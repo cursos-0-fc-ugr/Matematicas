@@ -8,6 +8,8 @@ La maquetación e inclusión de gráficos la ha llevado a cabo Pedro A. García 
 
 Este respositorio se pude visualizar en [GitHub pages](https://pedritomelenas.github.io/Curso-0-Matematicas).
 
+Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](https://github.com/cursos-0-fc-ugr/Matematicas/issues) de este repositorio.
+
 ## Contenidos
 
 1. [Complejos](00-complejos.html)
