@@ -10,6 +10,8 @@ Este respositorio se pude visualizar en [GitHub pages](https://pedritomelenas.gi
 
 Si encuentra algún error, por favor, comuníquenoslo usando el [issue tracker](https://github.com/cursos-0-fc-ugr/Matematicas/issues) de este repositorio.
 
+Este curso está disponible en [openswad](https://openswad.org/es?crs=2688), donde además hay tests de autoevaluación disponibles.
+
 ## Contenidos
 
 1. [Complejos](00-complejos.html)
