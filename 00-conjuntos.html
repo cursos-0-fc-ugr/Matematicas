@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Conjuntos, relaciones y aplicaciones</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Conjuntos, relaciones y aplicaciones</h1>
+</div>
+<h1 id="conjuntos">Conjuntos</h1>
+<p>La idea de conjunto es una de las más significativas en Matemáticas. La mayor parte de los conceptos matemáticos están construidos a partir de conjuntos.</p>
+<p>Podríamos decir de forma informal que un <em>conjunto</em> es simplemente una colección de objetos a los que llamaremos elementos del conjunto. Esta definición nos bastará para los contenidos de este curso, pero desde el punto de vista matemático es imprecisa y da lugar rápidamente a paradojas. Desde comienzos del siglo XX esta definición dejó de utilizarse por los problemas que acarrea. Por desgracia, dar una definición precisa está bastante lejos de los objetivos de este guión.</p>
+<ul>
+<li><p>Cuando <span class="math inline">\(x\)</span> sea un elemento de un conjunto <span class="math inline">\(A\)</span>, escribiremos <span class="math inline">\(x\in A\)</span>, que se lee “<span class="math inline">\(x\)</span> <em>pertenece</em> a <span class="math inline">\(A\)</span>”.</p></li>
+<li><p>Diremos que un conjunto <span class="math inline">\(A\)</span> es <em>subconjunto</em> del conjunto <span class="math inline">\(B\)</span>, y lo denotaremos por <span class="math inline">\(A\subseteq B\)</span>, si todo elemento de <span class="math inline">\(A\)</span> pertenece a <span class="math inline">\(B\)</span>.</p></li>
+<li><p>Un conjunto <span class="math inline">\(A\)</span> es igual que otro conjunto <span class="math inline">\(B\)</span> si tienen los mismos elementos, a saber, si <span class="math inline">\(A\subseteq B\)</span> y <span class="math inline">\(B\subseteq A\)</span>. Cuando esto ocurre, escribiremos <span class="math inline">\(A=B\)</span>.</p></li>
+<li><p>Admitiremos la existencia de un conjunto sin elementos, al que denotemos por <span class="math inline">\(\emptyset\)</span> y llamaremos <em>conjunto vacío</em>. El conjunto vacío es subconjunto de cualquier conjunto.</p></li>
+</ul>
+<h1 id="operaciones-con-conjuntos">Operaciones con conjuntos</h1>
+<p>Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> conjuntos.</p>
+<ol style="list-style-type: decimal">
+<li><p>La <em>intersección</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado por los elementos comunes de <span class="math inline">\(A\)</span> y de <span class="math inline">\(B\)</span>, y lo denotamos así <span class="math display">\[A \cap B=\{ x : x\in A \hbox{ y } x\in B\}.\]</span></p></li>
+<li><p>La <em>unión</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado al tomar todos los elementos de <span class="math inline">\(A\)</span> y los de <span class="math inline">\(B\)</span>. <span class="math display">\[A\cup B=\{x : x\in A \hbox{ o } x\in B\}.\]</span></p></li>
+<li><p>La <em>diferencia</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto que tiene por elementos los elementos de <span class="math inline">\(A\)</span> que no están en <span class="math inline">\(B\)</span>. <span class="math display">\[A\setminus B=\{x\in A : x\not\in B\}\]</span> (siempre que tachemos un símbolo, estamos indicando que no se cumple la condición sin tachar; así <span class="math inline">\(x\not \in B\)</span> significa que <span class="math inline">\(x\)</span> no pertenece a <span class="math inline">\(B\)</span>, <span class="math inline">\(A\not=B\)</span> significa que <span class="math inline">\(A\)</span> es distinto de <span class="math inline">\(B\)</span>, etcétera).</p></li>
+<li><p><span class="math inline">\(\mathcal P(A)=\{ X : X\subseteq A\}\)</span> es el <em>conjunto de partes</em> de <span class="math inline">\(A\)</span> o conjunto <em>potencia</em> de <span class="math inline">\(A\)</span>.</p></li>
+<li><p>El producto cartesiano de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto de parejas cuya primera componente está en <span class="math inline">\(A\)</span> y la segunda en <span class="math inline">\(B\)</span>. Esto se escribe de la siguiente forma. <span class="math display">\[A\times B=\{ (a,b) : a\in A \hbox{ y } b\in B\}.\]</span> Si en vez de dos conjuntos tenemos <span class="math inline">\(A_1,\ldots, A_n\)</span>, <span class="math display">\[A_1\times \cdots \times A_n=\{ (a_1,\ldots, a_n) : a_1\in A_1,\ldots, a_n\in A_n\},\]</span> y a los elementos de <span class="math inline">\(A_1\times \dots \times A_n\)</span> les llamaremos <em><span class="math inline">\(n\)</span>-uplas</em>.</p>
+<p>Al conjunto <span class="math inline">\(A\times \stackrel{n}{\cdots} \times  A\)</span> lo denotaremos por <span class="math inline">\(A^n\)</span>, para <span class="math inline">\(n\)</span> un entero positivo.</p></li>
+</ol>
+<p>El <em>cardinal</em> de un conjunto es el número de elementos que contiene. Usaremos <span class="math inline">\(\sharp A\)</span> para denotar el cardinal del conjunto <span class="math inline">\(A\)</span>.</p>
+<ul>
+<li><p><span class="math inline">\(\sharp \mathcal P(A)=2^{\sharp A}\)</span>.</p></li>
+<li><p><span class="math inline">\(\sharp (A\times B)=\sharp A \cdot \sharp B\)</span>.</p></li>
+</ul>
+<h1 id="relaciones-de-equivalencia">Relaciones de equivalencia</h1>
+<p>Sea <span class="math inline">\(A\)</span> un conjunto. Una <em>relación binaria</em> en <span class="math inline">\(A\)</span> es un subconjunto <span class="math inline">\(R\)</span> de <span class="math inline">\(A\times A\)</span>. Cuando <span class="math inline">\((x,y)\in R\)</span> escribimos <span class="math inline">\(x\ R\ y\)</span> y decimos que <span class="math inline">\(x\)</span> está relacionado (mediante <span class="math inline">\(R\)</span>) con <span class="math inline">\(y\)</span>.</p>
+<p>Una relación binaria <span class="math inline">\(R\)</span> sobre un conjunto <span class="math inline">\(A\)</span> es una relación de <em>equivalencia</em> si verifica las siguientes propiedades.</p>
+<ol>
+<li><p>Para todo <span class="math inline">\(a\in A\)</span>, <span class="math inline">\(a\ R\ a\)</span> (<span class="math inline">\(R\)</span> es <em>reflexiva</em>).</p></li>
+<li><p>Dados <span class="math inline">\(a, b\in A\)</span>, si <span class="math inline">\(a\ R\ b\)</span>, entonces <span class="math inline">\(b\ R\ a\)</span> (<span class="math inline">\(R\)</span> es <em>simétrica</em>).</p></li>
+<li><p>Para cualesquiera <span class="math inline">\(a,b,c\in A\)</span>, si <span class="math inline">\(a\ R\ b\)</span> y <span class="math inline">\(b\ R\ c\)</span>, entonces <span class="math inline">\(a\ R\ c\)</span> (<span class="math inline">\(R\)</span> es <em>transitiva</em>).</p></li>
+</ol>
+<p>Si <span class="math inline">\(R\)</span> es una relación de equivalencia sobre un conjunto <span class="math inline">\(A\)</span>, y <span class="math inline">\(a\)</span> es un elemento de <span class="math inline">\(A\)</span>, entonces la <em>clase</em> de <span class="math inline">\(a\)</span> es el conjunto de todos los elementos de <span class="math inline">\(A\)</span> que están relacionados con <span class="math inline">\(a\)</span>, <span class="math display">\[[a]=\{x\in A : x\ R\ a\}.\]</span> Se define el <em>conjunto cociente</em> de <span class="math inline">\(A\)</span> por <span class="math inline">\(R\)</span> como el conjunto de todas las clases de equivalencia de elementos de <span class="math inline">\(A\)</span>, y se denota por <span class="math inline">\(A/R\)</span>. Así <span class="math display">\[\frac{A}R=\{ [a] : a\in A\}.\]</span></p>
+<p>Para una relación de equivalencia <span class="math inline">\(R\)</span> en un conjunto <span class="math inline">\(A\)</span> se tiene que</p>
+<ol>
+<li><p><span class="math inline">\(a\ R\ b\)</span> si y sólo si <span class="math inline">\([a]=[b]\)</span>,</p></li>
+<li><p><span class="math inline">\(a\not{R}\ b\)</span> si y sólo si <span class="math inline">\([a]\cap[b]=\emptyset\)</span>.</p></li>
+</ol>
+<article>
+    <header>
+      <h3>Ejercicio</h3>
+    </header>
+  <p>En el conjunto <span class="math inline">\(\mathbb Z=\{0,1,-1,2,-2,\ldots\}\)</span> de los números enteros, definimos la siguiente relación de equivalencia. <span class="math display">\[x\ R\ y \hbox{ si }x-y\hbox{ es múltiplo de } 5.\]</span></p>
+  <ol>
+  <li><p>Demuestra que <span class="math inline">\(R\)</span> es una relación de equivalencia.</p></li>
+  <li><p>Calcula <span class="math inline">\([2]\)</span>.</p></li>
+  </ol>
+</article>
+
+<article>
+    <header>
+      <h3>Ejercicio</h3>
+    </header>
+  <p>En el conjunto <span class="math inline">\({\mathcal P}(\{1,2,3\})\)</span>, definimos la siguiente relación binaria. <span class="math display">\[A\sim B\hbox{ si }\#A=\#B.\]</span></p>
+  <ol>
+  <li><p>Demuestra que <span class="math inline">\(\sim\)</span> es una relación de equivalencia.</p></li>
+  <li><p>Calcula <span class="math inline">\([\{1,2\}]\)</span>.</p></li>
+  </ol>
+</article>
+
+<p>Dado un conjunto <span class="math inline">\(X\)</span>, una <em>partición</em> de <span class="math inline">\(X\)</span> es una familia de subconjuntos de <span class="math inline">\(X\)</span>, <span class="math inline">\(\{A_i\}_{i\in I}\)</span> (<span class="math inline">\(=\{A_i : i\in I\}\)</span>), de forma que</p>
+<ol>
+<li><p><span class="math inline">\(A_i\not=\emptyset\)</span> para todo <span class="math inline">\(i\in I\)</span>,</p></li>
+<li><p><span class="math inline">\(A_i\cap A_j=\emptyset\)</span> para cualesquiera <span class="math inline">\(i,j\in I\)</span> con <span class="math inline">\(i\neq j\)</span>,</p></li>
+<li><p><span class="math inline">\(X=\bigcup_{i\in I} A_i\)</span> (la unión de todos los elementos de la familia <span class="math inline">\(\{A_i\}_{i\in I}\)</span>).</p></li>
+</ol>
+<ul>
+<li><p>Se puede comprobar fácilmente que el hecho de ser <span class="math inline">\(R\)</span> una relación de equivalencia sobre <span class="math inline">\(A\)</span> hace que <span class="math inline">\(A/R\)</span> sea una partición de <span class="math inline">\(A\)</span>.</p></li>
+<li><p>Es más, si <span class="math inline">\(\{A_1,\ldots,A_n\}\)</span> es una partición de <span class="math inline">\(A\)</span>, entonces <span class="math display">\[R=(A_1\times A_1)\cup \cdots \cup(A_n\times A_n)\]</span> es una relación de equivalencia sobre <span class="math inline">\(A\)</span> (nótese que para <span class="math inline">\(a,b\in A\)</span>, <span class="math inline">\(a\ R\ b\)</span> si y sólo si existe <span class="math inline">\(i\in\{1,\ldots,n\}\)</span> tal que <span class="math inline">\(a,b\in A_i\)</span>) y <span class="math display">\[\frac{A}R=\{A_1,\ldots, A_n\}.\]</span></p></li>
+</ul>
+<h1 id="relaciones-de-orden">Relaciones de orden</h1>
+<p>Una relación binaria <span class="math inline">\(\le\)</span> sobre un conjunto <span class="math inline">\(A\)</span> es una <em>relación de orden</em> si verifica las siguientes propiedades.</p>
+<ol style="list-style-type: decimal">
+<li><p>Para todo <span class="math inline">\(a\in A\)</span>, <span class="math inline">\(a\le a\)</span> (reflexiva).</p></li>
+<li><p>Dados <span class="math inline">\(a, b\in A\)</span>, si <span class="math inline">\(a\le b\)</span> y <span class="math inline">\(b\le a\)</span>, entonces <span class="math inline">\(a=b\)</span> (<em>antisimétrica</em>).</p></li>
+<li><p>Para cualesquiera <span class="math inline">\(a,b,c\in A\)</span>, si <span class="math inline">\(a\le b\)</span> y <span class="math inline">\(b\le c\)</span>, entonces <span class="math inline">\(a\le c\)</span> (transitiva).</p></li>
+</ol>
+<p>Ejemplos de orden son <span class="math inline">\(\le\)</span> en <span class="math inline">\(\mathbb N\)</span>, <span class="math inline">\(\mathbb Z\)</span>, <span class="math inline">\(\mathbb Q\)</span> y <span class="math inline">\(\mathbb R\)</span>.</p>
+<p>Si un conjunto <span class="math inline">\(A\)</span> tiene una relación de orden <span class="math inline">\(\le\)</span>, al par <span class="math inline">\((A,\le)\)</span> lo llamaremos <em>conjunto ordenado</em>.</p>
+
+<article>
+    <header>
+      <h3>Ejercicio</h3>
+    </header>
+  <p>En el conjunto de los números naturales <span class="math inline">\(\mathbb N=\{0,1,2,\ldots\}\)</span> definimos la relación <span class="math inline">\(a\mid b\)</span> si <span class="math inline">\(b\)</span> es múltiplo de <span class="math inline">\(a\)</span>. Demuestra que <span class="math inline">\(\mid\)</span> es una relación de orden.</p>
+</article>
+
+<article>
+    <header>
+      <h3>Ejercicio</h3>
+    </header>
+  <p>Sea <span class="math inline">\(X\)</span> un conjunto. Demuestra que <span class="math inline">\(\subseteq\)</span> es una relación de orden en <span class="math inline">\(\mathcal P(X)\)</span>.</p>
+</article>
+
+<p>Un conjunto ordenado <span class="math inline">\((A,\le)\)</span> es <em>totalmente ordenado</em> si para cada <span class="math inline">\(a,b\in A\)</span>, se tiene que <span class="math inline">\(a\le b\)</span> o <span class="math inline">\(b\le A\)</span>.</p>
+<p>En <span class="math inline">\(\mathbb N^n\)</span> definimos la siguiente relación binaria <span class="math display">\[(a_1,\ldots,a_n)\le_p (b_1,\ldots,b_n) \hbox{ si } a_1\le b_1,\ldots, a_n\le b_n.\]</span> Demuestra que <span class="math inline">\(\le_p\)</span> es una relación de orden (orden producto cartesiano), pero no es un orden total para <span class="math inline">\(n\ge 2\)</span>.</p>
+
+<article>
+    <header>
+      <h3>Ejercicio</h3>
+    </header>
+  <p>En <span class="math inline">\(\mathbb N^n\)</span> definimos la siguiente relación binaria <span class="math inline">\((a_1,\ldots,a_n)\preceq_\mathrm{lex} (b_1,\ldots,b_n)\)</span> si la primera coordenada no nula de <span class="math inline">\((a_1-b_1,\ldots, a_n-b_n)\in \mathbb Z^n\)</span> es positiva (caso de que exista, es decir, puede ser que todas sean nulas). Demuestra que <span class="math inline">\(\preceq_\mathrm{lex}\)</span> es un orden total.</p>
+</article>
+
+<h1 id="aplicaciones-entre-conjuntos">Aplicaciones entre conjuntos</h1>
+<p>Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> dos conjuntos. Una <em>aplicación</em> <span class="math inline">\(f\)</span> de <span class="math inline">\(A\)</span> en <span class="math inline">\(B\)</span>, que denotaremos como <span class="math inline">\(f:A\to B\)</span>, es una correspondencia que a cada elemento de <span class="math inline">\(A\)</span> le asocia un único elemento de <span class="math inline">\(B\)</span> (de nuevo esta definición es algo imprecisa, pero suficiente para nuestro curso). Si <span class="math inline">\(a\in A\)</span>, al elemento que le asocia <span class="math inline">\(f\)</span> en <span class="math inline">\(B\)</span> lo denotamos por <span class="math inline">\(f(a)\)</span>, y se llama la <em>imagen</em> de <span class="math inline">\(a\)</span> por <span class="math inline">\(f\)</span>. Los conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son el <em>dominio</em> y <em>codominio</em> de <span class="math inline">\(f\)</span>, respectivamente. Llamaremos <em>conjunto imagen</em> de <span class="math inline">\(f\)</span> a <span class="math display">\[{\rm Im}(f)=\{f(a) : a\in A\}.\]</span></p>
+<h2 id="tipos-especiales-de-aplicaciones">Tipos especiales de aplicaciones</h2>
+<p>Si <span class="math inline">\(f:A\to B\)</span> es una aplicación, diremos que <span class="math inline">\(f\)</span> es</p>
+<ol style="list-style-type: decimal">
+<li><p><em>inyectiva</em> si <span class="math inline">\(f(a)=f(a&#39;)\)</span> para <span class="math inline">\(a,a&#39;\in A\)</span>, implica <span class="math inline">\(a=a&#39;\)</span>;</p></li>
+<li><p><em>sobreyectiva</em> si <span class="math inline">\({\rm Im}(f)=B\)</span> (para todo <span class="math inline">\(b\in B\)</span>, existe <span class="math inline">\(a\in A\)</span> tal que <span class="math inline">\(f(a)=b\)</span>);</p></li>
+<li><p><em>biyectiva</em> si es inyectiva y sobreyectiva.</p></li>
+</ol>
+
+<article>
+    <header>
+      <h3>Ejercicio</h3>
+    </header> 
+    <ol>
+  <li>Demuestra que la aplicación <span class="math inline">\(f:\mathbb Q\to \mathbb R\)</span> definida por <span class="math inline">\(f(x)=\frac{1}2(2x+1)\)</span> es inyectiva pero no sobreyectiva.</li>
+  <li>Demuestra que la aplicación <span class="math inline">\(f:\mathbb Z\to \mathbb N,\ f(x)=|x|\)</span> (valor absoluto) es sobreyectiva pero no inyectiva.</li>
+  <li>Demuestra que la aplicación <span class="math inline">\(f:\mathbb Q\to \mathbb Q\)</span>, <span class="math inline">\(f(x)=\frac{3x+1}2\)</span> es biyectiva.</li>
+  </ol>
+</article>
+
+<h2 id="composición-de-aplicaciones">Composición de aplicaciones</h2>
+<p>Sean <span class="math inline">\(f:A\to B\)</span> y <span class="math inline">\(g:B\to C\)</span> dos aplicaciones. La aplicación <em>composición</em> de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> (también conocida como <span class="math inline">\(f\)</span> compuesta con <span class="math inline">\(g\)</span>) es la aplicación <span class="math inline">\(g\circ f: A\to C\)</span>, definida como <span class="math inline">\((g\circ f)(a)=g(f(a))\)</span>. Para calcular la imagen de un elemento por la composición primero aplicamos <span class="math inline">\(f\)</span> y luego <span class="math inline">\(g\)</span>.</p>
+<p>Sean <span class="math inline">\(f:\mathbb Z\to \mathbb Z\)</span>, <span class="math inline">\(x\mapsto x^2\)</span>, y <span class="math inline">\(g:\mathbb Z\to \mathbb Q\)</span>, <span class="math inline">\(y\mapsto \frac{1}2(y+1)\)</span>. Calcula <span class="math inline">\(g\circ f\)</span>.</p>
+<ul>
+<li><p>La composición de aplicaciones es asociativa (<span class="math inline">\(f\circ(g\circ h)=(f\circ g)\circ h\)</span>) pero no es conmutativa (<span class="math inline">\(f\circ g\)</span> no tiene por qué ser igual a <span class="math inline">\(g\circ f\)</span>).</p></li>
+</ul>
+<p>Sea <span class="math inline">\(A\)</span> un conjunto. La aplicación <em>identidad</em> en <span class="math inline">\(A\)</span> es la aplicación <span class="math inline">\(1_A: A\to A\)</span> definida como <span class="math inline">\(1_A(a)=a\)</span> para todo <span class="math inline">\(a\in A\)</span>.</p>
+<ul>
+<li><p>Una aplicación <span class="math inline">\(f:A\to B\)</span> es biyectiva si y sólo si existe una única aplicación <span class="math inline">\(g:B\to A\)</span> tal que <span class="math inline">\(g\circ f=1_A\)</span> y <span class="math inline">\(f\circ g=1_B\)</span>. Dicha aplicación diremos que es la <em>inversa</em> de <span class="math inline">\(f\)</span> y la denotaremos por <span class="math inline">\(f^{-1}\)</span>.</p></li>
+</ul>
+
+<article>
+    <header>
+      <h3>Ejercicio</h3>
+    </header> 
+  <p>Demuestra que la aplicación <span class="math inline">\(f:\mathbb Q\to \mathbb Q\)</span>, <span class="math inline">\(f(x)=\frac{1}3(2x+1)\)</span> es biyectiva. Calcula <span class="math inline">\(f^{-1}\)</span>.</p>
+</article>
+
+<hr>
+
+<p style="font-size: 10pt">Esta página está basada en los apuntes de J.C. Rosales y P. A. García-Sánchez, <a ref="http://hdl.handle.net/10481/43099">Notas de de Álgebra Lineal y Estructuras Matemáticas</a> Las representaciones gráficas se han realizado con <a href="http://jsxgraph.uni-bayreuth.de">JSXGraph</a>. Las animaciones en JSXGraph y el maquetado de la página han sido realizados por Pedro A. García Sánchez.</p>
+
+
+</body>
+</html>

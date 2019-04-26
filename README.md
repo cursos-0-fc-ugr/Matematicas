@@ -14,6 +14,7 @@ Este curso está disponible en [openswad](https://openswad.org/es?crs=2688), don
 
 ## Contenidos
 
+1. [Conjuntos y aplicaciones](00-conjuntos.html)
 1. [Complejos](00-complejos.html)
 1. [Fracciones y potencias](00-fracciones-potencias.html)
 1. [Polinomios](00-polinomios.html)
@@ -38,4 +39,4 @@ Para la visualización de funciones usamos [JSXGraph](http://jsxgraph.uni-bayreu
 
 Hemos hecho una versión de [Derivadas aplicadas al estudio de funciones](derivadas-app-estudio-func-thebelab.html) usando  [Thebelab](https://github.com/minrk/thebelab) con un núcleo de [SageMath](http://www.sagemath.org)
 
-Estos contenidos forman parte del FIDO "IMPLEMENTACIÓN DE CURSOS CERO EN LA PLATAFORMA PRADO2 PARA LAS TITULACIONES DE LA FACULTAD DE CIENCIAS" de la Convocatoria de Proyectos de Innovación Docente y Buenas Prácticas del Plan FIDO UGR 2016-2018 (Universidad de Granada)
+Estos contenidos forman parte del FIDO "IMPLEMENTACIÓN DE CURSOS CERO EN LA PLATAFORMA PRADO2 PARA LAS TITULACIONES DE LA FACULTAD DE CIENCIAS" de la Convocatoria de Proyectos de Innovación Docente y Buenas Prácticas del Plan FIDO UGR 2016-2018 (Universidad de Granada), y del PID  “MANTENIMIENTO Y MEJORA DE LOS CURSOS CERO DE LA FACULTAD DE CIENCIAS”, de la Convocatoria  de Proyectos de Innovación y Buenas Prácticas Docentes 2018/2020, en la modalidad de proyectos Coordinados
