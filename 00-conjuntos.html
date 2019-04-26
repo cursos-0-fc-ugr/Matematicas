@@ -25,9 +25,110 @@
 <h1 id="operaciones-con-conjuntos">Operaciones con conjuntos</h1>
 <p>Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> conjuntos.</p>
 <ol style="list-style-type: decimal">
-<li><p>La <em>intersección</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado por los elementos comunes de <span class="math inline">\(A\)</span> y de <span class="math inline">\(B\)</span>, y lo denotamos así <span class="math display">\[A \cap B=\{ x : x\in A \hbox{ y } x\in B\}.\]</span></p></li>
-<li><p>La <em>unión</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado al tomar todos los elementos de <span class="math inline">\(A\)</span> y los de <span class="math inline">\(B\)</span>. <span class="math display">\[A\cup B=\{x : x\in A \hbox{ o } x\in B\}.\]</span></p></li>
-<li><p>La <em>diferencia</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto que tiene por elementos los elementos de <span class="math inline">\(A\)</span> que no están en <span class="math inline">\(B\)</span>. <span class="math display">\[A\setminus B=\{x\in A : x\not\in B\}\]</span> (siempre que tachemos un símbolo, estamos indicando que no se cumple la condición sin tachar; así <span class="math inline">\(x\not \in B\)</span> significa que <span class="math inline">\(x\)</span> no pertenece a <span class="math inline">\(B\)</span>, <span class="math inline">\(A\not=B\)</span> significa que <span class="math inline">\(A\)</span> es distinto de <span class="math inline">\(B\)</span>, etcétera).</p></li>
+<li><p>La <em>intersección</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado por los elementos comunes de <span class="math inline">\(A\)</span> y de <span class="math inline">\(B\)</span>, y lo denotamos así <span class="math display">\[A \cap B=\{ x : x\in A \hbox{ y } x\in B\}.\]</span></p>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+  viewBox="0 -150 450 300"
+  width="450" height="300">
+ <desc>
+    Intersección conjuntos
+ </desc>
+ <circle
+    style="fill:lightgreen;stroke:none"
+    r="140"
+    cy="0"
+    cx="150" />
+ <circle
+    style="fill:lightblue;stroke:none;fill-opacity:.4"
+    r="120"
+    cy="0"
+    cx="300" />
+ <text
+    style="font-size:30;font-weight:normal;font-family:serif"
+    y="30"
+    x="80">A</text>
+ <text style="font-size:30;font-weight:normal;font-family:serif" y="10" x="210">A&#x2229;B</text>
+ <text
+    style="font-size:30;font-weight:normal;font-family:serif"
+    y="-10"
+    x="350">B</text>
+</svg>
+
+</li>
+<li><p>La <em>unión</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado al tomar todos los elementos de <span class="math inline">\(A\)</span> y los de <span class="math inline">\(B\)</span>. <span class="math display">\[A\cup B=\{x : x\in A \hbox{ o } x\in B\}.\]</span></p>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+  viewBox="0 -150 450 300"
+  width="450" height="300">
+ <desc>
+    Set intersection
+ </desc>
+ <line x1="150" y1="0" x2="210" y2="115" stroke="black" stroke-width="2"/>
+ <circle
+    style="fill:lightblue;stroke:black;stroke-width:3"
+    r="140"
+    cy="0"
+    cx="150" />
+ <circle
+    style="fill:lightblue;stroke:black;stroke-width:3"
+    r="120"
+    cy="0"
+    cx="300" />
+ <circle
+    style="fill:lightblue;"
+    r="137"
+    cy="0"
+    cx="150" />
+ <circle
+    style="fill:none;stroke:black;stroke-width:1;stroke-dasharray:8,8"
+    r="140" cy="0" cx="150" />
+ <circle
+    style="fill:none;stroke:black;stroke-width:1;stroke-dasharray:8,8"
+    r="120"
+    cy="0"
+    cx="300" />
+ <text
+    style="font-size:30;font-weight:normal;font-family:serif"
+    y="10"
+    x="150">A&#x222A;B</text>
+ <text style="font-size:30;font-weight:normal;font-family:serif" y="-100" x="35">A</text>
+ <text
+    style="font-size:30;font-weight:normal;font-family:serif"
+    y="-110"
+    x="350">B</text>
+</svg>
+
+</li>
+<li><p>La <em>diferencia</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto que tiene por elementos los elementos de <span class="math inline">\(A\)</span> que no están en <span class="math inline">\(B\)</span>. <span class="math display">\[A\setminus B=\{x\in A : x\not\in B\}\]</span> (siempre que tachemos un símbolo, estamos indicando que no se cumple la condición sin tachar; así <span class="math inline">\(x\not \in B\)</span> significa que <span class="math inline">\(x\)</span> no pertenece a <span class="math inline">\(B\)</span>, <span class="math inline">\(A\not=B\)</span> significa que <span class="math inline">\(A\)</span> es distinto de <span class="math inline">\(B\)</span>, etcétera).</p>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+  viewBox="0 -150 450 300"
+  width="450" height="300">
+ <desc>
+    Set intersection
+ </desc>
+ <line x1="150" y1="0" x2="210" y2="115" stroke="black" stroke-width="2"/>
+ <circle
+    style="fill:lightgreen;stroke:black;stroke-width:1"
+    r="140"
+    cy="0"
+    cx="150" />
+ <circle
+    style="fill:lightblue;stroke:black;stroke-width:1"
+    r="120"
+    cy="0"
+    cx="300" />
+ <circle
+    style="fill:none;stroke:black;stroke-width:1;stroke-dasharray:8,8"
+    r="140" cy="0" cx="150" />
+ <text
+    style="font-size:30;font-weight:normal;font-family:serif"
+    y="10"
+    x="80">A\B</text>
+ <text style="font-size:30;font-weight:normal;font-family:serif" y="-100" x="35">A</text>
+ <text
+    style="font-size:30;font-weight:normal;font-family:serif"
+    y="-110"
+    x="350">B</text>
+</svg>
+</li>
 <li><p><span class="math inline">\(\mathcal P(A)=\{ X : X\subseteq A\}\)</span> es el <em>conjunto de partes</em> de <span class="math inline">\(A\)</span> o conjunto <em>potencia</em> de <span class="math inline">\(A\)</span>.</p></li>
 <li><p>El producto cartesiano de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto de parejas cuya primera componente está en <span class="math inline">\(A\)</span> y la segunda en <span class="math inline">\(B\)</span>. Esto se escribe de la siguiente forma. <span class="math display">\[A\times B=\{ (a,b) : a\in A \hbox{ y } b\in B\}.\]</span> Si en vez de dos conjuntos tenemos <span class="math inline">\(A_1,\ldots, A_n\)</span>, <span class="math display">\[A_1\times \cdots \times A_n=\{ (a_1,\ldots, a_n) : a_1\in A_1,\ldots, a_n\in A_n\},\]</span> y a los elementos de <span class="math inline">\(A_1\times \dots \times A_n\)</span> les llamaremos <em><span class="math inline">\(n\)</span>-uplas</em>.</p>
 <p>Al conjunto <span class="math inline">\(A\times \stackrel{n}{\cdots} \times  A\)</span> lo denotaremos por <span class="math inline">\(A^n\)</span>, para <span class="math inline">\(n\)</span> un entero positivo.</p></li>
