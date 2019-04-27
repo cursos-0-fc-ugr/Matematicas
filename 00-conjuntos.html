@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html >
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -156,7 +156,7 @@
 
 
 <li><p><span class="math inline">\(\mathcal P(A)=\{ X : X\subseteq A\}\)</span> es el <em>conjunto de partes</em> de <span class="math inline">\(A\)</span> o conjunto <em>potencia</em> de <span class="math inline">\(A\)</span>.</p></li>
-<li><p>El producto cartesiano de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto de parejas cuya primera componente está en <span class="math inline">\(A\)</span> y la segunda en <span class="math inline">\(B\)</span>. Esto se escribe de la siguiente forma. \[A\times B=\{ (a,b) : a\in A \hbox{ y } b\in B\}.\]</p>
+<li><p>El producto cartesiano de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto de parejas cuya primera componente está en <span class="math inline">\(A\)</span> y la segunda en <span class="math inline">\(B\)</span>. Esto se escribe de la siguiente forma. \[A\times B=\{ (a,b) : a\in A \text{ y } b\in B\}.\]</p>
 	<center><div id="box" class="jxgbox" style="width:400px; height:400px;"></div></center>
     <script type="text/javascript">
       //JXG.Options.text.useMathJax = true;
@@ -176,7 +176,7 @@
       pintac()
     </script>
   
-<p>Si en vez de dos conjuntos tenemos <span class="math inline">\(A_1,\ldots, A_n\)</span>, <span class="math display">\[A_1\times \cdots \times A_n=\{ (a_1,\ldots, a_n) : a_1\in A_1,\ldots, a_n\in A_n\},\]</span> y a los elementos de <span class="math inline">\(A_1\times \dots \times A_n\)</span> les llamaremos <em><span class="math inline">\(n\)</span>-uplas</em>.</p>
+<p>Si en vez de dos conjuntos tenemos <span class="math inline">\(A_1,\ldots, A_n\)</span>, <span class="math display">\[A_1\times \cdots \times A_n=\{ (a_1,\ldots, a_n) : a_1\in A_1,\ldots, a_n\in A_n\},\]</span> y a los elementos de <span class="math inline">\(A_1\times \cdots \times A_n\)</span> les llamaremos <em><span class="math inline">\(n\)</span>-uplas</em>.</p>
 <p>Al conjunto <span class="math inline">\(A\times \stackrel{n}{\cdots} \times  A\)</span> lo denotaremos por <span class="math inline">\(A^n\)</span>, para <span class="math inline">\(n\)</span> un entero positivo.</p></li>
 </ol>
 <p>El <em>cardinal</em> de un conjunto es el número de elementos que contiene. Usaremos <span class="math inline">\(\sharp A\)</span> para denotar el cardinal del conjunto <span class="math inline">\(A\)</span>.</p>
@@ -202,7 +202,7 @@
     <header>
       <h3>Ejercicio</h3>
     </header>
-  <p>En el conjunto <span class="math inline">\(\mathbb Z=\{0,1,-1,2,-2,\ldots\}\)</span> de los números enteros, definimos la siguiente relación de equivalencia. <span class="math display">\[x\ R\ y \hbox{ si }x-y\hbox{ es múltiplo de } 5.\]</span></p>
+  <p>En el conjunto <span class="math inline">\(\mathbb Z=\{0,1,-1,2,-2,\ldots\}\)</span> de los números enteros, definimos la siguiente relación de equivalencia. <span class="math display">\[x\ R\ y \text{ si }x-y\text{ es múltiplo de } 5.\]</span></p>
   <ol>
   <li><p>Demuestra que <span class="math inline">\(R\)</span> es una relación de equivalencia.</p></li>
   <li><p>Calcula <span class="math inline">\([2]\)</span>.</p></li>
@@ -213,7 +213,7 @@
     <header>
       <h3>Ejercicio</h3>
     </header>
-  <p>En el conjunto <span class="math inline">\({\mathcal P}(\{1,2,3\})\)</span>, definimos la siguiente relación binaria. <span class="math display">\[A\sim B\hbox{ si }\#A=\#B.\]</span></p>
+  <p>En el conjunto <span class="math inline">\({\mathcal P}(\{1,2,3\})\)</span>, definimos la siguiente relación binaria. <span class="math display">\[A\sim B\text{ si }\#A=\#B.\]</span></p>
   <ol>
   <li><p>Demuestra que <span class="math inline">\(\sim\)</span> es una relación de equivalencia.</p></li>
   <li><p>Calcula <span class="math inline">\([\{1,2\}]\)</span>.</p></li>
@@ -255,7 +255,7 @@
 </article>
 
 <p>Un conjunto ordenado <span class="math inline">\((A,\le)\)</span> es <em>totalmente ordenado</em> si para cada <span class="math inline">\(a,b\in A\)</span>, se tiene que <span class="math inline">\(a\le b\)</span> o <span class="math inline">\(b\le A\)</span>.</p>
-<p>En <span class="math inline">\(\mathbb N^n\)</span> definimos la siguiente relación binaria <span class="math display">\[(a_1,\ldots,a_n)\le_p (b_1,\ldots,b_n) \hbox{ si } a_1\le b_1,\ldots, a_n\le b_n.\]</span> Demuestra que <span class="math inline">\(\le_p\)</span> es una relación de orden (orden producto cartesiano), pero no es un orden total para <span class="math inline">\(n\ge 2\)</span>.</p>
+<p>En <span class="math inline">\(\mathbb N^n\)</span> definimos la siguiente relación binaria <span class="math display">\[(a_1,\ldots,a_n)\le_p (b_1,\ldots,b_n) \text{ si } a_1\le b_1,\ldots, a_n\le b_n.\]</span> Demuestra que <span class="math inline">\(\le_p\)</span> es una relación de orden (orden producto cartesiano), pero no es un orden total para <span class="math inline">\(n\ge 2\)</span>.</p>
 
 <article>
     <header>
@@ -269,9 +269,87 @@
 <h2 id="tipos-especiales-de-aplicaciones">Tipos especiales de aplicaciones</h2>
 <p>Si <span class="math inline">\(f:A\to B\)</span> es una aplicación, diremos que <span class="math inline">\(f\)</span> es</p>
 <ol style="list-style-type: decimal">
-<li><p><em>inyectiva</em> si <span class="math inline">\(f(a)=f(a&#39;)\)</span> para <span class="math inline">\(a,a&#39;\in A\)</span>, implica <span class="math inline">\(a=a&#39;\)</span>;</p></li>
-<li><p><em>sobreyectiva</em> si <span class="math inline">\({\rm Im}(f)=B\)</span> (para todo <span class="math inline">\(b\in B\)</span>, existe <span class="math inline">\(a\in A\)</span> tal que <span class="math inline">\(f(a)=b\)</span>);</p></li>
-<li><p><em>biyectiva</em> si es inyectiva y sobreyectiva.</p></li>
+<li><p><em>inyectiva</em> si <span class="math inline">\(f(a)=f(a&#39;)\)</span> para <span class="math inline">\(a,a&#39;\in A\)</span>, implica <span class="math inline">\(a=a&#39;\)</span>;</p>
+	<center><div id="iny" class="jxgbox" style="width:300px; height:200px;"></div></center>
+    <script type="text/javascript">
+      //JXG.Options.text.useMathJax = true;
+      function pintac(){
+        JXG.Options.axis.ticks.drawLabels = false;
+        var board = JXG.JSXGraph.initBoard('iny', {boundingbox: [0,3,3,0], axis:false, showCopyright:false, showNavigation:false, grid:false});
+        var a1 = board.create('point',[0.5,0.5],{fixed:true, size:1,name:"b"})
+        //var a2 = board.create('point',[0.5,1.5],{fixed:true})
+        var a3 = board.create('point',[0.5,2.5],{fixed:true,size:1,name:"a"})
+        var b1 = board.create('point',[2.5,0.5],{fixed:true,size:1,name:"c'"})
+        var b2 = board.create('point',[2.5,1.5],{fixed:true,size:1,name:"b'"})
+        var b3 = board.create('point',[2.5,2.5],{fixed:true,size:1,name:"a'"})
+        var s1 = board.create('segment',[a1,b1], {lastArrow:true,color:'black'})
+        var s2 = board.create('segment',[a3,b3], {lastArrow:true,color:'black'})
+        var A=board.create('polygon',[[0.25,0.25],[0.75,0.25],[0.75,2.75], [0.25,2.75]],
+        {vertices: {visible:false}, borders:{visible:false}, fixed:true})
+        var B=board.create('polygon',[[2.25,0.25],[2.75,0.25],[2.75,2.75], [2.25,2.75]],
+        {vertices: {visible:false}, borders:{visible:false}, fixed:true})
+        board.update()
+      }
+      pintac()
+    </script>
+
+</li>
+<li><p><em>sobreyectiva</em> si <span class="math inline">\({\rm Im}(f)=B\)</span> (para todo <span class="math inline">\(b\in B\)</span>, existe <span class="math inline">\(a\in A\)</span> tal que <span class="math inline">\(f(a)=b\)</span>);</p>
+
+	<center><div id="sobr" class="jxgbox" style="width:300px; height:200px;"></div></center>
+    <script type="text/javascript">
+      //JXG.Options.text.useMathJax = true;
+      function pintac(){
+        JXG.Options.axis.ticks.drawLabels = false;
+        var board = JXG.JSXGraph.initBoard('sobr', {boundingbox: [0,3,3,0], axis:false, showCopyright:false, showNavigation:false, grid:false});
+        var a1 = board.create('point',[0.5,0.5],{fixed:true, size:1,name:"c"})
+        var a2 = board.create('point',[0.5,1.5],{fixed:true,size:1,name:"b"})
+        var a3 = board.create('point',[0.5,2.5],{fixed:true,size:1,name:"a"})
+        var b1 = board.create('point',[2.5,0.5],{fixed:true,size:1,name:"b'"})
+        //var b2 = board.create('point',[2.5,1.5],{fixed:true,size:1,name:"b'"})
+        var b3 = board.create('point',[2.5,2.5],{fixed:true,size:1,name:"a'"})
+        var s1 = board.create('segment',[a1,b1], {lastArrow:true,color:'black'})
+        var s2 = board.create('segment',[a3,b3], {lastArrow:true,color:'black'})
+        var s3 = board.create('segment',[a2,b3], {lastArrow:true,color:'black'})
+        var A=board.create('polygon',[[0.25,0.25],[0.75,0.25],[0.75,2.75], [0.25,2.75]],
+        {vertices: {visible:false}, borders:{visible:false}, fixed:true})
+        var B=board.create('polygon',[[2.25,0.25],[2.75,0.25],[2.75,2.75], [2.25,2.75]],
+        {vertices: {visible:false}, borders:{visible:false}, fixed:true})
+        board.update()
+      }
+      pintac()
+    </script>
+
+
+</li>
+<li><p><em>biyectiva</em> si es inyectiva y sobreyectiva.</p>
+
+  <center><div id="biy" class="jxgbox" style="width:300px; height:200px;"></div></center>
+  <script type="text/javascript">
+    //JXG.Options.text.useMathJax = true;
+    function pintac(){
+      JXG.Options.axis.ticks.drawLabels = false;
+      var board = JXG.JSXGraph.initBoard('biy', {boundingbox: [0,3,3,0], axis:false, showCopyright:false, showNavigation:false, grid:false});
+      var a1 = board.create('point',[0.5,0.5],{fixed:true, size:1,name:"c"})
+      var a2 = board.create('point',[0.5,1.5],{fixed:true,size:1,name:"b"})
+      var a3 = board.create('point',[0.5,2.5],{fixed:true,size:1,name:"a"})
+      var b1 = board.create('point',[2.5,0.5],{fixed:true,size:1,name:"b'"})
+      var b2 = board.create('point',[2.5,1.5],{fixed:true,size:1,name:"c'"})
+      var b3 = board.create('point',[2.5,2.5],{fixed:true,size:1,name:"a'"})
+      var s1 = board.create('segment',[a1,b1], {lastArrow:true,color:'black'})
+      var s2 = board.create('segment',[a3,b3], {lastArrow:true,color:'black'})
+      var s3 = board.create('segment',[a2,b2], {lastArrow:true,color:'black'})
+      var A=board.create('polygon',[[0.25,0.25],[0.75,0.25],[0.75,2.75], [0.25,2.75]],
+      {vertices: {visible:false}, borders:{visible:false}, fixed:true})
+      var B=board.create('polygon',[[2.25,0.25],[2.75,0.25],[2.75,2.75], [2.25,2.75]],
+      {vertices: {visible:false}, borders:{visible:false}, fixed:true})
+      board.update()
+    }
+    pintac()
+  </script>
+
+
+</li>
 </ol>
 
 <article>
