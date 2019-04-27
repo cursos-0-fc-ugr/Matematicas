@@ -7,18 +7,18 @@
   <title>Conjuntos, relaciones y aplicaciones</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="otro.css" type="text/css" />
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
   <link rel="stylesheet" type="text/css" href="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
   <script type="text/javascript" src="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-  <script>
-		MathJax.Hub.Config({
-		 tex2jax:
-		 {
-		    preview: "none"
-		 }
-		});
-	</script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/contrib/auto-render.min.js" type="text/javascript"></script>
+  <script type="text/javascript">// <![CDATA[
+  document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+  // ]]></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css" />
+  
 </head>
 <body>
 <div id="header">
@@ -36,7 +36,7 @@
 <h1 id="operaciones-con-conjuntos">Operaciones con conjuntos</h1>
 <p>Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> conjuntos.</p>
 <ol style="list-style-type: decimal">
-<li><p>La <em>intersección</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado por los elementos comunes de <span class="math inline">\(A\)</span> y de <span class="math inline">\(B\)</span>, y lo denotamos así <span class="math display">\[A \cap B=\{ x : x\in A \hbox{ y } x\in B\}.\]</span></p>
+<li><p>La <em>intersección</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado por los elementos comunes de <span class="math inline">\(A\)</span> y de <span class="math inline">\(B\)</span>, y lo denotamos así \[A \cap B=\{ x : x\in A,\ x\in B\}.\]</p>
 
 <center>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
@@ -67,7 +67,7 @@
 </svg>
 </center>
 </li>
-<li><p>La <em>unión</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado al tomar todos los elementos de <span class="math inline">\(A\)</span> y los de <span class="math inline">\(B\)</span>. <span class="math display">\[A\cup B=\{x : x\in A \hbox{ o } x\in B\}.\]</span></p>
+<li><p>La <em>unión</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado al tomar todos los elementos de <span class="math inline">\(A\)</span> y los de <span class="math inline">\(B\)</span>. \[A\cup B=\{x : x\in A \text{ o } x\in B\}.\]</p>
 <center>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
   viewBox="0 -150 450 300"
@@ -111,7 +111,7 @@
 </svg>
 </center>
 </li>
-<li><p>La <em>diferencia</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto que tiene por elementos los elementos de <span class="math inline">\(A\)</span> que no están en <span class="math inline">\(B\)</span>. <span class="math display">\[A\setminus B=\{x\in A : x\not\in B\}\]</span> (siempre que tachemos un símbolo, estamos indicando que no se cumple la condición sin tachar; así <span class="math inline">\(x\not \in B\)</span> significa que <span class="math inline">\(x\)</span> no pertenece a <span class="math inline">\(B\)</span>, <span class="math inline">\(A\not=B\)</span> significa que <span class="math inline">\(A\)</span> es distinto de <span class="math inline">\(B\)</span>, etcétera).</p>
+<li><p>La <em>diferencia</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto que tiene por elementos los elementos de <span class="math inline">\(A\)</span> que no están en <span class="math inline">\(B\)</span>. \[A\setminus B=\{x\in A : x\not\in B\}\](siempre que tachemos un símbolo, estamos indicando que no se cumple la condición sin tachar; así <span class="math inline">\(x\not \in B\)</span> significa que <span class="math inline">\(x\)</span> no pertenece a <span class="math inline">\(B\)</span>, <span class="math inline">\(A\not=B\)</span> significa que <span class="math inline">\(A\)</span> es distinto de <span class="math inline">\(B\)</span>, etcétera).</p>
 <center>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
   viewBox="0 -150 450 300"
@@ -145,8 +145,18 @@
 </svg>
 </center>
 </li>
+
+<li> <p>Si \(A\subseteq X\), el <em>complementario</em> de \(A\) en \(X\) es \(X \setminus A\). Si \(X\) se  sobreentiende en el contexto, entonces a \(X\setminus A\) se denota por \(\overline{A}\) o \(A^c\). Claramente, \(\overline{\overline{A}}=A\)</p>
+
+
+<p>  <h4>Leyes de DeMorgan.</h4> Dados \(A\) y \(B\) subconjuntos de \(X\), se tiene que 
+\[ \overline{A\cap B}=\overline{A}\cup \overline{B},\] \[\overline{A\cup B}=\overline{A}\cap \overline{B}.\] </p>
+
+</li>
+
+
 <li><p><span class="math inline">\(\mathcal P(A)=\{ X : X\subseteq A\}\)</span> es el <em>conjunto de partes</em> de <span class="math inline">\(A\)</span> o conjunto <em>potencia</em> de <span class="math inline">\(A\)</span>.</p></li>
-<li><p>El producto cartesiano de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto de parejas cuya primera componente está en <span class="math inline">\(A\)</span> y la segunda en <span class="math inline">\(B\)</span>. Esto se escribe de la siguiente forma. <span class="math display">\[A\times B=\{ (a,b) : a\in A \hbox{ y } b\in B\}.\]</span></p>
+<li><p>El producto cartesiano de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto de parejas cuya primera componente está en <span class="math inline">\(A\)</span> y la segunda en <span class="math inline">\(B\)</span>. Esto se escribe de la siguiente forma. \[A\times B=\{ (a,b) : a\in A \hbox{ y } b\in B\}.\]</p>
 	<center><div id="box" class="jxgbox" style="width:400px; height:400px;"></div></center>
     <script type="text/javascript">
       //JXG.Options.text.useMathJax = true;
