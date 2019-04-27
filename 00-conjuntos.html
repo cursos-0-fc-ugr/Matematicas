@@ -8,6 +8,17 @@
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="otro.css" type="text/css" />
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+  <script type="text/javascript" src="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+  <script>
+		MathJax.Hub.Config({
+		 tex2jax:
+		 {
+		    preview: "none"
+		 }
+		});
+	</script>
+
 </head>
 <body>
 <div id="header">
@@ -26,9 +37,11 @@
 <p>Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> conjuntos.</p>
 <ol style="list-style-type: decimal">
 <li><p>La <em>intersección</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado por los elementos comunes de <span class="math inline">\(A\)</span> y de <span class="math inline">\(B\)</span>, y lo denotamos así <span class="math display">\[A \cap B=\{ x : x\in A \hbox{ y } x\in B\}.\]</span></p>
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+
+<center>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
   viewBox="0 -150 450 300"
-  width="450" height="300">
+  width="450" height="300" display="block">
  <desc>
     Intersección conjuntos
  </desc>
@@ -52,9 +65,10 @@
     y="-10"
     x="350">B</text>
 </svg>
-
+</center>
 </li>
 <li><p>La <em>unión</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto formado al tomar todos los elementos de <span class="math inline">\(A\)</span> y los de <span class="math inline">\(B\)</span>. <span class="math display">\[A\cup B=\{x : x\in A \hbox{ o } x\in B\}.\]</span></p>
+<center>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
   viewBox="0 -150 450 300"
   width="450" height="300">
@@ -95,9 +109,10 @@
     y="-110"
     x="350">B</text>
 </svg>
-
+</center>
 </li>
 <li><p>La <em>diferencia</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto que tiene por elementos los elementos de <span class="math inline">\(A\)</span> que no están en <span class="math inline">\(B\)</span>. <span class="math display">\[A\setminus B=\{x\in A : x\not\in B\}\]</span> (siempre que tachemos un símbolo, estamos indicando que no se cumple la condición sin tachar; así <span class="math inline">\(x\not \in B\)</span> significa que <span class="math inline">\(x\)</span> no pertenece a <span class="math inline">\(B\)</span>, <span class="math inline">\(A\not=B\)</span> significa que <span class="math inline">\(A\)</span> es distinto de <span class="math inline">\(B\)</span>, etcétera).</p>
+<center>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
   viewBox="0 -150 450 300"
   width="450" height="300">
@@ -128,9 +143,30 @@
     y="-110"
     x="350">B</text>
 </svg>
+</center>
 </li>
 <li><p><span class="math inline">\(\mathcal P(A)=\{ X : X\subseteq A\}\)</span> es el <em>conjunto de partes</em> de <span class="math inline">\(A\)</span> o conjunto <em>potencia</em> de <span class="math inline">\(A\)</span>.</p></li>
-<li><p>El producto cartesiano de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto de parejas cuya primera componente está en <span class="math inline">\(A\)</span> y la segunda en <span class="math inline">\(B\)</span>. Esto se escribe de la siguiente forma. <span class="math display">\[A\times B=\{ (a,b) : a\in A \hbox{ y } b\in B\}.\]</span> Si en vez de dos conjuntos tenemos <span class="math inline">\(A_1,\ldots, A_n\)</span>, <span class="math display">\[A_1\times \cdots \times A_n=\{ (a_1,\ldots, a_n) : a_1\in A_1,\ldots, a_n\in A_n\},\]</span> y a los elementos de <span class="math inline">\(A_1\times \dots \times A_n\)</span> les llamaremos <em><span class="math inline">\(n\)</span>-uplas</em>.</p>
+<li><p>El producto cartesiano de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto de parejas cuya primera componente está en <span class="math inline">\(A\)</span> y la segunda en <span class="math inline">\(B\)</span>. Esto se escribe de la siguiente forma. <span class="math display">\[A\times B=\{ (a,b) : a\in A \hbox{ y } b\in B\}.\]</span></p>
+	<center><div id="box" class="jxgbox" style="width:400px; height:400px;"></div></center>
+    <script type="text/javascript">
+      //JXG.Options.text.useMathJax = true;
+      function pintac(){
+        JXG.Options.axis.ticks.drawLabels = false;
+        var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-.5,3,3,-.5], axis:true, showCopyright:false, showNavigation:false, grid:false});
+        var sx = board.create('segment',[[1,0],[2.5,0]], {visible:false})
+        var sy = board.create('segment',[[0,1],[0,2.5]], {visible:false})
+        var px = board.create('glider',[1.5,0,sx],{visible:true, withLabel:false, face:'o'});
+        var py = board.create('glider',[0,2,sy],{visible:true, withLabel:false, face:'o'});
+        var a=board.create('segment',[[0.5,0],px], {withLabel:true, name:'A'})
+        var b=board.create('segment',[[0,.5],py],  {withLabel:true, name:'B'})
+        var c=board.create('polygon',[[0.5,0.5],[function(){return px.X()},0.5],[function(){return px.X()},function(){return py.Y()}], [0.5,function(){return py.Y()}]],
+        {vertices: {visible:false}})
+        board.update()
+      }
+      pintac()
+    </script>
+  
+<p>Si en vez de dos conjuntos tenemos <span class="math inline">\(A_1,\ldots, A_n\)</span>, <span class="math display">\[A_1\times \cdots \times A_n=\{ (a_1,\ldots, a_n) : a_1\in A_1,\ldots, a_n\in A_n\},\]</span> y a los elementos de <span class="math inline">\(A_1\times \dots \times A_n\)</span> les llamaremos <em><span class="math inline">\(n\)</span>-uplas</em>.</p>
 <p>Al conjunto <span class="math inline">\(A\times \stackrel{n}{\cdots} \times  A\)</span> lo denotaremos por <span class="math inline">\(A^n\)</span>, para <span class="math inline">\(n\)</span> un entero positivo.</p></li>
 </ol>
 <p>El <em>cardinal</em> de un conjunto es el número de elementos que contiene. Usaremos <span class="math inline">\(\sharp A\)</span> para denotar el cardinal del conjunto <span class="math inline">\(A\)</span>.</p>
