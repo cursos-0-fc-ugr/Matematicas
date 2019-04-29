@@ -159,7 +159,9 @@
 </li>
 
 
-<li><p><span class="math inline">\(\mathcal P(A)=\{ X : X\subseteq A\}\)</span> es el <em>conjunto de partes</em> de <span class="math inline">\(A\)</span> o conjunto <em>potencia</em> de <span class="math inline">\(A\)</span>, que es a su vez un conjunto.</p></li>
+<li><p><span class="math inline">\(\mathcal P(A)=\{ X : X\subseteq A\}\)</span> es el <em>conjunto de partes</em> de <span class="math inline">\(A\)</span> o conjunto <em>potencia</em> de <span class="math inline">\(A\)</span>, que es a su vez un conjunto. Por ejemplo, \(\mathcal{P}(\{1,2\})=\{\emptyset,\{1\},\{2\},\{1,2\}\}\).</p></li>
+
+
 <li><p>El producto cartesiano de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> es el conjunto de parejas cuya primera componente está en <span class="math inline">\(A\)</span> y la segunda en <span class="math inline">\(B\)</span>. Esto se escribe de la siguiente forma. \[A\times B=\{ (a,b) : a\in A \text{ y } b\in B\}.\]</p>
 	<center><div id="box" class="jxgbox" style="width:400px; height:400px;"></div></center>
     <script type="text/javascript">
@@ -257,6 +259,15 @@
     </header>
   <p>Sea <span class="math inline">\(X\)</span> un conjunto. Demuestra que <span class="math inline">\(\subseteq\)</span> es una relación de orden en <span class="math inline">\(\mathcal P(X)\)</span>.</p>
 </article>
+
+<p>El conjunto de partes de \(\{1,2\}\) ordenado por inclusión se puede representar como sigue:</p>
+<script  src="http://mdaines.github.io/viz.js/bower_components/viz.js/viz.js">
+</script>
+<center><span id="partes" class='content'>Grafo (se necesita conexión a internet) </span></center>
+<script>
+ document.getElementById("partes").innerHTML =Viz('graph NSGraph{     node [shape=none]; 0 [label="Ø"]; 1 [label="{1}"]; 2 [label="{2}"]; 12 [label="{1,2}"]; 1 -- 0; 2 -- 0; 12 -- 1; 12 -- 2 }', {engine: "dot"});
+</script>
+
 
 <p>Un conjunto ordenado <span class="math inline">\((A,\le)\)</span> es <em>totalmente ordenado</em> si para cada <span class="math inline">\(a,b\in A\)</span>, se tiene que <span class="math inline">\(a\le b\)</span> o <span class="math inline">\(b\le A\)</span>.</p>
 <p>En <span class="math inline">\(\mathbb N^n\)</span> definimos la siguiente relación binaria <span class="math display">\[(a_1,\ldots,a_n)\le_p (b_1,\ldots,b_n) \text{ si } a_1\le b_1,\ldots, a_n\le b_n.\]</span> Demuestra que <span class="math inline">\(\le_p\)</span> es una relación de orden (orden producto cartesiano), pero no es un orden total para <span class="math inline">\(n\ge 2\)</span>.</p>
@@ -387,7 +398,7 @@
 
 <hr>
 
-<p style="font-size: 10pt">Esta página está basada en los apuntes de J.C. Rosales y P. A. García-Sánchez, <a ref="http://hdl.handle.net/10481/43099">Notas de de Álgebra Lineal y Estructuras Matemáticas</a> Las representaciones gráficas se han realizado con <a href="http://jsxgraph.uni-bayreuth.de">JSXGraph</a>. Las animaciones en JSXGraph y el maquetado de la página han sido realizados por Pedro A. García Sánchez.</p>
+<p style="font-size: 10pt">Esta página está basada en los apuntes de J.C. Rosales y P. A. García-Sánchez, <a ref="https://hdl.handle.net/10481/43099">Notas de de Álgebra Lineal y Estructuras Matemáticas</a> Las representaciones gráficas se han realizado con <a href="https://jsxgraph.uni-bayreuth.de">JSXGraph</a> y con <a href="https://viz-js.com">viz.js</a>. Las animaciones en JSXGraph y el maquetado de la página han sido realizados por Pedro A. García Sánchez.</p>
 
 
 </body>
