@@ -392,12 +392,41 @@
     <header>
       <h3>Ejercicio</h3>
     </header> 
-  <p>Demuestra que la aplicación <span class="math inline">\(f:\mathbb Q\to \mathbb Q\)</span>, <span class="math inline">\(f(x)=\frac{1}3(2x+1)\)</span> es biyectiva. Calcula <span class="math inline">\(f^{-1}\)</span>.</p>
+  <p>Demuestra que la aplicación <span class="math inline">\(f:\mathbb Q\to \mathbb Q\)</span>, <span class="math inline">\(f(x)=\frac{1}3(2x+1)\)</span> es biyectiva. Calcula <span class="math inline">\(f^{-1}\)</span>. <button id="e7" class="button" onclick="show2('e7');">Solución</button></p>
+    <span id="sol-e7" style="display:none;">
+      <p>Para la inyectividad, si \(f(x)=\f(y)\) para \(x,y\in\mathbb{Q}\), entonces \(\frac{1}3(2x+1)=\frac{1}3(2y+1)\). Multiplicando por \(3\) en ambos lados de la igualdad, tenemos que \(2x+1=2y+1\). Restando \(1\) en ambas partes de la igualdad y luego dividiendo por \(2\), llegamos a que \(x=y\), por lo que \(f\) es inyectiva.</p>
+      <p>Para ver que es sobreyectiva, sea \(y\in\mathbb{Q}\), y busquemos \(x\in \mathbb{Q}\) de forma que \(f(x)=y\). Ahora bien, planteando la igualdad \(y=\frac{1}3(2x+1)\), y despejando, obtenemos que \(x=\frac{3y-1}2\), que es racional. Esto prueba que \(f\) es sobreyectiva. Por tanto, \(f\) es biyectiva.</p>
+      <p>De cómo hemos demostrado la sobreyectividad, se sigue que \(f^{-1}(y)=\frac{1}2(3y-1)\).</p>
+    </span>
 </article>
 
 <hr>
 
 <p style="font-size: 10pt">Esta página está basada en los apuntes de J.C. Rosales y P. A. García-Sánchez, <a ref="https://hdl.handle.net/10481/43099">Notas de de Álgebra Lineal y Estructuras Matemáticas</a> Las representaciones gráficas se han realizado con <a href="https://jsxgraph.uni-bayreuth.de">JSXGraph</a> y con <a href="https://viz-js.com">viz.js</a>. Las animaciones en JSXGraph y el maquetado de la página han sido realizados por Pedro A. García Sánchez.</p>
+
+
+<script type="text/javascript" language="javascript">
+  function show2(divID) {
+
+      var sol = document.getElementById("sol-"+divID);
+      var div = document.getElementById(divID);
+
+      if(sol.style.display == "none"){
+        sol.style.display = "unset";
+      }else{
+        sol.style.display = "none";
+      }
+
+
+      if(div.innerHTML == "Solución"){
+        div.innerHTML = "Oculta solución";
+      }else{
+        div.innerHTML = "Solución";
+      }
+
+  }
+
+</script>
 
 
 </body>
