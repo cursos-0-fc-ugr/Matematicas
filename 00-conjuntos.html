@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="otro.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
   <script type="text/javascript" src="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.8.2/viz.js"></script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.1/katex.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.1/contrib/auto-render.min.js" type="text/javascript"></script>
@@ -251,7 +251,12 @@
     <header>
       <h3>Ejercicio</h3>
     </header>
-  <p>En el conjunto de los números naturales <span class="math inline">\(\mathbb N=\{0,1,2,\ldots\}\)</span> definimos la relación <span class="math inline">\(a\mid b\)</span> si <span class="math inline">\(b\)</span> es múltiplo de <span class="math inline">\(a\)</span>. Demuestra que <span class="math inline">\(\mid\)</span> es una relación de orden.</p>
+  <p>En el conjunto de los números naturales <span class="math inline">\(\mathbb N=\{0,1,2,\ldots\}\)</span> definimos la relación <span class="math inline">\(a\mid b\)</span> si <span class="math inline">\(b\)</span> es múltiplo de <span class="math inline">\(a\)</span>. Demuestra que <span class="math inline">\(\mid\)</span> es una relación de orden.<button id="e3" class="button" onclick="show2('e3');">Solución</button></p>
+  <span id="sol-e3" style="display:none;">
+    <p>Como para cualquier natural \(n\), se tiene que \(n\) divide a \(n\), tenemos que es reflexiva.</p>
+    <p>Si tenemos tres números naturales tales que \(a\mid b\) y \(b\mid c\), entonces existen \(n,m\in \mathbb{N}\) de forma que \(b=n a\) y \(c=m b\). Substituyendo \(b\) en la segunda igualdad, tenemos \(c=m(na)= (mn)a\), y en consecuencia \(a\mid c\). Esto prueba que la relación de divisibilidad es transitiva.</p>
+    <p>Para la antisimetría, supongamos que \(a\mid b\) y que \(b\mid a\), con \(a,b\in \mathbb{N}\). Si \(a\) y \(b\) son cero, hemos terminado. Entonces existen \(m,n\in \mathbb{N}\) de forma que \(a=n b\) y \(b=ma\). Si cambiamos \(b\) por su valor en la primera igualdad, tenemos \( a= n m a\), y de igual manera \(b=mnb\). Como, o bien \(a\) o \(b\) es no nulo, esto lleva a que \(mn=1\). Sobre los naturales esto sólo es posible si \(n=m=1\). Esto demuestra que \(a=1b=b\), y por tanto la relación es antisimétrica.</p>
+  </span>
 </article>
 
 <article>
@@ -261,10 +266,10 @@
   <p>Sea <span class="math inline">\(X\)</span> un conjunto. Demuestra que <span class="math inline">\(\subseteq\)</span> es una relación de orden en <span class="math inline">\(\mathcal P(X)\)</span>.</p>
 </article>
 
-<p>El conjunto de partes de \(\{1,2\}\) ordenado por inclusión se puede representar como sigue:</p>
+<p>El conjunto de partes de \(\{1,2,3\}\) ordenado por inclusión se puede representar como sigue:</p>
 <center><span id="partes" class='content'>Grafo (se necesita conexión a internet) </span></center>
 <script>
- document.getElementById("partes").innerHTML =Viz('graph NSGraph{     node [shape=none]; 0 [label="Ø"]; 1 [label="{1}"]; 2 [label="{2}"]; 12 [label="{1,2}"]; 1 -- 0; 2 -- 0; 12 -- 1; 12 -- 2 }', {engine: "dot"});
+ document.getElementById("partes").innerHTML =Viz('graph NSGraph{     node [shape=none]; 0 [label="Ø"]; 1 [label="{1}"]; 2 [label="{2}"]; 3 [label="{3}"]; 12 [label="{1,2}"]; 13 [label="{1,3}"]; 23 [label="{2,3}"]; 123 [label="{1,2,3}"]; 1 -- 0; 2 -- 0; 3--0; 12 -- 1; 12 -- 2; 13 -- 1; 13 -- 3; 23 -- 2; 23 -- 3; 123 -- 12; 123 -- 13; 123 -- 23;  }', {engine: "dot"});
 </script>
 
 
