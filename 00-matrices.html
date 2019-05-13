@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Matrices</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="otro.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Matrices</h1>
+</div>
+<h1 id="matrices">Matrices</h1>
+<p>Sean <span class="math inline">\(I=\{1,2,\ldots,m\}\)</span> y <span class="math inline">\(J=\{1,2,\ldots,n\}\)</span>. Una <em>matriz</em> de orden <span class="math inline">\(m\times n\)</span> sobre un cuerpo <span class="math inline">\(K\)</span> es una aplicación <span class="math display">\[A:I\times J\to K,\ (i,j)\mapsto a_{ij}.\]</span> Normalmente a la matriz <span class="math inline">\(A\)</span> la representaremos de la siguiente forma <span class="math display">\[A=\begin{pmatrix}
+    a_{11} &amp; a_{12} &amp; \ldots &amp; a_{1n}\\
+    a_{21} &amp; a_{22} &amp; \ldots &amp; a_{2n}\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn}
+   \end{pmatrix},\]</span> y a veces simplemente escribiremos <span class="math inline">\(A=(a_{ij})\)</span>, si queda claro dónde varían <span class="math inline">\(i\)</span> y <span class="math inline">\(j\)</span>. Diremos que <span class="math inline">\(A\)</span> es una matriz con <span class="math inline">\(m\)</span> filas y <span class="math inline">\(n\)</span> columnas.</p>
+<p>Denotaremos por <span class="math inline">\(\mathcal M_{m\times n}(K)\)</span> al conjunto de las matrices de orden <span class="math inline">\(m\times n\)</span> sobre <span class="math inline">\(K\)</span>.</p>
+<p>Dada <span class="math display">\[A=\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \ldots &amp; a_{1n}\\
+a_{21} &amp; a_{22} &amp; \ldots &amp; a_{2n}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn}
+\end{pmatrix}\in \mathcal M_{m\times n}(K),\]</span> y <span class="math inline">\(\lambda\)</span> en el cuerpo <span class="math inline">\(K\)</span>, el producto de <span class="math inline">\(\lambda\)</span> por <span class="math inline">\(A\)</span> es <span class="math display">\[\lambda A=\begin{pmatrix}
+\lambda a_{11} &amp; \lambda a_{12} &amp; \ldots &amp; \lambda a_{1n}\\
+\lambda a_{21} &amp; \lambda a_{22} &amp; \ldots &amp; \lambda a_{2n}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\lambda a_{m1} &amp; \lambda a_{m2} &amp; \ldots &amp; \lambda a_{mn}
+\end{pmatrix}\in \mathcal M_{m\times n}(K).\]</span> A esta operación se le llama <em>producto por escalares</em>.</p>
+<p>El conjunto <span class="math inline">\(\mathcal M_{m\times n}(K)\)</span> con la suma coordenada a coordenada <span><span class="math display">\[\begin{pmatrix}
+    a_{11} &amp; a_{12} &amp; \ldots &amp; a_{1n}\\
+    a_{21} &amp; a_{22} &amp; \ldots &amp; a_{2n}\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn}
+    \end{pmatrix} +
+    \begin{pmatrix}
+    b_{11} &amp; b_{12} &amp; \ldots &amp; b_{1n}\\
+    b_{21} &amp; b_{22} &amp; \ldots &amp; b_{2n}\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    b_{m1} &amp; b_{m2} &amp; \ldots &amp; b_{mn}
+    \end{pmatrix} =
+    \begin{pmatrix}
+    a_{11}+b_{11} &amp; a_{12}+b_{12} &amp; \ldots &amp; a_{1n}+b_{1n}\\
+    a_{21}+b_{21} &amp; a_{22}+b_{22} &amp; \ldots &amp; a_{2n}+b_{2n}\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    a_{m1}+b_{m1} &amp; a_{m2}+b_{m2} &amp; \ldots &amp; a_{mn}+b_{mn}
+    \end{pmatrix}.\]</span></span> tiene estructura de grupo abeliano, esto es, la suma es</p>
+<ul>
+<li><p>asociativa (<span class="math inline">\((A+B)+C=A+(B+C)\)</span>),</p></li>
+<li><p>tiene elemento neutro (la matriz con todas las entradas iguales a cero),</p></li>
+<li><p>toda matriz tiene inversa (<span class="math inline">\(-A+A=0=A+(-A)\)</span>; <span class="math inline">\(-A=(-1)A\)</span>), y</p></li>
+<li><p>es conmutativa (<span class="math inline">\(A+B=B+A\)</span>).</p></li>
+</ul>
+<article>
+  <h3>Ejercicio</h3>
+<p>Calcula la suma de <span class="math inline">\(\begin{pmatrix} 1 &amp; -2 &amp; 3\\ 3 &amp; 4 &amp; -2\end{pmatrix}\)</span> y <span class="math inline">\(\begin{pmatrix} 2 &amp; 3 &amp; -3\\ 3 &amp; 0 &amp; 2\end{pmatrix}\)</span> en <span class="math inline">\(\mathcal M_{2\times 3}(\mathbb{R})\)</span>.</p>
+</article>
+<p>El conjunto <span class="math inline">\(\mathcal M_{m\times n}(K)\)</span>, con la suma y el producto por escalares definidos arriba, es un espacio vectorial. Esto, además de las propiedades que hemos visto para la suma conlleva que para todo <span class="math inline">\(\lambda, \beta\in K\)</span> y <span class="math inline">\(A,B\in \mathcal M_{m\times n}\)</span>,</p>
+<ul>
+<li><p><span class="math inline">\(\lambda (\beta A)=(\lambda\beta)A\)</span>,</p></li>
+<li><p><span class="math inline">\(\lambda(A+B)=\lambda A+ \lambda B\)</span>,</p></li>
+<li><p><span class="math inline">\((\lambda + \beta)A=\lambda A+\beta A\)</span>,</p></li>
+<li><p><span class="math inline">\(1A=A\)</span>.</p></li>
+</ul>
+<p>Sea <span class="math inline">\(A=(a_{ij})\in \mathcal M_{m\times n}(K)\)</span> y <span class="math inline">\(B=(b_{jk})\in \mathcal M_{n\times p}(K)\)</span>. Entonces podemos definir el <em>producto</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> como <span class="math inline">\(AB=C=(c_{ik})\in \mathcal M_{m\times p}(K)\)</span> con <span class="math display">\[c_{ik}=a_{i1}b_{1k}+a_{i2}b_{2k}+\cdots + a_{in}b_{nk}.\]</span></p>
+<article>
+    <h3>Ejercicio</h3>  
+<p>Sean <span class="math inline">\(A=\begin{pmatrix} 1 &amp; -2 &amp; 3\\ -3 &amp; 4 &amp; -2\end{pmatrix}\in\mathcal M_{2\times 3}(\mathbb{Q})\)</span> y <span class="math inline">\(B=\begin{pmatrix} -1&amp; 2&amp; 1&amp; -2\\ 2 &amp; 0 &amp; -1 &amp; 0\\ -3&amp; 1&amp; 0 &amp; 1 \end{pmatrix}\in \mathcal M_{3\times 4}(\mathbb{Q})\)</span>. Calcula <span class="math inline">\(AB\)</span>.</p>
+</article>
+<p>Una matriz de orden <span class="math inline">\(n\times n\)</span> diremos que es una matriz <em>cuadrada</em> de orden <span class="math inline">\(n\)</span>.</p>
+<p>El conjunto <span class="math inline">\(\mathcal M_{n\times n}(K)\)</span> con las operaciones suma y producto es un anillo. Esto implica que además de ser <span class="math inline">\((\mathcal M_{n\times n}(K),+)\)</span> un grupo como ya hemos visto antes, se tiene que el producto</p>
+<ul>
+<li><p>es asociativo (<span class="math inline">\((AB)C=A(BC)\)</span>),</p></li>
+<li><p>tiene elemento neutro (la <em>matriz identidad</em>, que es la matriz que tiene todas sus entradas cero salvo en la diagonal que tiene unos; a dicha matriz la denotamos por <span class="math inline">\(I_n\)</span>, o simplemente <span class="math inline">\(I\)</span> cuando <span class="math inline">\(n\)</span> queda claro en el contexto),</p></li>
+<li><p>es distributivo respecto de la suma (<span class="math inline">\(A(B+C)=AB+AC\)</span> y <span class="math inline">\((A+B)C=AC+BC\)</span>).</p></li>
+</ul>
+<article>
+    <h3>Ejercicio</h3>  
+<p>Sean <span class="math inline">\(A=\begin{pmatrix}
+          1&amp; 2\\ 3&amp; 4
+         \end{pmatrix}\)</span> and <span class="math inline">\(B=\begin{pmatrix}
+    1&amp; 2\\ 2&amp; 0
+   \end{pmatrix}\)</span>. Comprueba que <span class="math inline">\(AB\neq BA\)</span>.</p>
+</article>
+
+<h1 id="determinantes">Determinantes</h1>
+<p>Dada <span class="math inline">\(A=(a_{ij})\in \mathcal M_{n\times n}(K)\)</span>, definimos <span class="math inline">\(|A|\)</span>, el determinante de <span class="math inline">\(A\)</span>, recursivamente de la siguiente forma.</p>
+<ol style="list-style-type: decimal">
+<li><p>Para <span class="math inline">\(n=1\)</span>, <span class="math inline">\(|(a_{11})|=a_{11}\)</span> (el determinante de una matriz de orden <span class="math inline">\(1\times 1\)</span> es su único coeficiente).</p></li>
+<li><p>Supuesto que sabemos calcular el determinante de matrices de orden <span class="math inline">\(n-1\)</span>, dado <span class="math inline">\(i\in\{1,\ldots,n\}\)</span>, <span class="math display">\[|A|=a_{i1}\alpha_{i1}+\cdots+a_{in}\alpha_{in},\]</span> donde <span class="math inline">\(\alpha_{ij}=(-1)^{i+j}|A_{ij}|\)</span> se conoce como el <em>adjunto</em> de la entrada <span class="math inline">\(a_{ij}\)</span>, con <span class="math inline">\(A_{ij}\in \mathcal M_{(n-1)\times(n-1)}(K)\)</span> la matriz que se obtiene al eliminar la fila <span class="math inline">\(i\)</span>-ésima y la columna <span class="math inline">\(j\)</span>-ésima de <span class="math inline">\(A\)</span>. Esta fórmula se conoce como Desarrollo de Laplace por la fila <span class="math inline">\(i\)</span> del determinante de <span class="math inline">\(A\)</span>, y el resultado no depende de <span class="math inline">\(i\)</span>. Es más, también se puede desarrollar por cualquier columna. Dado <span class="math inline">\(j\)</span> el Desarrollo de Laplace por la columna <span class="math inline">\(j\)</span> es <span class="math display">\[|A|=a_{1j}\alpha_{1j}+\cdots+a_{nj}\alpha_{nj}.\]</span></p></li>
+</ol>
+<p>Se puede comprobar fácilmente que</p>
+<ul>
+<li><p><span class="math inline">\(\left| \begin{matrix}
+                a_{11} &amp; a_{12} \\
+        a_{21} &amp; a_{22}
+               \end{matrix}\right| = a_{11}a_{22}-a_{12}a_{21}\)</span>.</p></li>
+<li><p><span class="math inline">\(\left| \begin{matrix}
+          a_{11} &amp; a_{12} &amp; a_{13} \\
+          a_{21} &amp; a_{22} &amp; a_{23} \\
+          a_{31} &amp; a_{32} &amp; a_{33} 
+               \end{matrix}\right| = a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{21}a_{32}a_{13}-a_{13}a_{22}a_{31}-a_{23}a_{32}a_{11}-a_{12}a_{21}a_{33}\)</span>.</p></li>
+</ul>
+<article>
+    <h3>Ejercicio</h3>  
+<p>Calcula el determinante de <span class="math inline">\(\begin{pmatrix}
+                              1 &amp; 2 &amp; 3\\ 3&amp; -12 &amp;-1\\ -2&amp; 2&amp; -2
+                             \end{pmatrix}\in \mathcal M_{3\times 3}(\mathbb{Q})\)</span>.</p>
+</article>
+<article>
+<h3>Ejercicio</h3>  
+<p>Calcula el determinante de <span class="math display">\[\begin{pmatrix}
+  1&amp; 2&amp; 3&amp; 1\\
+-2&amp; 0&amp; 1&amp; 1\\
+3&amp;1 &amp; 0&amp; -1\\
+2&amp; 0 &amp; 1 &amp;-3
+ \end{pmatrix}\in \mathcal M_{4\times 4}(\mathbb{Q}).\]</span></p>
+</article>
+
+<p>Si <span class="math inline">\(A=(a_{ij})\in \mathcal M_{m\times n}(K)\)</span>, la <em>matriz traspuesta</em> de <span class="math inline">\(A\)</span> es <span class="math display">\[A^t =
+  \begin{pmatrix}
+    a_{11} &amp; a_{21} &amp; \ldots &amp; a_{n1}\\
+    a_{12} &amp; a_{22} &amp; \ldots &amp; a_{n2}\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    a_{1m} &amp; a_{2m} &amp; \ldots &amp; a_{nm}
+   \end{pmatrix}\in \mathcal M_{n\times m}(K),\]</span> esto es, la matriz que se obtiene a partir de <span class="math inline">\(A\)</span> intercambiando filas por columnas.</p>
+<h2 id="propiedades-de-los-determinantes" class="unnumbered">Propiedades de los determinantes</h2>
+<p>Sea <span class="math inline">\(A\in \mathcal M_{n\times n}(K)\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(|A|=|A^t|\)</span>.</p></li>
+<li><p>Si se intercambian dos filas (o dos columnas) de <span class="math inline">\(A\)</span> se obtiene una nueva matriz cuyo determinante es <span class="math inline">\(-|A|\)</span>.</p></li>
+<li><p>Si multiplicamos todos los elementos de una fila (o de una columna) de <span class="math inline">\(A\)</span> por <span class="math inline">\(\alpha\in K\)</span>, obtenemos una matriz con determinante <span class="math inline">\(\alpha |A|\)</span>.</p></li>
+<li><p>Si a una fila de <span class="math inline">\(A\)</span> le sumamos otra fila de <span class="math inline">\(A\)</span> multiplicada por un elemento de <span class="math inline">\(K\)</span>, entonces la nueva matriz tiene el mismo determinante que <span class="math inline">\(A\)</span> (lo mismo ocurre si hacemos esta operación con columnas).</p></li>
+<li><p>Si <span class="math inline">\(B\in \mathcal M_{n\times n}(K)\)</span>, entonces <span class="math inline">\(|A B|=|A||B|\)</span>.</p></li>
+</ol>
+<p>Con estas propiedades podemos calcular el determinante de una matriz reduciéndola a una forma triangular superior o inferior, y luego multiplicando los elementos de la diagonal (el que el determinante de una matriz triangular sea el producto de los elementos de su diagonal es consecuencia del desarrollo de Laplace).</p>
+<p><span class="math display">\[\begin{vmatrix}
+ 1 &amp; 0 &amp;1 \\
+ 2 &amp; -1 &amp;3\\
+ 0 &amp; -2 &amp;1 
+\end{vmatrix} \stackrel{f_2\leftarrow f_2-2f_1}{=}
+\begin{vmatrix}
+1 &amp; 0 &amp;1 \\
+0 &amp; -1 &amp;1\\
+0 &amp; -2 &amp;1 
+\end{vmatrix} \stackrel{f_2\leftarrow -f_2}{=}
+-\begin{vmatrix}
+1 &amp; 0 &amp;1 \\
+0 &amp; 1 &amp;-1\\
+0 &amp; -2 &amp;1 
+\end{vmatrix} \stackrel{f_3\leftarrow f_3+2f_2}{=}
+-\begin{vmatrix}
+1 &amp; 0 &amp;1 \\
+0 &amp; 1 &amp;-1\\
+0 &amp; 0 &amp;-1 
+\end{vmatrix} = -(1\times1\times-1)=1.\]</span> La notación <span class="math inline">\(f_2\leftarrow f_2-2f_1\)</span> significa que estamos cambiando la segunda fila por el resultado de restarle a la segunda fila dos veces la primera.</p>
+
+<article>
+    <h3>Ejercicio</h3>  
+<p>Calcula el determinante de la matriz <span class="math display">\[\begin{pmatrix}
+   -2 &amp; 3&amp; 4&amp; 0\\
+   3&amp; 1&amp; -2&amp; 2\\
+   4&amp; -3&amp; 3&amp; -1\\
+   2&amp; 3&amp; 3&amp; -2
+  \end{pmatrix}\in \mathcal M_{4\times 4}(\mathbb{Q}).\]</span></p>
+</article>
+
+<p>Una matriz <span class="math inline">\(A\in \mathcal M_{n\times n}(K)\)</span> es <em>regular</em> si tiene inversa para el producto, esto es, si existe <span class="math inline">\(B\)</span> tal que <span class="math inline">\(AB=BA=I_n\)</span>. En dicho caso, a la matriz <span class="math inline">\(B\)</span> se le denota por <span class="math inline">\(A^{-1}\)</span>.</p>
+<p>La matriz <em>adjunta</em> de <span class="math inline">\(A\)</span> es la matriz formada por los adjuntos de las entradas de <span class="math inline">\(A\)</span>, a saber, <span class="math display">\[\overline{A}=
+  \begin{pmatrix}
+    \alpha_{11} &amp; \alpha_{12} &amp; \ldots &amp; \alpha_{1n}\\
+    \alpha_{21} &amp; \alpha_{22} &amp; \ldots &amp; \alpha_{2n}\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    \alpha_{1} &amp; a_{m2} &amp; \ldots &amp; \alpha_{nn}
+   \end{pmatrix}.\]</span></p>
+<h2 id="teorema" class="unnumbered">Teorema</h2>
+<p>Sea <span class="math inline">\(A\in \mathcal M_{n\times n}(K)\)</span>. Entonces <span class="math inline">\(A\)</span> es regular si y sólo si <span class="math inline">\(|A|\neq 0\)</span>. En ese caso <span class="math display">\[A^{-1}=|A|^{-1}\overline{A}^t.\]</span></p>
+
+<article>
+    <h3>Ejercicio</h3>  
+<p>Calcula la inversa de <span class="math display">\[\begin{pmatrix}
+   -2 &amp; 1&amp; 2\\
+   1 &amp; 0 &amp; 1\\
+   1&amp; -2 &amp; -2
+  \end{pmatrix}\in \mathcal M_{3\times 3}(\mathbb{R}).\]</span></p>
+</article>
+
+<h1 id="forma-escalonada-por-filas-de-una-matriz">Forma escalonada (por filas) de una matriz</h1>
+<p>Sea <span class="math inline">\(A\in \mathcal{M}_{m \times n}(K)\)</span>. Decimos que está en forma escalonada si</p>
+<ul>
+<li><p>todas las filas con entradas nulas están en la parte inferior de la matriz,</p></li>
+<li><p>el primer elemento no nulo de una fila que no sea la primera (empezando por la izquierda) está en una columna a la derecha del primer elemento no nulo de la fila anterior.</p></li>
+</ul>
+<p>Toda matriz se puede transformar en una matriz escalonada utilizando las siguientes operaciones elementales.</p>
+<ul>
+<li><p>Intercambio de filas.</p></li>
+<li><p>Multiplicar filas por escalares no nulos.</p></li>
+<li><p>Sumar a una fila el múltiplo de otra por un escalar.</p></li>
+</ul>
+<p>Usando el ejemplo del determinante que vimos antes, tenemos que una forma escalonada de <span class="math display">\[\begin{pmatrix}
+1 &amp; 0 &amp;1 \\
+2 &amp; -1 &amp;3\\
+0 &amp; -2 &amp;1 
+\end{pmatrix}\]</span> es <span class="math display">\[\begin{pmatrix}
+1 &amp; 0 &amp;1 \\
+0 &amp; 1 &amp;-1\\
+0 &amp; 0 &amp;-1 
+\end{pmatrix}.\]</span></p>
+<p>El <em>rango</em> de una matriz es el número de filas no nulas de cualquiera de sus formas escalonadas. Se puede calcular como el tamaño de la submatriz cuadrada más grande con determinante no nulo.</p>
+<p>El rango de la matriz <span class="math display">\[\begin{pmatrix}
+1 &amp; 0 &amp;1 \\
+0 &amp; 1 &amp;-1\\
+0 &amp; 0 &amp;-1 
+\end{pmatrix}\]</span> es por tanto tres.</p>
+<p>Veamos otro ejemplo de cómo obtener la forma escalonada. <span class="math display">\[\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 &amp; 8 \\
+9 &amp; 10 &amp; 11 &amp; 12
+\end{pmatrix}
+\stackrel{f_2\leftarrow f_2-5f_1}{\sim}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; -4 &amp; -8 &amp; -12 \\
+9 &amp; 10 &amp; 11 &amp; 12
+\end{pmatrix}
+\stackrel{f_2\leftarrow f_2-5f_1}{\sim}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 1 &amp; 2 &amp; 3 \\
+9 &amp; 10 &amp; 11 &amp; 12
+\end{pmatrix}\]</span> <span class="math display">\[\stackrel{f_3\leftarrow f_3-9f_1}{\sim}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 1 &amp; 2 &amp; 3 \\
+0 &amp; -8 &amp; -16 &amp; -24
+\end{pmatrix}
+\stackrel{f_3\leftarrow f_3+8f_2}{\sim}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 1 &amp; 2 &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}.\]</span></p>
+
+<hr>
+
+<p style="font-size: 10pt">Esta página está basada en los apuntes de J.C. Rosales y P. A. García-Sánchez, <a href="http://hdl.handle.net/10481/43099">Notas de de Álgebra Lineal y Estructuras Matemáticas</a>.</p>
+
+</body>
+</html>

@@ -20,6 +20,7 @@ Este curso está disponible en [openswad](https://openswad.org/es?crs=2688), don
 1. [Polinomios](00-polinomios.html)
 1. [Fracciones algebraicas](01-fracciones_algebraicas.html)
 2. [Ecuaciones polinomiales](00-ecuaciones-polinomicas.html)
+3. [Matrices](00-matrices.html)
 3. [Sistemas de ecuaciones lineales](00-sistemas-ecuaciones-lineales.html)
 3. [Inecuaciones](02-inecuaciones.html)
 4. [Funciones elementales](03-funciones_elementales.html)
