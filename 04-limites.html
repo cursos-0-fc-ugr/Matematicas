@@ -7,7 +7,7 @@
   <title>Límites y continuidad</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="otro.css" type="text/css" />
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
   <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>-->
   <link rel="stylesheet" type="text/css" href="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
   <script type="text/javascript" src="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
@@ -93,7 +93,7 @@
   </script>
 
 
-  <p>Las funciones elementales que hemos visto en la sesión anterior son continuas. Por tanto, se tiene que <span class="math">\[\lim_{x \to -1} \left( x^2-x+1 \right) =3, \quad  \lim_{x \to 0} \cos(x)  = 1, \quad \lim_{x \to e^2} \log(x)= 2 .\]</span> Además, la suma, producto y composición de funciones continuas da como resultado una función continua. Por ejemplo, la función <span class="math">\(f(x)=x^2+\log(x)\)</span> es continua, con lo que, <span class="math">\[\lim_{x \to e^2} x^2+\log(x)= e^4+2.\]</span></p>
+  <p>Las funciones elementales que hemos visto en la sesión anterior son continuas. Por tanto, se tiene que <span class="math">\[\lim_{x \to -1} \left( x^2-x+1 \right) =3, \quad  \lim_{x \to 0} \cos(x)  = 1, \quad \lim_{x \to e^2} \log(x)= 2 .\]</span> Además, la suma, producto y composición de funciones continuas da como resultado una función continua. Por ejemplo, la función <span class="math">\(f(x)=x^2+\log(x)\)</span> es continua, con lo que, <span class="math">\[\lim_{x \to e^2} \left(x^2+\log(x)\right) = e^4+2.\]</span></p>
   <h1 id="cálculo-de-límites">Cálculo de límites</h1>
   <h2 id="límites-laterales">Límites laterales</h2>
   <p>Hay veces en las que el cálculo del límite en un punto <span class="math">\(a\)</span> depende de la posición, a la izquierda o a la derecha, de los puntos que tomemos acercándose a <span class="math">\(a\)</span>. Esta situación, por ejemplo, se presenta en los puntos que dividen las partes de una función definida a trozos.</p>
@@ -103,9 +103,9 @@
   \end{cases}\]</span>
 
 
-  <p>Vamos a calcular el límite de la función dada en los puntos ``conflictivos&quot;; esto es, en los puntos donde la expresión de <span class="math">\(f\)</span> cambia. En este caso son <span class="math">\(x=0\)</span>, y <span class="math">\(x=1\)</span>. Como a ambos lados de cada uno de estos puntos la expresión de la función es distinta, nos vemos obligados a calcular los límites laterales para decidir si la función <span class="math">\(f\)</span> tiene límite en ellos.</p>
+  <p>Vamos a calcular el límite de la función dada en los puntos &quot;conflictivos&quot;; esto es, en los puntos donde la expresión de <span class="math">\(f\)</span> cambia. En este caso son <span class="math">\(x=0\)</span>, y <span class="math">\(x=1\)</span>. Como a ambos lados de cada uno de estos puntos la expresión de la función es distinta, nos vemos obligados a calcular los límites laterales para decidir si la función <span class="math">\(f\)</span> tiene límite en ellos.</p>
   <p><span class="math">\[\begin{aligned}
-  \lim_{x \to 0^-}f(x) &amp; = \lim_{x \to 0} x^2+1= 1, \\
+  \lim_{x \to 0^-}f(x) &amp; = \lim_{x \to 0} (x^2+1)= 1, \\
   \lim_{x \to 0^+}f(x) &amp; = \lim_{x \to 0} e^x= e^0=1,\end{aligned}\]</span></p>
 
   <!--
