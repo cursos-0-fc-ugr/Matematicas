@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <title>Inecuaciones</title>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
-  
+
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
@@ -23,11 +23,11 @@
 <div id="header">
 <h1 class="title">Inecuaciones</h1>
 </div>
-<p>Las inecuaciones son expresiones algebraicas relacionadas no por la igualdad (<span class="math">\(=\)</span>) como en las ecuaciones, sino por símbolos de desigualdad, como “<span class="math">\(\le\)</span>”, “<span class="math">\(\ge\)</span>”, “<span class="math">\(&lt;\)</span>” o “<span class="math">\(&gt;\)</span>”.</p>
-<p>Las inecuaciones con solución tienen, en general, infinitas soluciones. El proceso para resolverlas es similar al que se sigue para resolver una ecuación, siendo cuidadoso con las reglas de cálculo cuando aparecen desigualdades. Por ejemplo, por destacar una de estas reglas, si en algún momento de la resolución es preciso multiplicar o dividir ambos miembros de la inecuación por un número negativo, recordamos que la desigualdad se invierte.</p>
+<p>Las inecuaciones son expresiones algebraicas relacionadas no por la igualdad (<span class="math">\(=\)</span>) como en las ecuaciones, sino por desigualdades representadas con los símobols “<span class="math">\(\le\)</span>”, “<span class="math">\(\ge\)</span>”, “<span class="math">\(&lt;\)</span>” o “<span class="math">\(&gt;\)</span>”.</p>
+<p>Las inecuaciones con solución pueden tener un número finito o infinito de soluciones. El proceso para resolverlas es similar al que se sigue para resolver una ecuación, siendo cuidadoso con las reglas de cálculo cuando aparecen desigualdades. Por ejemplo, por destacar una de estas reglas, si en algún momento de la resolución es preciso multiplicar o dividir ambos miembros de la inecuación por un número negativo, recordamos que la desigualdad se invierte.</p>
 <section>
   <header>
-    <h1 id="inecuaciones-lineales-con-una-incógnita">Inecuaciones lineales con una incógnita</h1>
+    <h2 id="inecuaciones-lineales-con-una-incógnita">Inecuaciones lineales con una incógnita</h2>
   </header>
   <p>Son las inecuaciones más sencillas que se nos pueden presentar.</p>
   <p>Vamos a resolver la inecuación <span class="math">\(2x+5 \ge x-5\)</span>.</p>
@@ -36,7 +36,7 @@
   %\intertext{pasamos la $x$ del miembro izquierdo a la derecha, y los coeficientes independientes los dejamos a la izquierda}
   2x-x &amp; \ge -5-5 \\
   x &amp;\ge -10\end{aligned}\]</span></p>
-  <p>Por tanto la solución de la inecuación son todos los números reales que verifican ser mayores o iguales a -10, es decir, las soluciones se encuentran en el intervalo <span class="math">\([-10,+\infty[\)</span>.</p>
+  <p>Por tanto la solución de la inecuación son todos los números reales que verifican ser mayores o iguales a -10, es decir, las soluciones se encuentran en el intervalo <span class="math">\([-10,+\infty)\)</span>.</p>
   <article>
     <header>
       <h3>Ejercicio</h3>
@@ -55,7 +55,7 @@
     <li><p>Ídem al ejercicio anterior con la inecuación <span class="math">\(\dfrac{3x}{5}-\dfrac{11x}{10} \ge 1-\dfrac{6-x}{4}\).</span>
       <button id="e1-3" class="button"  onclick="show2('e1-3');">Solución</button>
       <div id="sol-e1-3" style="display:none;">
-        Solución: $x <\dfrac{2}{2}$.
+        Solución: $x \leq\dfrac{2}{3}$.
       </div></p></li>
     <li><p>Resuelve <span class="math">\((x+1)^2-(x-1)^2+12 \ge 0\).</span>
       <button id="e1-4" class="button"  onclick="show2('e1-4');">Solución</button>
@@ -67,9 +67,9 @@
 </section>
 <section>
   <header>
-    <h1 id="sistemas-lineales-de-dos-inecuaciones-con-una-incógnita">Sistemas lineales de dos inecuaciones con una incógnita</h1>
+    <h2 id="sistemas-lineales-de-dos-inecuaciones-con-una-incógnita">Sistemas lineales de dos inecuaciones con una incógnita</h2>
   </header>
-  <p>Vamos a plantear ahora sistemas de dos inecuaciones lineales con una incógnita. Veremos que las soluciones, si las hay, vuelven a ser infinitas.</p>
+  <p>Vamos a plantear ahora sistemas de dos inecuaciones lineales con una incógnita. Veremos que las soluciones, si hay más de una, son infinitas.</p>
   <p>Consideremos el sistema <span class="math">\[\left\{
   \begin{aligned} x-3 &amp;&gt;0 \\
                 2x &amp; &lt; 8
@@ -79,7 +79,7 @@
   \begin{aligned}
    x &amp; &gt;3 \\
    x &amp; &lt;4
-  \end{aligned}\]</span> con lo que la solución es <span class="math">\(3 &lt; x &lt;4\)</span>. Es decir, las soluciones de este sistema son todos los números reales que están en el intervalo <span class="math">\(]3,4[\)</span>.</p>
+  \end{aligned}\]</span> con lo que la solución es <span class="math">\(3 &lt; x &lt;4\)</span>. Es decir, las soluciones de este sistema son todos los números reales que están en el intervalo <span class="math">\((3,4)\)</span>.</p>
   <p>Hay que tener en cuenta que un sistema de inecuaciones de este tipo puede tener solución (sistema compatible) o puede no tenerlo (sistema incompatible).</p>
   <article>
     <header>
@@ -110,9 +110,9 @@
 </section>
 <section>
   <header>
-    <h1 id="inecuaciones-de-segundo-grado">Inecuaciones de segundo grado</h1>
+    <h2 id="inecuaciones-de-segundo-grado">Inecuaciones de segundo grado</h2>
   </header>
-  <p>También podemos plantear y resolver inecuaciones a partir de un polinomio de grado 2; esto es, una inecuación del tipo <span class="math">\(P(x) \le Q(x)\)</span>, o, <span class="math">\(P(x) &lt;Q(x)\)</span>, donde ambas expresiones, <span class="math">\(P\)</span> y <span class="math">\(Q\)</span>, son polinomios de grado 2. Para resolverlas, simplificamos coeficientes hasta conseguir una inecuación de 2º grado comparada con el cero. Después factorizamos el polinomio resultante (utilizando la resolución de una ecuación de 2º grado) y discutimos casos. Vemos todo este proceso con un ejemplo:</p>
+  <p>También podemos plantear y resolver inecuaciones que involucren de un polinomio de grado 2; esto es, una inecuación del tipo <span class="math">\(P(x) \le Q(x)\)</span>, o, <span class="math">\(P(x) &lt;Q(x)\)</span>, donde ambas expresiones, <span class="math">\(P\)</span> y <span class="math">\(Q\)</span>, son polinomios de grado 2. Para resolverlas, simplificamos coeficientes hasta conseguir una inecuación de 2º grado comparada con el cero. Después factorizamos el polinomio resultante (utilizando la resolución de una ecuación de 2º grado) y discutimos casos. Vemos todo este proceso con un ejemplo:</p>
   <p>Consideramos la inecuación: <span class="math">\(x^2-3x-3&lt;-4x-1\)</span>. Pasamos todos los coeficientes a un miembro, por ejemplo al izquierdo y nos queda:</p>
   <p><span class="math">\[\begin{aligned}
   x^2-3x+4x-3+1 &amp; &lt;0 \\
@@ -124,7 +124,7 @@
   \text{Si} \ x &lt; -2, &amp; \hbox{ entonces } \ (x+2)(x-1)&gt;0 \\
   \text{Si} \ -2 &lt; x &lt;1, &amp; \hbox{ entonces } \ (x+2)(x-1)&lt;0 \\
   \text{Si} \ x &gt; 1, &amp; \hbox{ entonces } \ (x+2)(x-1)&gt;0 \end{aligned}\]</span></p>
-  <p>Por tanto, la solución de la inecuación la forman los números <span class="math">\(x\)</span>, que verifican <span class="math">\(-2&lt;x&lt;1\)</span>, es decir, el intervalo <span class="math">\(]-2,1[\)</span>.</p>
+  <p>Por tanto, la solución de la inecuación la forman los números <span class="math">\(x\)</span>, que verifican <span class="math">\(-2&lt;x&lt;1\)</span>, es decir, el intervalo <span class="math">\((-2,1)\)</span>.</p>
 
   <p>Podemos dibujar la parábola $y=x^2+2x-2$ y ver gráficamente la solución.</p>
   <div id="box" class="jxgbox" style="width:500px; height:500px;"></div></br>
@@ -170,9 +170,9 @@
 
 <section>
     <header>
-      <h1 id="inecuaciones-del-tipo-fracpxqx-le-rx">Inecuaciones del tipo <span class="math">\(\dfrac{P(x)}{Q(x)} \le R(x)\)</span></h1>
+      <h2 id="inecuaciones-del-tipo-fracpxqx-le-rx">Inecuaciones del tipo <span class="math">\(\dfrac{P(x)}{Q(x)} \le R(x)\)</span></h2>
     </header>
-  <p>Cuando se resuelven este tipo de inecuaciones no hay que caer en el error de ``presuponer&quot; nada. Intentemos explicarnos mejor con el siguiente ejemplo.</p>
+  <p>Cuando se resuelven este tipo de inecuaciones no hay que caer en el error de "presuponer" nada. Intentemos explicarnos mejor con el siguiente ejemplo.</p>
 
   <p>Consideramos la inecuación: <span class="math">\(\dfrac{x^2+1}{x-1} \le x\)</span>.</p>
 
@@ -196,12 +196,12 @@
   1 &amp; \le -x \\
   %\intertext{Multiplicando ambos miembros de la inecuación por $-1$ y la desigualdad  se invierte}
   -1 &amp; \ge x\end{aligned}\]</span></p>
-  <p>Parecería entonces que la solución es el conjunto <span class="math">\(]-\infty,-1] \)</span>. Sin embargo, es fácil comprobar que el punto <span class="math">\(x=0\)</span> es solución de inecuación y, evidentemente, no pertenece al conjunto solución que acabamos de dar. ¿Qué ha pasado entonces? Ha pasado que, en el primer paso que hemos dado (multiplicar ambos miembros de la inecuación por el denominador <span class="math">\(x-1\)</span>), hemos ``presupuesto&quot; que <span class="math">\(x-1&gt;0\)</span>, es decir, que <span class="math">\(x&gt;1\)</span>. Por lo que el conjunto solución que hemos obtenido por ahora no tiene sentido con la suposición que hemos hecho de <span class="math">\(x&gt;1\)</span>. Por tanto, como en el caso <span class="math">\(x-1&gt;0\)</span> no habría solución, tenemos que contemplar la posibilidad de que <span class="math">\(x-1&lt;0\)</span>, es decir, de que <span class="math">\(x\)</span> fuera menor que <span class="math">\(1\)</span>. Consideramos este caso ahora, con lo que al multiplicar por el denominador, la desigualdad se invierte.</p>
+  <p>Parecería entonces que la solución es el conjunto <span class="math">\((-\infty,-1] \)</span>. Sin embargo, es fácil comprobar que el punto <span class="math">\(x=0\)</span> es solución de inecuación y, evidentemente, no pertenece al conjunto solución que acabamos de dar. ¿Qué ha pasado entonces? Ha pasado que, en el primer paso que hemos dado (multiplicar ambos miembros de la inecuación por el denominador <span class="math">\(x-1\)</span>), hemos &quot;presupuesto&quot; que <span class="math">\(x-1&gt;0\)</span>, es decir, que <span class="math">\(x&gt;1\)</span>. Por lo que el conjunto solución que hemos obtenido por ahora no tiene sentido con la suposición que hemos hecho de <span class="math">\(x&gt;1\)</span>. Por tanto, como en el caso <span class="math">\(x-1&gt;0\)</span> no habría solución, tenemos que contemplar la posibilidad de que <span class="math">\(x-1&lt;0\)</span>, es decir, de que <span class="math">\(x\)</span> fuera menor que <span class="math">\(1\)</span>. Consideramos este caso ahora, con lo que al multiplicar por el denominador, la desigualdad se invierte.</p>
   <p><span class="math">\[\begin{aligned}
   x^2+1 &amp; \ge x^2-x \\
   1 &amp; \ge -x \\
   x &amp; \ge -1\end{aligned}\]</span></p>
-  <p>Por tanto, la solución está formada por los puntos <span class="math">\(x\)</span> tales que <span class="math">\(x&lt;1\)</span> y además <span class="math">\(x \ge -1\)</span>. Es decir, el intervalo <span class="math">\([-1,1[\)</span>.</p>
+  <p>Por tanto, la solución está formada por los puntos <span class="math">\(x\)</span> tales que <span class="math">\(x&lt;1\)</span> y además <span class="math">\(x \ge -1\)</span>. Es decir, el intervalo <span class="math">\([-1,1)\)</span>.</p>
   <article>
     <header>
       <h3>Ejercicio</h3>

@@ -221,7 +221,7 @@
         \end{cases}\)</span>
         <button id="e1-2" class="button"  onclick="show2('e1-2');">Solución</button>
         <div id="sol-e1-2" style="display:none;">
-          <p>La función \(3x^2+x\) es contínua en todo \(\mathbb{R}\), y la función \(1/x\) lo es en el intervalo \((0,\infty)\). Por tanto sólo falta estudiar qué ocurre en el \(0\). Para ello calculamos \(\lim\nolimits_{x\to 0^-} (3x^2+x)=1=f(0)\) y \(\lim\nolimits_{x\to 0^+} \frac{1}x=+\infty\). Concluimos que la función es contínua en todo \(\mathbb{R}\setminus\{0\}\).</p>
+          <p>La función \(3x^2+x\) es contínua en todo \(\mathbb{R}\), y la función \(1/x\) lo es en el intervalo \((0,\infty)\). Por tanto sólo falta estudiar qué ocurre en el \(0\). Para ello calculamos \(\lim\nolimits_{x\to 0^-} (3x^2+x)=0=f(0)\) y \(\lim\nolimits_{x\to 0^+} \frac{1}x=+\infty\). Concluimos que la función es contínua en todo \(\mathbb{R}\setminus\{0\}\).</p>
           <p>Ésta es la gráfica de la función.</p>
 
           <div id='ebox1-2' class='jxgbox' style='width:400px; height:150px;display:inline-block;text-align: center;'> </div>
@@ -290,7 +290,7 @@
   <h2 id="cero-elevado-a-cero-infinito-elevado-a-cero-uno-elevado-a-infinito">Cero elevado a cero, infinito elevado a cero, uno elevado a infinito</h2>
   <p>Las indeterminaciones en las que aparecen funciones elevadas a funciones siempre se pueden pasar a productos o cocientes utilizando logaritmos y exponenciales. Recordemos que la función exponencial y logaritmo son inversas una de la otra o, lo que es lo mismo, que <span class="math">\[e^{\log(x)}=x \quad \text{y} \quad \log(e^x)=x.\]</span> Usando esto, si tenemos un par de funciones <span class="math">\(f(x)\)</span> y <span class="math">\(g(x)\)</span>, entonces, usando que el exponente de la función dentro del logaritmo sale multiplicando, <span class="math">\[f(x)^{g(x)}     = e^{\log\left( f(x)^{g(x)}\right) }  = e^{g(x)\log(f(x))}.\]</span></p>
   <p>Resumiendo, hemos cambiado el problema de estudiar <span class="math">\(f(x)^{g(x)}\)</span> por el de <span class="math">\(g(x)\log(f(x))\)</span>.</p>
-  <p>El cálculo del límite de <span class="math">\(x^x\)</span>, cuando <span class="math">\(x\)</span> tiende a cero, pasa por resolver una indeterminación de la forma <span class="math">\(0^0\)</span>. Utilizando exponenciales y logaritmos <span class="math">\[\lim_{x \to 0 } x^x = \lim_{x \to  0} e^{\log(x^x)} =\lim_{x \to  0} e^{x \log(x)}\]</span> pasamos a estudiar <span class="math">\(\lim_{x \to  0} x\log(x)\)</span>. El cálculo de este último lo veremos en la carrera.</p>
+  <p>El cálculo del límite de <span class="math">\(x^x\)</span>, cuando <span class="math">\(x\)</span> tiende a cero, pasa por resolver una indeterminación de la forma <span class="math">\(0^0\)</span>. Utilizando exponenciales y logaritmos <span class="math">\[\lim_{x \to 0 } x^x = \lim_{x \to  0} e^{\log(x^x)} =\lim_{x \to  0} e^{x \log(x)}\]</span> pasamos a estudiar <span class="math">\(\lim_{x \to  0} x\log(x)\)</span>. El cálculo de este último lo veremos en la correspondiente asignatura del grado.</p>
   <article>
     <header>
       <h3>Ejercicio</h3>

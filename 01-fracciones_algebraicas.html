@@ -29,7 +29,7 @@ En este documento repasaremos cómo simplificar fracciones algebraicas.
 
 <section>
   <header>
-  <h1 id="simplificaciones-elementales">Simplificaciones elementales</h1>
+  <h2 id="simplificaciones-elementales">Simplificaciones elementales</h2>
   </header>
 
   <p>En esta sección vamos a repasar los procedimientos más usuales cuando se simplifican expresiones algebraicas. Comenzamos con un ejemplo en el que, tanto el numerador como el denominador, son de fácil factorización.</p>
@@ -106,15 +106,15 @@ En este documento repasaremos cómo simplificar fracciones algebraicas.
 
 <section>
   <header>
-    <h1>Identidades notables</h1>
-    <p>En algunas expresiones tendremos que utilizar las identidades notables, por lo que vamos a recodarlas.</p>
+    <h2>Identidades notables</h2>
+    <p>En algunas expresiones tendremos que utilizar las identidades notables, por lo que vamos a recordarlas.</p>
   </header>
   <ol>
   <li><p><span class="math">\((a+b)^2=a^2+2ab+b^2\)</span></p></li>
   <li><p><span class="math">\((a-b)^2=a^2-2ab+b^2\)</span></p></li>
   <li><p><span class="math">\((a+b)(a-b)=a^2-b^2\)</span></p></li>
   </ol>
-  <p>Simplifiquemos la expresión <span class="math">\(\dfrac{x^2+4x+4}{x^2-4}\)</span>. Para ello utilizamos que $(x+2)^2=x^2+4x+2$ y que $x^2-4=(x+2)(x-2)$</p>
+  <p>Simplifiquemos la expresión <span class="math">\(\frac{x^2+4x+4}{x^2-4}\)</span>. Para ello utilizamos que $(x+2)^2=x^2+4x+2$ y que $x^2-4=(x+2)(x-2)$</p>
   <p><span class="math">\[\begin{aligned}
   \frac{x^2+4x+4}{x^2-4}&amp;=\frac{(x+2)^2}{(x+2)(x-2)} \\
   %\text{(donde hemos utilizado $(x+2)^2=x^2+4x+2$ y que $x^2-4=(x+2)(x-2)$)}
@@ -137,7 +137,7 @@ En este documento repasaremos cómo simplificar fracciones algebraicas.
 
 <section>
   <header>
-  <h1 id="suma-y-resta-de-fracciones-algebraicas">Suma y resta de fracciones algebraicas</h1>
+  <h2 id="suma-y-resta-de-fracciones-algebraicas">Suma y resta de fracciones algebraicas</h2>
   </header>
   <p>En este tipo de operaciones con fracciones algebraicas, al igual que cuando se suman y restan fracciones de números, lo primero que debemos hacer es buscar el mínimo común múltiplo de los denominadores. Lo vemos en el siguiente ejemplo.</p>
   <p>Vamos a desarrollar la expresión: <span class="math">\(\frac{1}{x-1}+\frac{2x-1}{x^2-1}-\frac{x+2}{x+1}\)</span>. Observamos que el m.c.m. de los denominadores es <span class="math">\((x-1)(x+1)=x^2-1\)</span>. Así que realizamos la operación de igual forma que con fracciones numéricas. Esto es,</p>
@@ -151,7 +151,7 @@ En este documento repasaremos cómo simplificar fracciones algebraicas.
     <header>
     <ol>
     <li><p><span class="math">\(\dfrac{3x+1}{x}-\dfrac{1}{x^2-x}\)</span>
-      <span id="sol-e9" style="display:none;">$=\dfrac{3x^2-x-2}{x^2-x}$</span>.
+      <span id="sol-e9" style="display:none;">$=\dfrac{3x^2-2x-2}{x^2-x}$</span>.
       <button id="e9" class="button"  onclick="show2('e9');">Solución</button></p></li>
     <li><p><span class="math">\(x+\dfrac{2x+1}{x-3}\)</span>
       <span id="sol-e10" style="display:none;">$=\dfrac{x^2-x+1}{x-3}$</span>.
@@ -165,7 +165,7 @@ En este documento repasaremos cómo simplificar fracciones algebraicas.
 
 <section>
   <header>
-    <h1 id="producto-y-cociente-de-fracciones-algebraicas">Producto y cociente de fracciones algebraicas</h1>
+    <h2 id="producto-y-cociente-de-fracciones-algebraicas">Producto y cociente de fracciones algebraicas</h2>
   </header>
   <p>Al igual que hemos comentado en la sección anterior, la multiplicación y la división de fracciones algebraicas se ejecuta de la misma forma que con fracciones numéricas. Siempre buscaremos la máxima simplificación en el resultado final.</p>
   <p>Realicemos el producto <span class="math">\(\frac{x+1}{x-1} \cdot \frac{x^2-x}{x^2+2x+1}\)</span>. Para ello, multiplicamos numeradores y multiplicamos denominadores, con lo que nos queda:</p>
@@ -185,7 +185,7 @@ En este documento repasaremos cómo simplificar fracciones algebraicas.
       <span id="sol-e12" style="display:none;">$=\dfrac{x-2}{x+2}\cdot \dfrac{(x+2)^2}{x}=\dfrac{x^2-4}{x}=x-\dfrac{4}x$</span>.
       <button id="e12" class="button"  onclick="show2('e12');">Solución</button></p></li>
     <li><p><span class="math">\(\dfrac{2a}{a^2-4} \cdot \dfrac{a+6}{a^2+2a}\)</span>
-      <span id="sol-e13" style="display:none;">$=\dfrac{3 a^2 + 4 a - 12}{a^3-4a}$</span>.
+      <span id="sol-e13" style="display:none;">$=\dfrac{2(a+6)}{(a+2)^{2}(a-2)}$</span>.
       <button id="e13" class="button"  onclick="show2('e13');">Solución</button></p></li>
     <li><p><span class="math">\(\dfrac{\frac{x}{x^2+4x+4} }{ \frac{x+2}{x^2-x}}\)</span>
       <span id="sol-e14" style="display:none;">$=\dfrac{x}{(x+2)^2}\cdot \dfrac{x^2-x}{x+2}=\dfrac{x^2(x-1)}{(x+2)^3}$</span>.
@@ -196,7 +196,7 @@ En este documento repasaremos cómo simplificar fracciones algebraicas.
 
 <section>
   <header>
-    <h1 id="racionalización-de-fracciones-algebraicas">Racionalización de fracciones algebraicas</h1>
+    <h2 id="racionalización-de-fracciones-algebraicas">Racionalización de fracciones algebraicas</h2>
   </header>
   <p>La racionalización de fracciones algebraicas consiste en eliminar los posibles radicales que aparezcan en el denominador. Para ello, multiplicaremos tanto en el numerador como en el denominador por el conjugado de este último. En el ejemplo siguiente realizamos esta operación.</p>
   <p>En la fracción <span class="math">\(\frac{c}{\sqrt{a}-\sqrt{b}}\)</span> vamos a eliminar los radicales del denominador multiplicando en los dos miembros de la fracción por el conjugado del denominador; esto es, multiplicamos por <span class="math">\(\sqrt{a}+\sqrt{b}\)</span> y y utilizamos una identidad notable que hemos recordado anteriormente. <span class="math">\[\frac{c}{\sqrt{a}-\sqrt{b}} =\frac{c\, (\sqrt{a}+\sqrt{b})}{(\sqrt{a}-\sqrt{b})(\sqrt{a}+\sqrt{b})}
@@ -211,7 +211,7 @@ En este documento repasaremos cómo simplificar fracciones algebraicas.
       <span id="sol-e15" style="display:none;">$=\dfrac{x(x+\sqrt{x})}{x^2-x}$</span>.
       <button id="e15" class="button"  onclick="show2('e15');">Solución</button></p></li>
     <li><p><span class="math">\(\dfrac{x+\sqrt{x}}{x-\sqrt{x}}\)</span>
-      <span id="sol-e16" style="display:none;">$=\dfrac{(x+\sqrt{x})^2}{x^2-x}$</span>.
+      <span id="sol-e16" style="display:none;">$=\dfrac{(x+\sqrt{x})^2}{x^2-x}=\dfrac{x+\sqrt{x}}{x-1}$</span>.
       <button id="e16" class="button"  onclick="show2('e16');">Solución</button></p></li>
     <li><p><span class="math">\(\dfrac{x}{\sqrt{x+1}-\sqrt{x-1}}\)</span>
       <span id="sol-e17" style="display:none;">$=\dfrac{1}{2}x(\sqrt{x+1}-\sqrt{x-1})$</span>.
