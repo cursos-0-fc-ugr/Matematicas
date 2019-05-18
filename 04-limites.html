@@ -7,7 +7,7 @@
   <title>Límites y continuidad</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="otro.css" type="text/css" />
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
   <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>-->
   <link rel="stylesheet" type="text/css" href="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
   <script type="text/javascript" src="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
@@ -93,7 +93,7 @@
   </script>
 
 
-  <p>Las funciones elementales que hemos visto en la sesión anterior son continuas. Por tanto, se tiene que <span class="math">\[\lim_{x \to -1} \left( x^2-x+1 \right) =3, \quad  \lim_{x \to 0} \cos(x)  = 1, \quad \lim_{x \to e^2} \log(x)= 2 .\]</span> Además, la suma, producto y composición de funciones continuas da como resultado una función continua. Por ejemplo, la función <span class="math">\(f(x)=x^2+\log(x)\)</span> es continua, con lo que, <span class="math">\[\lim_{x \to e^2} x^2+\log(x)= e^4+2.\]</span></p>
+  <p>Las funciones elementales que hemos visto en la sesión anterior son continuas. Por tanto, se tiene que <span class="math">\[\lim_{x \to -1} \left( x^2-x+1 \right) =3, \quad  \lim_{x \to 0} \cos(x)  = 1, \quad \lim_{x \to e^2} \log(x)= 2 .\]</span> Además, la suma, producto y composición de funciones continuas da como resultado una función continua. Por ejemplo, la función <span class="math">\(f(x)=x^2+\log(x)\)</span> es continua, con lo que, <span class="math">\[\lim_{x \to e^2} \left(x^2+\log(x)\right) = e^4+2.\]</span></p>
   <h1 id="cálculo-de-límites">Cálculo de límites</h1>
   <h2 id="límites-laterales">Límites laterales</h2>
   <p>Hay veces en las que el cálculo del límite en un punto <span class="math">\(a\)</span> depende de la posición, a la izquierda o a la derecha, de los puntos que tomemos acercándose a <span class="math">\(a\)</span>. Esta situación, por ejemplo, se presenta en los puntos que dividen las partes de una función definida a trozos.</p>
@@ -103,9 +103,9 @@
   \end{cases}\]</span>
 
 
-  <p>Vamos a calcular el límite de la función dada en los puntos ``conflictivos&quot;; esto es, en los puntos donde la expresión de <span class="math">\(f\)</span> cambia. En este caso son <span class="math">\(x=0\)</span>, y <span class="math">\(x=1\)</span>. Como a ambos lados de cada uno de estos puntos la expresión de la función es distinta, nos vemos obligados a calcular los límites laterales para decidir si la función <span class="math">\(f\)</span> tiene límite en ellos.</p>
+  <p>Vamos a calcular el límite de la función dada en los puntos &quot;conflictivos&quot;; esto es, en los puntos donde la expresión de <span class="math">\(f\)</span> cambia. En este caso son <span class="math">\(x=0\)</span>, y <span class="math">\(x=1\)</span>. Como a ambos lados de cada uno de estos puntos la expresión de la función es distinta, nos vemos obligados a calcular los límites laterales para decidir si la función <span class="math">\(f\)</span> tiene límite en ellos.</p>
   <p><span class="math">\[\begin{aligned}
-  \lim_{x \to 0^-}f(x) &amp; = \lim_{x \to 0} x^2+1= 1, \\
+  \lim_{x \to 0^-}f(x) &amp; = \lim_{x \to 0} (x^2+1)= 1, \\
   \lim_{x \to 0^+}f(x) &amp; = \lim_{x \to 0} e^x= e^0=1,\end{aligned}\]</span></p>
 
   <!--
@@ -221,7 +221,7 @@
         \end{cases}\)</span>
         <button id="e1-2" class="button"  onclick="show2('e1-2');">Solución</button>
         <div id="sol-e1-2" style="display:none;">
-          <p>La función \(3x^2+x\) es contínua en todo \(\mathbb{R}\), y la función \(1/x\) lo es en el intervalo \((0,\infty)\). Por tanto sólo falta estudiar qué ocurre en el \(0\). Para ello calculamos \(\lim\nolimits_{x\to 0^-} (3x^2+x)=1=f(0)\) y \(\lim\nolimits_{x\to 0^+} \frac{1}x=+\infty\). Concluimos que la función es contínua en todo \(\mathbb{R}\setminus\{0\}\).</p>
+          <p>La función \(3x^2+x\) es contínua en todo \(\mathbb{R}\), y la función \(1/x\) lo es en el intervalo \((0,\infty)\). Por tanto sólo falta estudiar qué ocurre en el \(0\). Para ello calculamos \(\lim\nolimits_{x\to 0^-} (3x^2+x)=0=f(0)\) y \(\lim\nolimits_{x\to 0^+} \frac{1}x=+\infty\). Concluimos que la función es contínua en todo \(\mathbb{R}\setminus\{0\}\).</p>
           <p>Ésta es la gráfica de la función.</p>
 
           <div id='ebox1-2' class='jxgbox' style='width:400px; height:150px;display:inline-block;text-align: center;'> </div>
@@ -290,7 +290,7 @@
   <h2 id="cero-elevado-a-cero-infinito-elevado-a-cero-uno-elevado-a-infinito">Cero elevado a cero, infinito elevado a cero, uno elevado a infinito</h2>
   <p>Las indeterminaciones en las que aparecen funciones elevadas a funciones siempre se pueden pasar a productos o cocientes utilizando logaritmos y exponenciales. Recordemos que la función exponencial y logaritmo son inversas una de la otra o, lo que es lo mismo, que <span class="math">\[e^{\log(x)}=x \quad \text{y} \quad \log(e^x)=x.\]</span> Usando esto, si tenemos un par de funciones <span class="math">\(f(x)\)</span> y <span class="math">\(g(x)\)</span>, entonces, usando que el exponente de la función dentro del logaritmo sale multiplicando, <span class="math">\[f(x)^{g(x)}     = e^{\log\left( f(x)^{g(x)}\right) }  = e^{g(x)\log(f(x))}.\]</span></p>
   <p>Resumiendo, hemos cambiado el problema de estudiar <span class="math">\(f(x)^{g(x)}\)</span> por el de <span class="math">\(g(x)\log(f(x))\)</span>.</p>
-  <p>El cálculo del límite de <span class="math">\(x^x\)</span>, cuando <span class="math">\(x\)</span> tiende a cero, pasa por resolver una indeterminación de la forma <span class="math">\(0^0\)</span>. Utilizando exponenciales y logaritmos <span class="math">\[\lim_{x \to 0 } x^x = \lim_{x \to  0} e^{\log(x^x)} =\lim_{x \to  0} e^{x \log(x)}\]</span> pasamos a estudiar <span class="math">\(\lim_{x \to  0} x\log(x)\)</span>. El cálculo de este último lo veremos en la carrera.</p>
+  <p>El cálculo del límite de <span class="math">\(x^x\)</span>, cuando <span class="math">\(x\)</span> tiende a cero, pasa por resolver una indeterminación de la forma <span class="math">\(0^0\)</span>. Utilizando exponenciales y logaritmos <span class="math">\[\lim_{x \to 0 } x^x = \lim_{x \to  0} e^{\log(x^x)} =\lim_{x \to  0} e^{x \log(x)}\]</span> pasamos a estudiar <span class="math">\(\lim_{x \to  0} x\log(x)\)</span>. El cálculo de este último lo veremos en la correspondiente asignatura del grado.</p>
   <article>
     <header>
       <h3>Ejercicio</h3>

@@ -57,6 +57,7 @@
   <li><p>si <span class="math">\(f&#39;(a)=0\)</span>, y además <span class="math">\(f&#39;&#39;(a)&gt;0\)</span>, entonces <span class="math">\(f\)</span> tiene un mínimo relativo en <span class="math">\(a\)</span>;</p></li>
   <li><p>si <span class="math">\(f&#39;(a)=0\)</span>, y además <span class="math">\(f&#39;&#39;(a)&lt;0\)</span>, entonces <span class="math">\(f\)</span> tiene un máximo relativo en <span class="math">\(a\)</span>.</p></li>
   </ul></li>
+  <li><p>También podemos sustituir el segundo paso por el estudio de la monotonía: si la función pasa de creciente a decreciente alcanza un máximo relativo y si pasa de decreciente a creciente tiene un mínimo relativo</p></li>
   </ol>
   <p>Si analizamos el signo de la derivada segunda de la función del ejemplo anterior en los puntos críticos que habíamos obtenido, concluimos cuál es mínimo y cuál es máximo. Como <span class="math">\(f&#39;&#39;(x)= 12x-6\)</span>, tenemos:</p>
   <ul>
@@ -65,7 +66,7 @@
   </ul>
   <!--<p>¿Concuerdan estas conclusiones con las que has obtenido estudiando el cambio de monotonía en torno a ambos puntos?</p>-->
 
-  <p>Una alternativa para decidir la existencia de un extremo relativo consiste en observar un cambio de monotonía: la función pasa de creciente a decreciente (máximo) o de decreciente a creciente (mínimo). Esto evita calcular la segunda derivada. En el ejemplo anterior, en \(-1\) la función pasa de ser creciente a decreciente, por lo que en \(-1\) tenemos un máximo relativo. En \(2\) pasamos de decreciente a creciente, y por lo tanto tenemos un mínimo relativo.</p>
+  <p>A esta misma conclusión se llega usando los cambios de monotonía que ya hemos calculado anteriormente.</p>
 
   <article>
     <header>
@@ -77,8 +78,8 @@
   <h2 id="concavidad-y-convexidad">Concavidad y convexidad</h2>
   <p>Si <span class="math">\(f\)</span> es una función dos veces derivable,</p>
   <ul>
-  <li><p>si <span class="math">\(f&#39;&#39;\)</span> es positiva, entonces <span class="math">\(f\)</span> es convexa; y</p></li>
-  <li><p>si <span class="math">\(f&#39;&#39;\)</span> es negativa, entonces <span class="math">\(f\)</span> es cóncava.</p></li>
+  <li><p>Una función es convexa si, y sólo si, la segunda derivada es mayor o igual que cero; y </p></li>
+  <li><p>una función es cóncava si, y sólo si, la segunda derivada es menor o igual que cero.</p></li>
   </ul>
 
   <h2 id="puntos-de-inflexión">Puntos de inflexión</h2>
@@ -111,21 +112,22 @@
   </ul>
   </dd>
   <dt>Extremos relativos</dt>
-  <dd><p>Ya que sabemos los puntos críticos, evaluamos la segunda derivada: <span class="math">\[f&#39;&#39;(x)=6x+6, \quad f&#39;&#39;(-3)=-12, \quad \text{y} \quad f&#39;&#39;(1)=12.\]</span> Por tanto,</p>
+  <dd><p>Directamente de los cambios de monotonía ya podemos deducir que</p>
   <ul>
   <li><p><span class="math">\(f\)</span> tiene un máximo relativo en <span class="math">\(-3\)</span> y</p></li>
   <li><p><span class="math">\(f\)</span> tiene un mínimo relativo en <span class="math">\(1\)</span>.</p></li>
   </ul>
+  <p>A la misma conclusión llegamos si evaluamos la segunda derivada: <span class="math">\[f&#39;&#39;(x)=6x+6, \quad f&#39;&#39;(-3)=-12, \quad \text{y} \quad f&#39;&#39;(1)=12.\]</span> </p>
   </dd>
   <dt>Convexidad y concavidad</dt>
   <dd><p>Para estudiar la concavidad y convexidad de una función, miramos el signo de la segunda derivada: <span class="math">\[f&#39;&#39;(x)=6x+6=0,\ x= -1.\]</span> Por tanto,</p>
   <ul>
-  <li><p><span class="math">\(f&#39;&#39;(x)\)</span> es positiva en <span class="math">\(]-\infty,-1]\)</span> (función convexa)</p></li>
-  <li><p><span class="math">\(f&#39;&#39;(x)\)</span> es negativa en <span class="math">\([-1,+\infty[\)</span> (función cóncava)</p></li>
+  <li><p><span class="math">\(f&#39;&#39;(x)\)</span> es negativa en <span class="math">\(]-\infty,-1]\)</span> (función cóncava)</p></li>
+  <li><p><span class="math">\(f&#39;&#39;(x)\)</span> es positiva en <span class="math">\([-1,+\infty[\)</span> (función convexa)</p></li>
   </ul>
   </dd>
   <dt>Puntos de inflexión</dt>
-  <dd><p>En <span class="math">\(-1\)</span> la función tiene un punto de inflexión: la segunda derivada se anula y la tercera en dicho punto es positiva o, si lo prefieres, la función cambia de de convexa a cóncava.</p>
+  <dd><p>En <span class="math">\(-1\)</span> la función tiene un punto de inflexión ya que cambia de de convexa a cóncava.</p>
   </dd>
   </dl>
 
@@ -173,7 +175,7 @@
       <ol>
         <li><p>Calcula las asíntotas de la gráfica de <span class="math">\(f\)</span>.</p></li>
         <li><p>Determina los intervalos de monotonía (crecimiento y decrecimiento).</p></li>
-        <li><p>Determina lso extremos relativos de <span class="math">\(f\)</span>.</p></li>
+        <li><p>Determina los extremos relativos de <span class="math">\(f\)</span>.</p></li>
         <li><p>Esboza la gráfica de <span class="math">\(f\)</span>.</p></li>
       </ol>
       </li>

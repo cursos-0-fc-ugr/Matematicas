@@ -7,7 +7,7 @@
   <title>Integrales</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="otro.css" type="text/css" />
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
   <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>-->
   <link rel="stylesheet" type="text/css" href="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
   <script type="text/javascript" src="https://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
@@ -37,7 +37,7 @@
   <p><span class="math">\( \)</span></p>
   <ul>
   <li><p>Todas las primitivas de una función se conocen en cuanto se conoce una. De hecho, si <span class="math">\(F\)</span> es una primitiva de <span class="math">\(f\)</span>, las funciones de la forma <span class="math">\(F+C\)</span>, con <span class="math">\(C \in \mathbb{R}\)</span>, son también primitivas de <span class="math">\(f\)</span>.</p></li>
-  <li><p>Para representar una primitiva de una función usaremos la notación siguiente: <span class="math">\(\int f(x) \, dx\)</span>.</p></li>
+  <li><p>Para representar una primitiva de una función usaremos la notación <span class="math">F(x)=\(\int f(x) \, dx\)</span>.</p></li>
   </ul>
 </section>
 
@@ -58,11 +58,11 @@
   </tr>
   <tr class="odd">
   <td align="left"><span class="math">\(1/x\)</span></td>
-  <td align="left"><span class="math">\(\ln (\lvert x\rvert )\)</span></td>
+  <td align="left"><span class="math">\(\log (\lvert x\rvert )\)</span></td>
   </tr>
   <tr class="even">
   <td align="left"><span class="math">\(a^x\)</span></td>
-  <td align="left"><span class="math">\(a^x/\ln(a)\)</span></td>
+  <td align="left"><span class="math">\(a^x/\log(a)\)</span></td>
   </tr>
   <tr class="odd">
   <td align="left"><span class="math">\(e^x\)</span></td>
@@ -78,7 +78,7 @@
   </tr>
   <tr class="even">
   <td align="left"><span class="math">\(\tan(x)\)</span></td>
-  <td align="left"><span class="math">\(-\ln (\lvert\cos(x)\rvert )\)</span></td>
+  <td align="left"><span class="math">\(-\log (\lvert\cos(x)\rvert )\)</span></td>
   </tr>
   <tr class="odd">
   <td align="left"><span class="math">\(\sec^2(x)\)</span></td>
@@ -152,7 +152,7 @@
     <li><span class="math">\(f(x)=x^2+\frac{1}{x}\)</span>,
       <button id="e1-2" class="button" onclick="show2('e1-2');">Solución</button>
       <div id="sol-e1-2" style="display:none;">
-        <p>\(\int f(x)\, dx=  \dfrac{x^3}{3} + \ln(x)\),</p>
+        <p>\(\int f(x)\, dx=  \dfrac{x^3}{3} + \log(\lvert x\rvert )\),</p>
       </div>
     </li>
     <li><p><span class="math">\(f(x)=5\sqrt{x}\)</span>,
@@ -187,11 +187,11 @@
   <p>Si aplicamos este método a algunas de las primitivas inmediatas, obtenemos las siguientes reglas.</p>
 
   <ul>
-    <li> \(\int g^{\prime}(x) g(x)^k\, dx = \frac{1}{n+} g(x)^{n+1}+ C\).
+    <li> \(\int g^{\prime}(x) g(x)^{n}\, dx = \frac{1}{n+1} g(x)^{n+1}+ C\).
     </li>
     <li> \(\int g^{\prime}(x) e^{g(x)}\, dx = e^{g(x)}+C\).
     </li>
-    <li>\(\int \frac{g^{\prime}(x)}{g(x)}\, d(x)= \ln(\vert g(x)\vert) +C\).
+    <li>\(\int \frac{g^{\prime}(x)}{g(x)}\, d(x)= \log(\vert g(x)\vert) +C\).
     </li>
   </ul>
 
@@ -200,7 +200,7 @@
   </p>
   <p>Tomando \(g(x)=x^2+1\), esta integral es de la forma \(\int\frac{g'(x)}{g(x)}\, dx\), que por el cambio de variable, tomando \(f(x)=\frac{1}x\),  obtenemos
     \[
-    \int \frac{x}{x^2+1}\, dx=\frac{1}2\int\frac{2x}{x^2+1}\, dx= \frac{1}2 \ln (x^2 +1)+ C.
+    \int \frac{x}{x^2+1}\, dx=\frac{1}2\int\frac{2x}{x^2+1}\, dx= \frac{1}2 \log (x^2 +1)+ C.
     \]
   </p>
   <p>Vamos ahora a calcular <span class="math">\[\int \frac{e^{x}+3e^{2x}}{2+e^{x}}\, dx .\]</span>
@@ -213,7 +213,7 @@
    = \int
   \frac{y + 3y^{2}}{2 + y}\cdot \frac{1}{y}\, dy \\ &amp; =  \int \frac{1 + 3
   y}{2+y}\, dy =\int \left( 3 - \frac{5}{2+y}\right)\, dy \\
-  &amp; =   3 y - 5 \ln  \lvert {y + 2} \lvert +C  = 3e^{x} - 5 \ln  \left(e^{x} +2\right) +C .\end{aligned}\]</span></p>
+  &amp; =   3 y - 5 \log  \lvert {y + 2} \lvert +C  = 3e^{x} - 5 \log  \left(e^{x} +2\right) +C .\end{aligned}\]</span></p>
 
   <article>
     <header>
@@ -222,7 +222,7 @@
     </header>
     <ol>
     <li><p><span class="math">\( f(x)=\dfrac{2x-3}{x^2-3x+4}\)</span>,</p></li>
-    <li><p><span class="math">\(f(x)=\dfrac{\ln(x)}{x}\)</span>,</p></li>
+    <li><p><span class="math">\(f(x)=\dfrac{\log(x)}{x}\)</span>,</p></li>
     <li><p><span class="math">\(f(x)=(x^2-1) \, e^{x^3-3x+5}\)</span>,
       <!--<span id="e2-3">,<input name="execute" value="Solución &#x25B6;" onclick="show2('sol-e2-3');" type="button"></span>-->
       <button id="e2-3" class="button" onclick="show2('e2-3');">Solución</button>
@@ -236,7 +236,7 @@
     <li><p><span class="math">\(f(x)=\dfrac{2^{1/x}}{x^2}\)</span>,
       <button id="e2-4" class="button" onclick="show2('e2-4');">Solución</button>
       <div id="sol-e2-4" style="display:none;">
-        <p>Teniendo en cuenta el cambio de variable y la primitiva de la función exponencial, \(\int g'(x)a^{g(x)}\, dx = \dfrac{a^{g(x)}}{\ln(a)}\). Tomando \(g(x)=\dfrac{1}x\),obtenemos \( \int \frac{1}{x^2}2^{\frac{1}{x}}\, dx= -\int-\frac{1}{x^2} 2^{\frac{1}{x}}\, dx= -\frac{2^\frac{1}x}{\ln(2)}+C\).
+        <p>Teniendo en cuenta el cambio de variable y la primitiva de la función exponencial, \(\int g'(x)a^{g(x)}\, dx = \dfrac{a^{g(x)}}{\log(a)}\). Tomando \(g(x)=\dfrac{1}x\),obtenemos \( \int \frac{1}{x^2}2^{\frac{1}{x}}\, dx= -\int-\frac{1}{x^2} 2^{\frac{1}{x}}\, dx= -\frac{2^\frac{1}x}{\log(2)}+C\).
       </div>
     </p></li>
     <li><p><span class="math">\(f(x)=(8x-3)(4x^2-3x+8)^{10}\)</span>,</p></li>
@@ -252,7 +252,7 @@
 
 
   <h2 id="integración-por-partes">Integración por partes</h2>
-  <p>Si <span class="math">\(u\)</span> y <span class="math">\(v\)</span> son dos funciones, teniendo en cuenta que <span class="math">\((u\cdot v)&#39;=u\cdot v&#39;+v\cdot u&#39;\)</span>, obtenemos que <span class="math">\[\int u(x)v&#39;(x)\, dx=u(x)v(x)-\int v(x)u&#39;(x)\, dx.\]</span> Esta fórmula aparece escrita en muchas ocasiones de la forma <span class="math">\[\int u \, dv = uv - \int v \, du.\]</span> El siguiente teorema especifica con un poco más de rigor las condiciones necesarias.</p>
+  <p>Si <span class="math">\(u\)</span> y <span class="math">\(v\)</span> son dos funciones derivables, teniendo en cuenta que <span class="math">\((u\cdot v)&#39;=u\cdot v&#39;+v\cdot u&#39;\)</span>, obtenemos que <span class="math">\[\int u(x)v&#39;(x)\, dx=u(x)v(x)-\int v(x)u&#39;(x)\, dx.\]</span> Esta fórmula aparece escrita en muchas ocasiones de la forma <span class="math">\[\int u \, dv = uv - \int v \, du.\]</span> El siguiente teorema especifica con un poco más de rigor las condiciones necesarias.</p>
   <!--<article>
     <header>
       <h4>Integración por partes</h4>
@@ -273,10 +273,10 @@
       <p>Calcula una primitiva de las siguientes funciones:</p>
     </header>
     <ol>
-    <li><p><span class="math">\( f(x)=\ln(5x)\)</span>,
+    <li><p><span class="math">\( f(x)=\log(5x)\)</span>,
       <button id="e3-1" class="button"  onclick="show2('e3-1');">Solución</button></p>
       <div id="sol-e3-1" style="display:none;">
-        <p>Hacemos integración por partes con \(u(x)=\ln(5x)\)  y \(dv=1\, dx\) (y por tanto \(v(x)=x\)). Tenemos así que \(\int \ln(5x)\, dx= \ln(5x)x-\int x\frac{5}{5x}\, dx= \ln(5x)x-x+C\).
+        <p>Hacemos integración por partes con \(u(x)=\log(5x)\)  y \(dv=1\, dx\) (y por tanto \(v(x)=x\)). Tenemos así que \(\int \log(5x)\, dx= \log(5x)x-\int x\frac{5}{5x}\, dx= \log(5x)x-x+C\).
       </div>
 
 
@@ -284,10 +284,10 @@
     <li><p><span class="math">\(f(x)=x^2 \, e^{-x}\)</span>,</p></li>
     <li><p><span class="math">\(f(x)=\arctan(x)\)</span>,</p></li>
     <li><p><span class="math">\(f(x)=\operatorname{sen}(x) \, e^{x}\)</span>,</p></li>
-    <li><p><span class="math">\(f(x)=x \ln(x)\)</span>.
+    <li><p><span class="math">\(f(x)=x \log(x)\)</span>.
           <button id="e3-3" class="button"  onclick="show2('e3-3');">Solución</button></p>
       <div id="sol-e3-3" style="display:none;">
-        <p>Hacemos integración por partes con \(u(x)=\ln(x)\)  y \(d v=x\, dx\) (y por tanto \(v(x)=x^2/2\)). Tenemos así que \(\int x\ln(x)\, dx= \frac{1}2x^2\ln(x)-\int \frac{1}2x\, dx= \frac{1}2x^2\ln(x)-\frac{1}4x^2+C\).
+        <p>Hacemos integración por partes con \(u(x)=\log(x)\)  y \(d v=x\, dx\) (y por tanto \(v(x)=x^2/2\)). Tenemos así que \(\int x\log(x)\, dx= \frac{1}2x^2\log(x)-\int \frac{1}2x\, dx= \frac{1}2x^2\log(x)-\frac{1}4x^2+C\).
       </div>
     </li>
     </ol>
@@ -324,7 +324,7 @@
   \frac{dx}{x-1} - \frac{1}{8} \int \frac{dx}{x+1} - \frac{1}{4}
   \int \frac{dx}{(x+1)^{2}} - \frac{1}{2} \int
   \frac{dx}{(x+1)^{3}} \\
-  &amp; =  \frac{1}{8} \ln  \vert x-1 \vert -\frac{1}{8} \ln  \vert x+1 \vert
+  &amp; =  \frac{1}{8} \log  \vert x-1 \vert -\frac{1}{8} \log  \vert x+1 \vert
   + \frac{1}{4(x+1)} + \frac{1}{4(x+1)^{2}} . \end{aligned}\]</span></p>
   <article>
     <header>
@@ -336,16 +336,16 @@
       <button id="e4-1" class="button" onclick="show2('e4-1');">Solución</button></p>
       <div id="sol-e4-1" style="display:none;">
         <p> Nótese que el numerador tiene grado menor que el denominador, por lo que no es necesario hacer ninguna simplificación previa. Además, \(x^2+2x-3=(x-1)(x+3)\). Debemos expresar \(\dfrac{x+1}{x^2+2x-3} = \dfrac{A}{x-1}+\dfrac{B}{x+3}=\dfrac{A(x+3)+B(x-1)}{x^2+2x-3}\). Por tanto \(x+1=A(x+3)+B(x-1)=(A+B)x+(3A-B)\). De aquí se deduce que \(A+B=1\) y \(3A-B=1\). Entonces, \(A=\dfrac{1}2\) y \(B=\dfrac{1}2\).</p>
-        <p>La integral a calcular es \(\int f(x)\, dx= \dfrac{1}2\int\dfrac{1}{x+3}\, dx+\dfrac{1}2\int\dfrac{1}{x-1}\, dx= \dfrac{1}2(\ln(|x+3|)+\ln(|x-1|))+C\).</p>
+        <p>La integral a calcular es \(\int f(x)\, dx= \dfrac{1}2\int\dfrac{1}{x+3}\, dx+\dfrac{1}2\int\dfrac{1}{x-1}\, dx= \dfrac{1}2(\log(|x+3|)+\log(|x-1|))+C\).</p>
 
-        <p>Esta integral también se puede hacer mediante un cambio de variable, pues el numerador es "casi" la derivada del denominador: \(\int \dfrac{x+1}{x^2+2x-3}\, dx = \dfrac{1}2 \int \dfrac{2x+2}{x^2+2x-3}\, dx = \dfrac{1}2\ln(|x^2+2x-3|)+C = \dfrac{1}2(\ln(|x+3|)+\ln(|x-1|))+C\) (el logaritmo del producto es la suma de los logaritmos). </p>
+        <p>Esta integral también se puede hacer mediante un cambio de variable, pues el numerador es "casi" la derivada del denominador: \(\int \dfrac{x+1}{x^2+2x-3}\, dx = \dfrac{1}2 \int \dfrac{2x+2}{x^2+2x-3}\, dx = \dfrac{1}2\log(|x^2+2x-3|)+C = \dfrac{1}2(\log(|x+3|)+\log(|x-1|))+C\) (el logaritmo del producto es la suma de los logaritmos). </p>
       </div>
     </li>
     <li><p><span class="math">\(f(x)=\dfrac{x^2+1}{x^2-1}\)</span>,
       <button id="e4-2" class="button" onclick="show2('e4-2');">Solución</button></p>
       <div id="sol-e4-2" style="display:none;">
         <p>Podemos escribir \(x^2+1=x^2-1+2\), con lo que obtenemos directamente el cociente y resto de la división del numerador entre el denominador. Así, \(\int f(x)\, dx=\int 1\, dx + \int \dfrac{2}{x^2-1}\, dx\). Por otro lado, \(x^2-1=(x-1)(x+1)\). Tenemos que expresar \(\dfrac{1}{x^2-1}=\dfrac{A}{x-1}+\dfrac{B}{x+1}=\dfrac{A(x+1)+B(x-1)}{x^2-1}\).</p>
-        <p> Luego \(2=(A+B)x+(A-B)\), de lo que se deduce que \(A+B=0\) y \(A-B=2\). Los valores de \(A\) y \(B\) son \(1\) y \(-1\), respectivamente. Nuestra integral queda como sigue: \(\int f(x)\, dx= x+ \int \dfrac{1}{x-1}\, dx-\int \dfrac{1}{x+1}\, dx=x+\ln(|x-1|)-\ln(|x+1|)+C\). </p>
+        <p> Luego \(2=(A+B)x+(A-B)\), de lo que se deduce que \(A+B=0\) y \(A-B=2\). Los valores de \(A\) y \(B\) son \(1\) y \(-1\), respectivamente. Nuestra integral queda como sigue: \(\int f(x)\, dx= x+ \int \dfrac{1}{x-1}\, dx-\int \dfrac{1}{x+1}\, dx=x+\log(|x-1|)-\log(|x+1|)+C\). </p>
       </div>
 
     </li>
@@ -362,11 +362,11 @@
       <p>Calcula las integrales siguientes:</p>
     </header>
     <ol>
-    <li><p><span class="math">\( \int_1^2 \dfrac{\ln(x)}{x}  dx\)</span>,</p></li>
+    <li><p><span class="math">\( \int_1^2 \dfrac{\log(x)}{x}  dx\)</span>,</p></li>
     <li><p><span class="math">\(\int_0^1 \operatorname{arcsen}(x) \, dx\)</span>,</p></li>
     <li><p><span class="math">\(\int_1^{\pi} \operatorname{sen}(x) \, e^{x} \, dx\)</span>,</p></li>
     <li><p><span class="math">\(\int_2^3 \dfrac{x}{x^3-3x^2+3x-1} \, dx\)</span>,</p></li>
-    <li><p><span class="math">\(\int_1^{2/5} \ln (5x) \, dx\)</span>,</p></li>
+    <li><p><span class="math">\(\int_1^{2/5} \log (5x) \, dx\)</span>,</p></li>
     <li><p><span class="math">\(\int_0^1 x^3 \, \sqrt{x^4+1} \, dx\)</span>.</p></li>
     </ol>
   </article>
