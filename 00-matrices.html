@@ -7,7 +7,14 @@
   <title>Matrices</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="otro.css" type="text/css" />
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX","output/HTML-CSS"],
+      displayAlign: "left",
+      displayIndent: "1em"
+    });
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 </head>
 <body>
 <div id="header">
@@ -246,6 +253,58 @@ a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn}
 0 &amp; 0 &amp; 0 &amp; 0
 \end{pmatrix}.\]</span></p>
 
+<h1>Cálculo de inversa con operaciones elementales</h1>
+
+Ya hemos visto que el rango de una matriz se puede calcular contando filas no nulas de una forma escalonada de esta matriz. Si a la matriz original le concatenamos a izquierda (o derecha) una matriz identidad, las operaciones elementales que efectuemos por filas se irán almacenando en esta matriz identidad. Si nuestra matriz tiene inversa, al final podremos conseguir una forma escalonada que sea la identidad, pues todos los escalones serán no nulos (las matrices con inversa tienen determinante no nulo, y por tanto su rango es máximo); en la parte derecha, tendremos la matriz inversa de la matriz original. 
+
+
+<p><span class="math display">\(\left(\begin{array}{ccc|ccc}
+  1 &amp; 0 &amp;1 &amp; 1 &amp; 0 &amp; 0 \\
+  2 &amp; -1 &amp;3 &amp; 0 &amp; 1 &amp; 0\\
+  0 &amp; -2 &amp; 1 &amp; 0 &amp; 0 &amp; 1 
+ \end{array}\right) \) \( \stackrel{f_2\leftarrow f_2-2f_1}{\sim}
+ \left(\begin{array}{ccc|ccc}
+ 1 &amp; 0 &amp;1 &amp; 1 &amp; 0 &amp; 0 \\
+ 0 &amp; -1 &amp;1 &amp; -2 &amp; 1 &amp; 0 \\
+ 0 &amp; -2 &amp;1 &amp; 0 &amp; 0 &amp; 1 
+ \end{array}\right) \) \( \stackrel{f_2\leftarrow -f_2}{\sim}
+ \left(\begin{array}{ccc|ccc}
+ 1 &amp; 0 &amp;1  &amp; 1 &amp; 0 &amp; 0 \\
+ 0 &amp; 1 &amp;-1 &amp; 2 &amp; -1 &amp; 0\\
+ 0 &amp; -2 &amp;1 &amp; 0 &amp; 0 &amp; 1
+ \end{array}\right) \) \( \stackrel{f_3\leftarrow f_3+2f_2}{\sim}
+ \left(\begin{array}{ccc|ccc}
+ 1 &amp; 0 &amp;1 &amp; 1 &amp; 0 &amp; 0\\
+ 0 &amp; 1 &amp;-1 &amp; 2 &amp; -1 &amp; 0\\
+ 0 &amp; 0 &amp;-1 &amp; 4 &amp; -2 &amp; 1
+ \end{array}\right) \) \( \stackrel{f_3\leftarrow -f_3}{\sim}
+ \left(\begin{array}{ccc|ccc}
+ 1 &amp; 0 &amp;1 &amp; 1 &amp; 0 &amp; 0\\
+ 0 &amp; 1 &amp;-1 &amp; 2 &amp; -1 &amp; 0\\
+ 0 &amp; 0 &amp; 1 &amp; -4 &amp; 2 &amp; -1
+ \end{array}\right) \)\( \stackrel{f_2\leftarrow f_2+f_3}{\sim}
+ \left(\begin{array}{ccc|ccc}
+ 1 &amp; 0 &amp;1 &amp; 1 &amp; 0 &amp; 0\\
+ 0 &amp; 1 &amp; 0 &amp; -2 &amp; 1 &amp; -1\\
+ 0 &amp; 0 &amp; 1 &amp; -4 &amp; 2 &amp; -1
+ \end{array}\right) \)\( \stackrel{f_1\leftarrow f_1-f_3}{\sim}
+ \left(\begin{array}{ccc|ccc}
+ 1 &amp; 0 &amp; 0 &amp; 5 &amp; -2 &amp; 1\\
+ 0 &amp; 1 &amp; 0 &amp; -2 &amp; 1 &amp; -1\\
+ 0 &amp; 0 &amp; 1 &amp; -4 &amp; 2 &amp; -1
+ \end{array}\right) \).
+</span></p>
+
+<p>Así \[\begin{pmatrix}
+  1 &amp; 0 &amp;1 \\
+  2 &amp; -1 &amp;3\\
+  0 &amp; -2 &amp;1 
+  \end{pmatrix}^{-1}= 
+  \begin{pmatrix}
+  5 &amp; -2 &amp; 1\\
+  -2 &amp; 1 &amp; -1\\
+  -4 &amp; 2 &amp; -1
+  \end{pmatrix}.\] </p>
 <hr>
 
 <p style="font-size: 10pt">Esta página está basada en los apuntes de J.C. Rosales y P. A. García-Sánchez, <a href="http://hdl.handle.net/10481/43099">Notas de de Álgebra Lineal y Estructuras Matemáticas</a>.</p>
