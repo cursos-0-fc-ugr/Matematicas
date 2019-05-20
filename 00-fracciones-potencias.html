@@ -7,7 +7,7 @@
   <title>Fracciones. Potencias</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="otro.css" type="text/css" />
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
   <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>-->
 </head>
 <body>
@@ -36,7 +36,7 @@
   </header>
   <p>Para multiplicar dos fracciones se multiplican ambos numeradores y ambos denominadores: <span class="math">\[\dfrac{a}{b}\cdot \dfrac{c}{d}= \dfrac{a\cdot c}{b \cdot d}.\]</span></p>
   <p>La <span><em>fracción inversa</em></span> de una dada es la que tiene por numerador al denominador de la primera y viceversa. La fracción inversa de <span class="math">\(\dfrac{a}{b}\)</span> es <span class="math">\(\dfrac{b}{a}\)</span>, es decir, la fracción inversa es aquella que al multiplicarla por la dada nos da como resultado el número 1.</p>
-  <p><span class="math">\[\dfrac{a}{b}\cdot \dfrac{b}{a}= \dfrac{a\cdot b}{b\cdot a}=\dfrac{\cancel{a}\cdot \cancel{b}\cdot 1}{\cancel{a}\cdot \cancel{b}\cdot 1}\dfrac{1}{1}=1.\]</span></p>
+  <p><span class="math">\[\dfrac{a}{b}\cdot \dfrac{b}{a}= \dfrac{a\cdot b}{b\cdot a}=\dfrac{\cancel{a}\cdot \cancel{b}\cdot 1}{\cancel{a}\cdot \cancel{b}\cdot 1}=\dfrac{1}{1}=1.\]</span></p>
   <p>Observemos que el número <span class="math">\(0=\dfrac{0}{1}\)</span> no tiene fracción inversa puesto que <span class="math">\(0\)</span> no es admitido como denominador.</p>
   <p>Para dividir dos fracciones se puede usar la regla de multiplicar en cruz o sustituir la división por el producto con la fracción inversa del divisor, es decir:</p>
   <p><span class="math">\[\dfrac{a}{b}\colon \dfrac{c}{d}= \dfrac{\frac{a}{b}}{\frac{c}{d}}= \dfrac{a}{b}\cdot \dfrac{d}{c}=\dfrac{a\cdot d}{b \cdot c}.\]</span></p>
@@ -115,7 +115,7 @@
     <ol>
     <li><p><span class="math">\(\dfrac{a^2}{(a^2)^{-3}\cdot a^4}\)</span>
       <span id="sol-e2-1" style="display:none;">
-        \(= -a^4\)
+        \(= a^4\)
       </span>.
       <button id="e2-1" class="button"  onclick="show2('e2-1');">Solución</button></p></li>
     <li><p><span class="math">\(\dfrac{(a^5\cdot a^{-2})^3}{a^{-3}}\)</span>
@@ -125,7 +125,7 @@
       <button id="e2-2" class="button"  onclick="show2('e2-2');">Solución</button></p></li>
     <li><p><span class="math">\(\left(\dfrac{a}{b}\right)^3\cdot\left(\dfrac{b}{a}\right)^{-2}\cdot \left(\dfrac{1}{a}\right)^{-1}\)</span>
       <span id="sol-e2-3" style="display:none;">
-        \(= -\dfrac{a^{6}}{b^5}\)
+        \(= \dfrac{a^{6}}{b^5}\)
       </span>.
       <button id="e2-3" class="button"  onclick="show2('e2-3');">Solución</button></p></li>
     </ol>
@@ -138,15 +138,15 @@
   <header>
     <h1 id="radicales">Radicales</h1>
   </header>
-  <p>Definimos la raiz n-ésima de un número no negativo <span class="math">\(a\)</span> como aquella cantidad no negativa <span class="math">\(x\)</span> tal que \(x^n=a\), y la denotaremos por \(\sqrt[n]{a}\): <span class="math">\[\sqrt[n]{a}=x  \text{ implica que }  x^n=a.\]</span></p> 
-    
-  <p>Estamos escogiendo raíces no negativas, si quitamos esa restricción, puede que exista más de una. Por ejemplo, existen dos raíces cuadradas de \(1\), pues tanto \((-1)^2\) como \(1^2\) valen \(1\). También estamos considerando raíces de números no negativos. Como el cuadrado de un número real es siempre no negativo, no podemos encontrar una raíz real cuadrada de un número negativo. Sin embargo, sí podemos encontrar una cúbica. Por ejemplo, \((-1)^3=-1\), por lo que \(-1\) es una raíz cúbica de \(-1\).</p>  
+  <p>Definimos la raiz n-ésima de un número no negativo <span class="math">\(a\)</span> como aquella cantidad no negativa <span class="math">\(x\)</span> tal que \(x^n=a\), y la denotaremos por \(\sqrt[n]{a}\): <span class="math">\[\sqrt[n]{a}=x  \text{ implica que }  x^n=a.\]</span></p>
+
+  <p>Estamos escogiendo raíces no negativas, si quitamos esa restricción, puede que exista más de una. Por ejemplo, existen dos raíces cuadradas de \(1\), pues tanto \((-1)^2\) como \(1^2\) valen \(1\). También estamos considerando raíces de números no negativos. Como el cuadrado de un número real es siempre no negativo, no podemos encontrar una raíz real cuadrada de un número negativo. Sin embargo, sí podemos encontrar una cúbica. Por ejemplo, \((-1)^3=-1\), por lo que \(-1\) es una raíz cúbica de \(-1\).</p>
   <p>La expresión de los radicales también puede realizarse mediante potencias, si <span class="math">\(x=\sqrt[n]{a}\)</span>, entonces <span class="math">\(x=a^{\frac{1}{n}}\)</span> puesto que <span class="math">\[x^n= (a^{\frac{1}{n}})^n= a^{\frac{n}{n}}=a^1 = a.\]</span></p>
   <p>La expresión de radicales como potencias con exponentes fraccionarios tiene las mismas propiedades, usando las operaciones correspondientes con dichos números.</p>
   <p>Podemos escribir en forma de potencia la siguiente expresión</p>
   <p><span class="math">\[\left[ \sqrt[12]{a^4b^8}\right]^3=\left[ (a^4 b^8)^{\frac{1}{12}} \right]^3 = \left[ a^{\frac{4}{12}}b^{\frac{8}{12}} \right]^3 =a^{\frac{4\cdot 3}{12}}b^{\frac{8\cdot 3}{12}} = ab^2.\]</span></p>
 
- 
+
   <article>
     <header>
       <h3>Ejercicio</h3>
@@ -166,7 +166,7 @@
       <button id="e3-2" class="button"  onclick="show2('e3-2');">Solución</button></p></li>
     <li><p><span class="math">\(\dfrac{(\sqrt{x})^3}{\left(\sqrt[3]{\sqrt[4]{x}}\right)^6}\)</span>
       <span id="sol-e3-3" style="display:none;">
-        \(= x\)
+        \(= x^{3}\)
       </span>.
       <button id="e3-3" class="button"  onclick="show2('e3-3');">Solución</button></p></li>
     </ol>
