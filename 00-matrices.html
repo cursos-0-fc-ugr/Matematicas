@@ -21,7 +21,7 @@
 <h1 class="title">Matrices</h1>
 </div>
 <h1 id="matrices">Matrices</h1>
-<p>Sean <span class="math inline">\(I=\{1,2,\ldots,m\}\)</span> y <span class="math inline">\(J=\{1,2,\ldots,n\}\)</span>. Una <em>matriz</em> de orden <span class="math inline">\(m\times n\)</span> sobre un cuerpo <span class="math inline">\(K\)</span> es una aplicación <span class="math display">\[A:I\times J\to K,\ (i,j)\mapsto a_{ij}.\]</span> Normalmente a la matriz <span class="math inline">\(A\)</span> la representaremos de la siguiente forma <span class="math display">\[A=\begin{pmatrix}
+<p>Sean <span class="math inline">\(I=\{1,2,\ldots,m\}\)</span> y <span class="math inline">\(J=\{1,2,\ldots,n\}\)</span>, y sea \(K\) un cuerpo (puede ser \(\mathbb{Q}\), el cuerpo de los números racionales, o \(\mathbb{R}\), el cuerpo de los números reales, o \(\mathbb{C}\) el cuerpo de los números complejos, ...). Una <em>matriz</em> de orden <span class="math inline">\(m\times n\)</span> sobre <span class="math inline">\(K\)</span> es una aplicación <span class="math display">\[A:I\times J\to K,\ (i,j)\mapsto a_{ij}.\]</span> Normalmente a la matriz <span class="math inline">\(A\)</span> la representaremos de la siguiente forma <span class="math display">\[A=\begin{pmatrix}
     a_{11} &amp; a_{12} &amp; \ldots &amp; a_{1n}\\
     a_{21} &amp; a_{22} &amp; \ldots &amp; a_{2n}\\
     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
@@ -39,7 +39,7 @@ a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn}
 \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 \lambda a_{m1} &amp; \lambda a_{m2} &amp; \ldots &amp; \lambda a_{mn}
 \end{pmatrix}\in \mathcal M_{m\times n}(K).\]</span> A esta operación se le llama <em>producto por escalares</em>.</p>
-<p>El conjunto <span class="math inline">\(\mathcal M_{m\times n}(K)\)</span> con la suma coordenada a coordenada <span><span class="math display">\[\begin{pmatrix}
+<p>Si definimos la suma de matrices como la suma coordenada a coordenada <span><span class="math display">\[\begin{pmatrix}
     a_{11} &amp; a_{12} &amp; \ldots &amp; a_{1n}\\
     a_{21} &amp; a_{22} &amp; \ldots &amp; a_{2n}\\
     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
@@ -56,7 +56,7 @@ a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn}
     a_{21}+b_{21} &amp; a_{22}+b_{22} &amp; \ldots &amp; a_{2n}+b_{2n}\\
     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
     a_{m1}+b_{m1} &amp; a_{m2}+b_{m2} &amp; \ldots &amp; a_{mn}+b_{mn}
-    \end{pmatrix}.\]</span></span> tiene estructura de grupo abeliano, esto es, la suma es</p>
+    \end{pmatrix},\]</span></span> entonces esa operación tiene las siguientes propiedades:</p>
 <ul>
 <li><p>asociativa (<span class="math inline">\((A+B)+C=A+(B+C)\)</span>),</p></li>
 <li><p>tiene elemento neutro (la matriz con todas las entradas iguales a cero),</p></li>
@@ -67,20 +67,20 @@ a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn}
   <h3>Ejercicio</h3>
 <p>Calcula la suma de <span class="math inline">\(\begin{pmatrix} 1 &amp; -2 &amp; 3\\ 3 &amp; 4 &amp; -2\end{pmatrix}\)</span> y <span class="math inline">\(\begin{pmatrix} 2 &amp; 3 &amp; -3\\ 3 &amp; 0 &amp; 2\end{pmatrix}\)</span> en <span class="math inline">\(\mathcal M_{2\times 3}(\mathbb{R})\)</span>.</p>
 </article>
-<p>El conjunto <span class="math inline">\(\mathcal M_{m\times n}(K)\)</span>, con la suma y el producto por escalares definidos arriba, es un espacio vectorial. Esto, además de las propiedades que hemos visto para la suma conlleva que para todo <span class="math inline">\(\lambda, \beta\in K\)</span> y <span class="math inline">\(A,B\in \mathcal M_{m\times n}\)</span>,</p>
+<p>El producto por escalares de matrices tiene las siguientes propiedades. Sean <span class="math inline">\(\lambda, \beta\in K\)</span> y <span class="math inline">\(A,B\in \mathcal M_{m\times n}\)</span>. Entonces </p>
 <ul>
 <li><p><span class="math inline">\(\lambda (\beta A)=(\lambda\beta)A\)</span>,</p></li>
 <li><p><span class="math inline">\(\lambda(A+B)=\lambda A+ \lambda B\)</span>,</p></li>
 <li><p><span class="math inline">\((\lambda + \beta)A=\lambda A+\beta A\)</span>,</p></li>
 <li><p><span class="math inline">\(1A=A\)</span>.</p></li>
 </ul>
-<p>Sea <span class="math inline">\(A=(a_{ij})\in \mathcal M_{m\times n}(K)\)</span> y <span class="math inline">\(B=(b_{jk})\in \mathcal M_{n\times p}(K)\)</span>. Entonces podemos definir el <em>producto</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> como <span class="math inline">\(AB=C=(c_{ik})\in \mathcal M_{m\times p}(K)\)</span> con <span class="math display">\[c_{ik}=a_{i1}b_{1k}+a_{i2}b_{2k}+\cdots + a_{in}b_{nk}.\]</span></p>
+<p>Sea <span class="math inline">\(A=(a_{ij})\in \mathcal M_{m\times n}(K)\)</span> y <span class="math inline">\(B=(b_{jk})\in \mathcal M_{n\times p}(K)\)</span>. Podemos definir el <em>producto</em> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> como <span class="math inline">\(AB=C=(c_{ik})\in \mathcal M_{m\times p}(K)\)</span> con <span class="math display">\[c_{ik}=a_{i1}b_{1k}+a_{i2}b_{2k}+\cdots + a_{in}b_{nk}.\]</span></p>
 <article>
     <h3>Ejercicio</h3>  
 <p>Sean <span class="math inline">\(A=\begin{pmatrix} 1 &amp; -2 &amp; 3\\ -3 &amp; 4 &amp; -2\end{pmatrix}\in\mathcal M_{2\times 3}(\mathbb{Q})\)</span> y <span class="math inline">\(B=\begin{pmatrix} -1&amp; 2&amp; 1&amp; -2\\ 2 &amp; 0 &amp; -1 &amp; 0\\ -3&amp; 1&amp; 0 &amp; 1 \end{pmatrix}\in \mathcal M_{3\times 4}(\mathbb{Q})\)</span>. Calcula <span class="math inline">\(AB\)</span>.</p>
 </article>
 <p>Una matriz de orden <span class="math inline">\(n\times n\)</span> diremos que es una matriz <em>cuadrada</em> de orden <span class="math inline">\(n\)</span>.</p>
-<p>El conjunto <span class="math inline">\(\mathcal M_{n\times n}(K)\)</span> con las operaciones suma y producto es un anillo. Esto implica que además de ser <span class="math inline">\((\mathcal M_{n\times n}(K),+)\)</span> un grupo como ya hemos visto antes, se tiene que el producto</p>
+<p>El producto de matrices tiene las siguientes propiedades:</p>
 <ul>
 <li><p>es asociativo (<span class="math inline">\((AB)C=A(BC)\)</span>),</p></li>
 <li><p>tiene elemento neutro (la <em>matriz identidad</em>, que es la matriz que tiene todas sus entradas cero salvo en la diagonal que tiene unos; a dicha matriz la denotamos por <span class="math inline">\(I_n\)</span>, o simplemente <span class="math inline">\(I\)</span> cuando <span class="math inline">\(n\)</span> queda claro en el contexto),</p></li>
