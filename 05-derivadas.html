@@ -317,12 +317,129 @@
   </article>
 </section>
 
+<section>
+  <header>
+    <h2 id="Cuestionario-derivación">Cuestionario derivación</h2>
+  </header>
+ 
+  <form id = "quiz" name = "quiz">
+ 
+  <article>        
+        <h4>Pregunta 1</h4>
+        <p>Sea la función \(f(x)=\ln \left (\sqrt {x^2+1}+x\right )\). El valor de \(f’(x)\) es: </p>
+          <ol style="list-style-type: lower-alpha">
+              <li><p><input type = "radio" id = "mc" name = "question1" value = "1-a"> \(\frac {1}{\sqrt {x^2+1}}\)</p></li>
+              <li><p><input type = "radio" id = "mc" name = "question1" value = "1-b"> \(\frac {x}{\sqrt {x^2+1}}\)</p></li>
+              <li><p><input type = "radio" id = "mc" name = "question1" value = "1-c"> \(\frac {2x+1}{\sqrt {x^2+1}}\)</p></li>
+          </ol>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 2</h4>
+      <p>La función \(f:\mathbb {R} \to \mathbb {R}\), definida como \[ f(x)=\begin{cases} x^3+2, \textrm{ si } x <-1, \\ x^2 , \textrm{ si } -1 \le x \le 1, \\ e^{1-x} , \textrm{ si } x>1. \end{cases} \] es derivable. </p>
+        <ol style="list-style-type: lower-alpha">
+            <li><p><input type = "radio" id = "mc" name = "question2" value = "2-a"> Verdadero</p></li>
+            <li><p><input type = "radio" id = "mc" name = "question2" value = "2-b"> Falso</p></li>
+        </ol>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 3</h4>
+      <p>La derivada de la función \(f(x)=\frac {1}{(x^2+x+4)^5}\) es: </p>
+      <ol style="list-style-type: lower-alpha">
+          <li><p><input type = "radio" id = "mc" name = "question3" value = "3-a"> \(\frac {1}{(x^2+x+4)^6}\)</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question3" value = "3-b"> \(\frac {-10x-5}{(x^2+x+4)^6}\)</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question3" value = "3-c"> \((-5)(x^2+x+4)^{-6}\)</p></li>
+      </ol>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 4</h4>
+      <p>Se considera la función \(f(x)=\arctan (\sqrt {1+x^2})\). El valor de \(f’(1)\) es: </p>
+      <ol style="list-style-type: lower-alpha">
+          <li><p><input type = "radio" id = "mc" name = "question4" value = "4-a"> \(\frac {\sqrt {2}}{3}\)</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question4" value = "4-b"> \(\frac {1}{\sqrt {2}}\)</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question4" value = "4-c"> \(\frac {\sqrt {2}}{6}\)</p></li>
+      </ol>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 5</h4>
+      <p>Sea la función \(f(x)=\ln \left (\frac {x}{x^2+1}\right )\). El valor de \(f’(1)\) es: </p>
+        <p><input id = "textbox" type = "text" name = "question5"> </p>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 6</h4>
+      <p>Sea la función \(f(x)=\arctan (\frac {x-1}{x+1})\). El valor de \(f’(1)\) es: </p>
+        <p><input id = "textbox" type = "text" name = "question6"> </p>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 7</h4>
+      <p>Sea la función \(f(x)=x^{1/x}\). El valor de \(f’(e)\) es: </p>
+        <p><input id = "textbox" type = "text" name = "question7"> </p>
+
+  </article>
+
+  <input id = "button2" type = "button" value = "Comprobar" onclick = "check();"><br>
+
+  </form>
+
+  <div id = "after_submit">
+      <p id = "number_correct"></p>
+  </div>
+</section>
+
 <hr>
 
 <p style="font-size: 10pt">Esta página está basada en las transparencias de Jerónimo Alaminos Prats, José Extremera Lizana y Pilar Muñoz Rivas para el Curso Cero de la ETSIIT de la Universidad de Granada. Las representaciones gráficas se han realizado con <a href="http://jsxgraph.uni-bayreuth.de">JSXGraph</a>. El maquetado de la página ha sido realizado por Pedro A. García Sánchez.</p>
 
 
 <script type="text/javascript" language="javascript">
+function check(){
+
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var question4 = document.quiz.question4.value;
+    var question5 = document.quiz.question5.value;
+    var question6 = document.quiz.question6.value;
+    var question7 = document.quiz.question7.value;
+    var correct = 0;
+
+    if (question1 == "1-a") {
+        correct++;
+    }
+    if (question2 == "2-b") {
+        correct++;
+    }	
+    if (question3 == "3-b") {
+        correct++;
+    }
+    if (question4 == "4-c") {
+        correct++;
+    }
+    if (question5 == "0") {
+        correct++;
+    }
+    if (question6 == "1") {
+        correct++;
+    }
+    if (question7 == "0") {
+        correct++;
+    }
+
+    //document.getElementById("after_submit").style.visibility = "visible";
+
+    document.getElementById("number_correct").innerHTML = "Has acertado " + correct + " de 7. (" + Math.round(correct/7*100) + "%)";
+  }
   function show(str, obj){
     document.getElementById(obj).innerHTML = str;
     //MathJax.Hub.Typeset();

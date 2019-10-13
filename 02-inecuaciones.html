@@ -225,11 +225,113 @@
   </article>
 </section>
 
+<section>
+  <header>
+    <h2 id="Cuestionario de inecuaciones">Cuestionario de inecuaciones</h2>
+  </header>
+ 
+  <form id = "quiz" name = "quiz">
+ 
+  <article>        
+        <h4>Pregunta 1</h4>
+        <p>Resuelve la inecuación \(\frac{4}{x} \ge x\)</p>
+          <ol style="list-style-type: lower-alpha">
+              <li><p><input type = "radio" id = "mc" name = "question1" value = "1-a"> \(x >-2\)</p></li>
+              <li><p><input type = "radio" id = "mc" name = "question1" value = "1-b"> \(0 < x \le 2\)</p></li>
+              <li><p><input type = "radio" id = "mc" name = "question1" value = "1-c"> \(x\le-2\) ó \(0 < x\le 2\)</p></li>
+          </ol>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 2</h4>
+      <p>Resuelve la inecuación \(2(x-11)-3x(1-3x) \le (3x+2)^2\).</p>
+        <ol style="list-style-type: lower-alpha">
+            <li><p><input type = "radio" id = "mc" name = "question2" value = "2-a"> \(x\ge -2\)</p></li>
+            <li><p><input type = "radio" id = "mc" name = "question2" value = "2-b"> \(x<2\)</p></li>
+            <li><p><input type = "radio" id = "mc" name = "question2" value = "2-c"> \(x>-2\)</p></li>
+        </ol>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 3</h4>
+      <p>Resuelve el sistema \(\left\{\begin{matrix} 3x+5>2x-3 \\ \frac{x+3}{7}< x-3 \end{matrix}\right.\)</p>
+      <ol style="list-style-type: lower-alpha">
+          <li><p><input type = "radio" id = "mc" name = "question3" value = "3-a"> No hay solución</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question3" value = "3-b"> \(x>-8\)</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question3" value = "3-c"> \(x>4\)</p></li>
+      </ol>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 4</h4>
+      <p>Resuelve la inecuación \(3x^2-3x \ge 2x^2-7x\)</p>
+      <ol style="list-style-type: lower-alpha">
+          <li><p><input type = "radio" id = "mc" name = "question4" value = "4-a"> \(x >4\)</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question4" value = "4-b"> \(x \le 0\) ó \(x \ge 4\)</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question4" value = "4-c"> \(0 \le x\le 4\)</p></li>
+      </ol>
+
+  </article>
+      
+    <article>        
+      <h4>Pregunta 5</h4>
+      <p>Resuelve la inecuación \(\frac{5x-16}{6}+\frac{x+8}{12}<\frac{x+1}{3}\).</p>
+      <ol style="list-style-type: lower-alpha">
+          <li><p><input type = "radio" id = "mc" name = "question5" value = "5-a"> \(x\le 4\)</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question5" value = "5-b"> \(x < 4\)</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question5" value = "5-c"> \(x\ge 4\)</p></li>
+      </ol>
+
+  </article>
+
+
+  <input id = "button2" type = "button" value = "Comprobar" onclick = "check();"><br>
+
+  </form>
+
+  <div id = "after_submit">
+      <p id = "number_correct"></p>
+  </div>
+</section>
+
 <hr>
 
 <p style="font-size: 10pt">Esta página está basada en las transparencias de Jerónimo Alaminos Prats, José Extremera Lizana y Pilar Muñoz Rivas para el Curso Cero de la ETSIIT de la Universidad de Granada. Las representaciones gráficas se han realizado con <a href="http://jsxgraph.uni-bayreuth.de">JSXGraph</a>. El maquetado y las gráficas han sido realizadas por Pedro A. García Sánchez.</p>
 
 <script type="text/javascript" language="javascript">
+function check(){
+
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var question4 = document.quiz.question4.value;
+    var question5 = document.quiz.question5.value;
+    var correct = 0;
+
+    if (question1 == "1-c") {
+      correct++;
+    }
+    if (question2 == "2-a") {
+      correct++;
+    }	
+    if (question3 == "3-c") {
+      correct++;
+    }
+    if (question4 == "4-b") {
+      correct++;
+    }
+    if (question5 == "5-b") {
+      correct++;
+    }
+
+    //document.getElementById("after_submit").style.visibility = "visible";
+
+    document.getElementById("number_correct").innerHTML = "Has acertado " + correct + " de 5. (" + Math.round(correct/5*100) + "%)";
+  }
+
   function show(str, obj){
     document.getElementById(obj).innerHTML = str;
     MathJax.Hub.Typeset();

@@ -305,9 +305,124 @@ Ya hemos visto que el rango de una matriz se puede calcular contando filas no nu
   -2 &amp; 1 &amp; -1\\
   -4 &amp; 2 &amp; -1
   \end{pmatrix}.\] </p>
+
+
+  <section>
+    <header>
+      <h2 id="Cuestionario de matrices">Cuestionario de matrices</h2>
+    </header>
+   
+    <form id = "quiz" name = "quiz">
+   
+    <article>        
+          <h4>Pregunta 1</h4>
+          <p>El determinante de \(\begin {pmatrix} 1 & 2 \\ 2 & 0 \end {pmatrix}\) vale </p>
+            <ol style="list-style-type: lower-alpha">
+                <li><p><input type = "radio" id = "mc" name = "question1" value = "1-a"> \(-4\)</p></li>
+                <li><p><input type = "radio" id = "mc" name = "question1" value = "1-b"> \(4\)</p></li>
+                <li><p><input type = "radio" id = "mc" name = "question1" value = "1-c"> \(5\)</p></li>
+            </ol>
+  
+    </article>
+  
+    <article>        
+        <h4>Pregunta 2</h4>
+        <p>El determinante de \(\begin {pmatrix} 0 & 2 \\ 1 & -1 \end {pmatrix}\) vale </p>
+          <ol style="list-style-type: lower-alpha">
+              <li><p><input type = "radio" id = "mc" name = "question2" value = "2-a"> \(-4\)</p></li>
+              <li><p><input type = "radio" id = "mc" name = "question2" value = "2-b"> \(-2\)</p></li>
+              <li><p><input type = "radio" id = "mc" name = "question2" value = "2-c"> \(5\)</p></li>
+          </ol>
+  
+    </article>
+  
+    <article>        
+        <h4>Pregunta 3</h4>
+        <p>La inversa de \(\begin {pmatrix} 1 & 2 \\ 2 & 0 \end {pmatrix}\) es </p>
+        <ol style="list-style-type: lower-alpha">
+            <li><p><input type = "radio" id = "mc" name = "question3" value = "3-a"> \(\begin {pmatrix} 0 & 1/2 \\ 1/2 & -1/4 \end {pmatrix}\)</p></li>
+            <li><p><input type = "radio" id = "mc" name = "question3" value = "3-b"> \(\begin {pmatrix} 0 & 1/4 \\ 1/2 & -1/4 \end {pmatrix}\)</p></li>
+            <li><p><input type = "radio" id = "mc" name = "question3" value = "3-c"> \(\begin {pmatrix} 0 & 1/2 \\ -1/2 & -1/4 \end {pmatrix}\)</p></li>
+            <li><p><input type = "radio" id = "mc" name = "question3" value = "3-d"> \(\begin {pmatrix} 1 & 1/2 \\ 1/2 & -1/4 \end {pmatrix}\)</p></li>
+          </ol>
+  
+    </article>
+  
+    <article>        
+        <h4>Pregunta 4</h4>
+        <p>El determinante de \(\begin {pmatrix} 1 & 2 \\ 2 & 0 \end {pmatrix}\cdot \begin {pmatrix} 0 & 2 \\ 1 & -1 \end {pmatrix}\) vale </p>
+        <ol style="list-style-type: lower-alpha">
+            <li><p><input type = "radio" id = "mc" name = "question4" value = "4-a"> \(8\)</p></li>
+            <li><p><input type = "radio" id = "mc" name = "question4" value = "4-b"> \(-4\)</p></li>
+            <li><p><input type = "radio" id = "mc" name = "question4" value = "4-c"> \(-8\)</p></li>
+        </ol>
+  
+    </article> 
+  
+    <input id = "button2" type = "button" value = "Comprobar" onclick = "check();"><br>
+  
+    </form>
+  
+    <div id = "after_submit">
+        <p id = "number_correct"></p>
+    </div>
+  </section>
+
 <hr>
 
 <p style="font-size: 10pt">Esta página está basada en los apuntes de J.C. Rosales y P. A. García-Sánchez, <a href="http://hdl.handle.net/10481/43099">Notas de de Álgebra Lineal y Estructuras Matemáticas</a>.</p>
+
+<script type="text/javascript" language="javascript">
+  function check(){
+  
+      var question1 = document.quiz.question1.value;
+      var question2 = document.quiz.question2.value;
+      var question3 = document.quiz.question3.value;
+      var question4 = document.quiz.question4.value;
+      var correct = 0;
+  
+      if (question1 == "1-a") {
+        correct++;
+      }
+      if (question2 == "2-b") {
+        correct++;
+      }	
+      if (question3 == "3-a") {
+        correct++;
+      }
+      if (question4 == "4-a") {
+        correct++;
+      }
+  
+      //document.getElementById("after_submit").style.visibility = "visible";
+  
+      document.getElementById("number_correct").innerHTML = "Has acertado " + correct + " de 4. (" + Math.round(correct/4*100) + "%)";
+    }
+  
+    function show(str, obj){
+      document.getElementById(obj).innerHTML = str;
+      MathJax.Hub.Typeset();
+    }
+    function show2(divID) {
+  
+        var sol = document.getElementById("sol-"+divID);
+        var div = document.getElementById(divID);
+  
+        if(sol.style.display == "none"){
+          sol.style.display = "unset";
+        }else{
+          sol.style.display = "none";
+        }
+  
+  
+        if(div.innerHTML == "Solución"){
+          div.innerHTML = "Oculta solución";
+        }else{
+          div.innerHTML = "Solución";
+        }
+  
+    }
+  </script>
 
 </body>
 </html>

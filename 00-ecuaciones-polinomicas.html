@@ -189,12 +189,110 @@
 </section>
 
 
+<section>
+  <header>
+    <h2 id="Cuestionario de ecuaciones">Cuestionario de ecuaciones</h2>
+  </header>
+ 
+  <form id = "quiz" name = "quiz">
+ 
+  <article>        
+        <h4>Pregunta 1</h4>
+        <p>Consideramos la ecuación \((x-a)\, (x-b)\, (x-c)=0\), con \( a, b, c \) constantes cualesquiera.</p>
+          <ol style="list-style-type: lower-alpha">
+              <li><p><input type = "radio" id = "mc" name = "question1" value = "1-a"> Las soluciones son \(x=a\), \(x=b\) y \(x=c\).</p></li>
+              <li><p><input type = "radio" id = "mc" name = "question1" value = "1-b"> Esta ecuación no tiene solución porque no sabemos los valores de \(a, b\) y \(c\).</p></li>
+              <li><p><input type = "radio" id = "mc" name = "question1" value = "1-c"> Tiene infinitas soluciones porque la ecuación viene definida por un polinomio de grado 3.</p></li>
+          </ol>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 2</h4>
+      <p>Consideramos la ecuación \(a^3\, x +6\, a-a\, x=12\, a+a\, x\), siendo \( a \) una constante cualquiera.</p>
+        <ol style="list-style-type: lower-alpha">
+            <li><p><input type = "radio" id = "mc" name = "question2" value = "2-a"> Si \(a=0\) la ecuación \(a^3\, x +6\, a-a\, x=12\, a+a\, x\) tiene infinitas soluciones, y además cualquier valor de \(x\) es solución de la ecuación.</p></li>
+            <li><p><input type = "radio" id = "mc" name = "question2" value = "2-b"> La única solución es \(x=0\) independiente del valor tenga la constante \(a\)</p></li>
+            <li><p><input type = "radio" id = "mc" name = "question2" value = "2-c"> La ecuación no tiene solución independiente del valor tenga la constante \(a\)</p></li>
+        </ol>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 3</h4>
+      <p>Consideramos la ecuación \(a^3\, x +6\, a-a\, x=12\, a+a\, x\), siendo \( a \) una constante cualquiera.</p>
+      <ol style="list-style-type: lower-alpha">
+          <li><p><input type = "radio" id = "mc" name = "question3" value = "3-a"> Si \(a =\sqrt{2}\) la ecuación tiene infinitas soluciones.</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question3" value = "3-b"> Si \(a=\sqrt{2}\) la ecuación tiene un única solución.</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question3" value = "3-c"> Si \(a=\sqrt{2}\) la ecuación no tiene solución.</p></li>
+      </ol>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 4</h4>
+      <p>Consideramos la ecuación \(a^3\, x +6\, a-a\, x=12\, a+a\, x\), siendo \( a \) una constante cualquiera.</p>
+      <ol style="list-style-type: lower-alpha">
+          <li><p><input type = "radio" id = "mc" name = "question4" value = "4-a"> Si \(a=23 \) la ecuación no tiene solución.</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question4" value = "4-b"> Si \(a\) es distinta de cero y de \(\sqrt{2}\) la ecuación tiene una única solución que es \(x=\frac{6}{a^2-2}\).</p></li>
+          <li><p><input type = "radio" id = "mc" name = "question4" value = "4-c"> Si \(a=2\) la ecuación no tiene solución.</p></li>
+      </ol>
+
+  </article>
+
+  <article>        
+      <h4>Pregunta 5</h4>
+      <p>Resuelve la ecuación \(8 \, x+12-2\,x=24+ 2\,x\).</p>
+        <p><input id = "textbox" type = "text" name = "question5"> </p>
+
+  </article>
+
+  <input id = "button2" type = "button" value = "Comprobar" onclick = "check();"><br>
+
+  </form>
+
+  <div id = "after_submit">
+      <p id = "number_correct"></p>
+  </div>
+</section>
+
+
 <div class="footnotes">
 <hr />
 <p style="font-size: 10pt">Esta página está basada en las transparencias de Javier Lobillo y Evangelina Santos Aláez para el Curso Cero de la ETSIIT de la Universidad de Granada. Las representaciones gráficas se han realizado con <a href="http://jsxgraph.uni-bayreuth.de">JSXGraph</a>. El maquetado de la página ha sido realizado por Pedro A. García Sánchez.</p>
 </div>
 
 <script type="text/javascript" language="javascript">
+function check(){
+
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var question4 = document.quiz.question4.value;
+    var question5 = document.quiz.question5.value;
+    var correct = 0;
+
+    if (question1 == "1-a") {
+      correct++;
+    }
+    if (question2 == "2-a") {
+      correct++;
+    }	
+    if (question3 == "3-c") {
+      correct++;
+    }
+    if (question4 == "4-b") {
+      correct++;
+    }
+    if (question5 == "3" || question5 == "x=3") {
+      correct++;
+    }
+
+    //document.getElementById("after_submit").style.visibility = "visible";
+
+    document.getElementById("number_correct").innerHTML = "Has acertado " + correct + " de 5. (" + Math.round(correct/5*100) + "%)";
+  }
+
   function show(str, obj){
     document.getElementById(obj).innerHTML = str;
     MathJax.Hub.Typeset();

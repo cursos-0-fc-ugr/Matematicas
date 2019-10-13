@@ -125,13 +125,151 @@
   </article>
 </section>
 
+<section>
+    <header>
+      <h2 id="Cuestionario-aplicaciones-derivadas">Cuestionario de aplicaciones de las derivadas</h2>
+    </header>
+   
+    <form id = "quiz" name = "quiz">
+   
+    <article>
+        <h4>Pregunta 1</h4>
+        <p>Dada la siguiente gráfica responde a las siguientes cuestiones</p>
+        <img  width="400px" src="img-der/funcion.png" alt="Funcion pregunta 1"/>
+            <ol style="list-style-type: lower-alpha">
+                <li><p>\(f\) es derivable en todo su dominio &nbsp; &nbsp; <input type = "radio" id = "mc" name = "question1" value = "1-a"> Verdadero &nbsp; <input type = "radio" id = "mc" name = "question1" value = "1-b"> Falso</p></li>
+                <li><p>\(f\) es decreciente &nbsp; &nbsp; <input type = "radio" id = "mc" name = "question2" value = "2-a"> Verdadero &nbsp; <input type = "radio" id = "mc" name = "question2" value = "2-b"> Falso</p></li>
+                <li><p>\(f\) es creciente en el intervalo \([0,1]\) &nbsp; &nbsp; <input type = "radio" id = "mc" name = "question3" value = "3-a"> Verdadero &nbsp; <input type = "radio" id = "mc" name = "question3" value = "3-b"> Falso</p></li>
+                <li><p>\(f\) es cóncava &nbsp; &nbsp; <input type = "radio" id = "mc" name = "question4" value = "4-a"> Verdadero &nbsp; <input type = "radio" id = "mc" name = "question4" value = "4-b"> Falso</p></li>
+                <li><p>La gráfica de \(f\) presenta una asíntota horizontal &nbsp; &nbsp; <input type = "radio" id = "mc" name = "question5" value = "5-a"> Verdadero &nbsp; <input type = "radio" id = "mc" name = "question5" value = "5-b"> Falso</p></li>
+                <li><p>\(f\) alcanza su mínimo absoluto en \(x=0\) &nbsp; &nbsp; <input type = "radio" id = "mc" name = "question6" value = "6-a"> Verdadero &nbsp; <input type = "radio" id = "mc" name = "question6" value = "6-b"> Falso</p></li>
+                <li><p>El valor de máximo absoluto de \(f\) es \(1\) &nbsp; &nbsp; <input type = "radio" id = "mc" name = "question7" value = "7-a"> Verdadero &nbsp; <input type = "radio" id = "mc" name = "question7" value = "7-b"> Falso</p></li>
+                <li><p>\(f\) no tiene puntos de inflexión &nbsp; &nbsp; <input type = "radio" id = "mc" name = "question8" value = "8-a"> Verdadero &nbsp; <input type = "radio" id = "mc" name = "question8" value = "8-b"> Falso</p></li>
+            </ol>  
+    </article>
 
+    <article>
+        <h4>Pregunta 2</h4>
+        <p>¿Cuál de las siguientes funciones alcanza su mínimo absoluto en el punto \(x=1\)? </p>
+            <ol style="list-style-type: lower-alpha">
+                <li><p><input type = "radio" id = "mc" name = "question9" value = "9-a"> \(f(x)=\frac {x^3-3x+2}{3}\)</p></li>
+                <li><p><input type = "radio" id = "mc" name = "question9" value = "9-b"> \(f(x)=\frac {2x-1-x^2}{2}\)</p></li>
+                <li><p><input type = "radio" id = "mc" name = "question9" value = "9-c"> \(f(x)=|x-1|\)</p></li>
+            </ol>
+    </article>
+
+    <article>
+        <h4>Pregunta 3</h4>
+        <p>Los dos números reales positivos cuya suma es \(20\) y tales que la suma de los cuadrados del mayor y del doble del menor es mínima son: </p>
+            <ol style="list-style-type: lower-alpha">
+                <li><p><input type = "radio" id = "mc" name = "question10" value = "10-a"> \(16\) y \(4\)</p></li>
+                <li><p><input type = "radio" id = "mc" name = "question10" value = "10-b"> \(13\) y \(7\)</p></li>
+                <li><p><input type = "radio" id = "mc" name = "question10" value = "10-c"> \(15\) y \(5\)</p></li>
+            </ol>
+    </article>
+
+    <article>
+        <h4>Pregunta 4</h4>
+        <p>La función \(f(x)=\frac {x^2-1}{x}\) tiene las siguientes propiedades: </p>
+            <ol style="list-style-type: lower-alpha">
+                <li><p><input type = "radio" id = "mc" name = "question11" value = "11-a"> \(f\) es decreciente</p></li>
+                <li><p><input type = "radio" id = "mc" name = "question11" value = "11-b"> Presenta una asíntota vertical en \(x=0\)</p></li>
+                <li><p><input type = "radio" id = "mc" name = "question11" value = "11-c"> Presenta una asíntota horizontal en \(y=0\)</p></li>
+            </ol>
+    </article>
+
+    <article>
+        <h4>Pregunta 5</h4>
+        <p>Los puntos de la gráfica de \(f(x)=x^3-2x+2\) en los que su recta tangente es paralela a la bisectriz del primer cuadrante son: </p>
+            <ol style="list-style-type: lower-alpha">
+                <li><p><input type = "radio" id = "mc" name = "question12" value = "12-a"> \(x=0\) y \(x=1\)</p></li>
+                <li><p><input type = "radio" id = "mc" name = "question12" value = "12-b"> \(x=-1\) y \(x=1\)</p></li>
+                <li><p><input type = "radio" id = "mc" name = "question12" value = "12-c"> \(x=-1\) y \(x=0\)</p></li>
+            </ol>
+    </article>
+
+    <article>
+        <h4>Pregunta 6</h4>
+        <p>El valor de \(x\) para el que la recta tangente a la gráfica de \(f(x)=x^2-5x+6\), en el punto \((x,f(x))\), es paralela a la recta \(5x-y=3\) es: </p>
+          <p><input id = "textbox" type = "text" name = "question13"> </p>
+  
+    </article>
+    
+    <input id = "button2" type = "button" value = "Comprobar" onclick = "check();"><br>
+  
+    </form>
+  
+    <div id = "after_submit">
+        <p id = "number_correct"></p>
+    </div>
+</section>
 
 <hr>
 
 <p style="font-size: 10pt">Esta página está basada en las transparencias de Jerónimo Alaminos Prats, José Extremera Lizana y Pilar Muñoz Rivas para el Curso Cero de la ETSIIT de la Universidad de Granada. Las representaciones gráficas se han realizado con <a href="http://jsxgraph.uni-bayreuth.de">JSXGraph</a>. Las animaciones en JSXGraph y el maquetado de la página han sido realizados por Pedro A. García Sánchez.</p>
 
 <script type="text/javascript" language="javascript">
+  function check(){
+
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var question4 = document.quiz.question4.value;
+    var question5 = document.quiz.question5.value;
+    var question6 = document.quiz.question6.value;
+    var question7 = document.quiz.question7.value;
+    var question8 = document.quiz.question8.value;
+    var question9 = document.quiz.question9.value;
+    var question10 = document.quiz.question10.value;
+    var question11 = document.quiz.question11.value;
+    var question12 = document.quiz.question12.value;
+    var question13 = document.quiz.question13.value;
+    var correct = 0;
+
+    if (question1 == "1-b") {
+        correct++;
+    }
+    if (question2 == "2-b") {
+        correct++;
+    }	
+    if (question3 == "3-a") {
+        correct++;
+    }
+    if (question4 == "4-b") {
+        correct++;
+    }
+    if (question5 == "5-a") {
+        correct++;
+    }
+    if (question6 == "6-b") {
+        correct++;
+    }
+    if (question7 == "7-a") {
+        correct++;
+    }
+    if (question8 == "8-b") {
+        correct++;
+    }
+    if (question9 == "9-c") {
+        correct++;
+    }
+    if (question10 == "10-a") {
+        correct++;
+    }
+    if (question11 == "11-b") {
+        correct++;
+    }
+    if (question12 == "12-b") {
+        correct++;
+    }
+    if (question13 == "5") {
+        correct++;
+    }
+
+    //document.getElementById("after_submit").style.visibility = "visible";
+
+    document.getElementById("number_correct").innerHTML = "Has acertado " + correct + " de 13. (" + Math.round(correct/13*100) + "%)";
+}
   function show(str, obj){
     document.getElementById(obj).innerHTML = str;
     MathJax.Hub.Typeset();

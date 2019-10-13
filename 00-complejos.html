@@ -16,7 +16,7 @@
 		 tex2jax:
 		 {
 		    preview: "none"
-     },
+     },       
       jax: ["input/TeX","output/HTML-CSS"],
       displayAlign: "left",
       displayIndent: "1em"
@@ -176,7 +176,7 @@
 \right.
   \]
   <p>Gráficamente, el argumento principal representa el ángulo que forma el segmento de extremos <span class="math">\(0\)</span> y <span class="math">\((a,b)\)</span> con la parte positiva del eje real.</p>
-  <p>Sea <span class="math">\(z\in \mathbb{C}\)</span>, <span class="math">\(z\neq 0\)</span>. El argumento principal de <span class="math">\(z\)</span>, <span class="math">\(\arg(z)\)</span>, es el único número real en el intervalo <span class="math">\(\,]-\pi,\pi]\)</span> que verifica la igualdad <span class="math">\[z=|z|\bigr(\cos(\arg(z))+i\,\operatorname{sen}(\arg(z))\bigr).\]</span></p>
+  <p>Sea <span class="math">\(z\in \mathbb{C}\)</span>, <span class="math">\(z\neq 0\)</span>. El argumento principal de <span class="math">\(z\)</span>, <span class="math">\(\arg(z)\)</span>, es el único número real en el intervalo <span class="math">\(\,]-\pi,\pi]\)</span> que verifica la igualdad <span class="math">\[z=|z|\left(\frac{}{}\hspace{-0.1cm}\cos(\arg(z))+i\,\operatorname{sen}(\arg(z))\right).\]</span></p>
   <p><strong>Conjunto de argumentos de un número complejo.</strong> Sea <span class="math">\(z\in \mathbb{C}\)</span>, <span class="math">\(z\neq 0\)</span>. Se dice que un número real <span class="math">\(\omega\)</span> es <em>un argumento de</em> <span class="math">\(z\)</span> si verifica que <span class="math">\[z=|z|(\cos\omega+i\,\operatorname{sen}\omega).\]</span> A esta expresión la llamaremos <em>forma trigonométrica</em> del número complejo <span class="math">\(z\)</span>.</p>
   <article>
     <header>
@@ -184,7 +184,7 @@
       <p>Describe geométricamente los conjuntos de números complejos definidos de la siguiente manera:</p>
     </header>
     <ol>
-    <li><p><span class="math">\(\{z\in\mathbb{C} :  \operatorname{Re}(z)&gt;0\}\),</span>
+    <li><p><span class="math">\(\{z\in\mathbb{C}\colon \operatorname{Re}(z)&gt;0\}\),</span>
       <button id="e3-1" class="button" onclick="show2('e3-1');">Solución</button></p>
       <div id="sol-e3-1" style="display:none;">
       <div id='ebox3-1' class='jxgbox' style='width:400px; height:400px;display:inline-block;text-align: center;'> </div>
@@ -193,7 +193,7 @@
       JXG.Options.axis.ticks.drawLabels = true;
       function pintae31(){
         var board = JXG.JSXGraph.initBoard('ebox3-1', {boundingbox: [-2, 2, 2, -2], axis:true, showCopyright:false, showNavigation:false}),
-        l1 = board.create("line",[[0,10],[0,0]], {fixed:true,strokeColor:"orange"});
+        l1 = board.create("line",[[1,10],[1,0]], {fixed:true,strokeColor:"orange"});
         ineq = board.create("inequality",[l1]);
 
       }
@@ -279,8 +279,8 @@
       <li><p>Representa gráficamente al número complejo opuesto, al conjugado y al opuesto del conjugado de cada uno de los cuatro números complejos dados.</p></li>
       </ol>
       <div id="sol-e4-1" style="display:none;">
-        <p>Vamos a dar la solución para \(z_1\). El argumento de \(z_1\) es  \(-\frac{\pi}{6}\) y su módulo es \(2\).</p>
-        <p>Por tanto \(z_1=(2)_{-\frac{\pi}6}=2\left(\cos\left(-\frac{\pi}6\right)+i \operatorname{sen}\left(-\frac{\pi}6\right)\right)\).</p>
+        <p>Vamos a dar la solución para \(z_1\). El argumento de \(z_1\) es  \(-\dfrac{\pi}{6}\) y su módulo es \(2\).</p>
+        <p>Por tanto \(z_1=(2)_{-\frac{\pi}6}=2\left(\cos\left(-\frac{pi}6\right)+i \operatorname{sen}\left(-\frac{\pi}6\right)\right)\).</p>
         <p>
         <div id='ebox4-1' class='jxgbox' style='width:400px; height:400px;display:inline-block;text-align: center;'> </div>
         <br>
@@ -299,19 +299,19 @@
 
       </div>
     </li>
-    <li><p>Sean los siguientes números complejos: <span class="math">\(z_1=(2)_{2\pi/3}\)</span> <span class="math">\(z_2=(3)_{\pi/4}\)</span>.<button id="e4-2" class="button" onclick="show2('e4-2');">Solución</button></p>
+    <li><p>Sean los siguientes números complejos: <span class="math">\(z_1=(2)_{120{{}^o}}\)</span> <span class="math">\(z_2=(3)_{45{{}^o}}\)</span>.<button id="e4-2" class="button" onclick="show2('e4-2');">Solución</button></p>
       <ol>
       <li><p>Halla la forma binómica de cada uno de ellos.</p></li>
       <li><p>Calcula <span class="math">\(z_1\cdot z_2\)</span> y <span class="math">\(\dfrac{z_1}{z_2}\)</span> utilizando la forma polar.</p></li>
       </ol>
       <div id="sol-e4-2" style="display:none;">
         <p>Tenemos que \(z_1=2\left(\cos\left( \frac{2\pi}3 \right) + i \operatorname{sen}\left(\frac{2\pi}3 \right)  \right)= -1+i\sqrt{3}\) y \(z_2=3\left(\cos\left( \frac{\pi}2 \right) + i \operatorname{sen}\left(\frac{\pi}2 \right)  \right)= 3i \).</p>
-        <p>El producto es \(z_1z_1=(2\times 6)_{2\pi/3+\pi/4}=(12)_{11 \pi/12}\), y la división es \(\dfrac{z_1}{z_2}=\left(\dfrac{2}6\right)_{2\pi/3-\pi/4}=\left(\dfrac{1}3\right)_{5\pi/12}\). </p>
+        <p>El producto es \(z_1z_1=(2\times 6)_{120^o+45^o}=(12)_{165^o}\), y la división es \(\dfrac{z_1}{z_2}=\left(\dfrac{2}6\right)_{120^o-45^o}=\left(\dfrac{1}3\right)_{75^o}\). </p>
       </div>
     </li>
     <li><p>Escribe el número complejo <span class="math">\(z=-1+\sqrt{3}i\)</span> en forma polar y calcula <span class="math">\(z^6\)</span> en dicha forma. Pasa el resultado a la forma binómica.<button id="e4-3" class="button" onclick="show2('e4-3');">Solución</button></p>
       <div id="sol-e4-3" style="display:none;">
-        <p>Ya hemos visto antes que \(z=(2)_{2\pi/3}\). Así \(z^6=(2^6)_{\frac{12\pi}3}=(64)_{4\pi}=(64)_{0}=64\).</p>
+        <p>Ya hemos visto antes que \(z=(2)_{120^o}=(2)_{\frac{2\pi}3}\). Así \(z^6=(2^6)_{\frac{12\pi}3}=(64)_{4\pi}=(64)_{0}=64\).</p>
       </div>
     </li>
   </article>
@@ -349,10 +349,10 @@
   <header>
     <h2 id="Cuestionario de números complejos">Cuestionario de números complejos</h2>
   </header>
-
+ 
   <form id = "quiz" name = "quiz">
-
-  <article>
+ 
+  <article>        
         <h4>Pregunta 1</h4>
         <p>La parte real de \((1+i)^2\) es </p>
           <ol style="list-style-type: lower-alpha">
@@ -364,7 +364,7 @@
 
   </article>
 
-  <article>
+  <article>        
       <h4>Pregunta 2</h4>
       <p>La parte imaginaria de \((1+i)^2\) vale </p>
         <ol style="list-style-type: lower-alpha">
@@ -376,7 +376,7 @@
 
   </article>
 
-  <article>
+  <article>        
       <h4>Pregunta 3</h4>
       <p>El módulo de \(5+i\) vale </p>
       <ol style="list-style-type: lower-alpha">
@@ -388,7 +388,7 @@
 
   </article>
 
-  <article>
+  <article>        
       <h4>Pregunta 4</h4>
       <p>El módulo de \(i^3\) vale </p>
       <ol style="list-style-type: lower-alpha">
@@ -400,7 +400,7 @@
 
   </article>
 
-  <article>
+  <article>        
       <h4>Pregunta 5</h4>
       <p>El argumento de \(1+i\) es </p>
       <ol style="list-style-type: lower-alpha">
@@ -412,7 +412,7 @@
 
   </article>
 
-  <article>
+  <article>        
       <h4>Pregunta 6</h4>
       <p>Resuelve </p>
       <ol style="list-style-type: lower-alpha">
@@ -423,7 +423,7 @@
 
   </article>
 
-  <article>
+  <article>        
       <h4>Pregunta 7</h4>
       <p>Calcula \(\frac {1+i}{1-i}\) </p>
       <ol style="list-style-type: lower-alpha">
@@ -435,7 +435,7 @@
 
   </article>
 
-  <article>
+  <article>        
       <h4>Pregunta 8</h4>
       <p>Calcula el argumento de \(9-9\sqrt {3}i\) </p>
       <ol style="list-style-type: lower-alpha">
@@ -478,7 +478,7 @@
       }
       if (question2 == "2-c") {
         correct++;
-      }
+      }	
       if (question3 == "3-b") {
         correct++;
       }
