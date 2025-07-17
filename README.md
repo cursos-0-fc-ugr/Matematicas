@@ -10,7 +10,7 @@ Este respositorio se pude visualizar en [GitHub pages](https://pedritomelenas.gi
 
 Si encuentra algún error, o quiere que se introduzca algún contenido adicional, por favor, comuníquenoslo usando el [gestor de incidencias](https://github.com/cursos-0-fc-ugr/Matematicas/issues) de este repositorio.
 
-Este curso está disponible en [openswad](https://openswad.org/es?crs=2688), donde además hay tests de autoevaluación disponibles.
+En el curso 2025/26 se va a ofrecer una [version presencial](guion-2025.md) para los grados en Física y Matemáticas.
 
 ## Contenidos
 
