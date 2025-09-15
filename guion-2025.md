@@ -1,5 +1,5 @@
 ## Curso 0 piloto 2025: Matemáticas 
-## Grados Física y Matemáticas
+## Grados Física, Estadística y Matemáticas
 
 <!--LTeX: language=es -->
 
