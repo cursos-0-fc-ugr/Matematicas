@@ -1,6 +1,6 @@
 # Curso cero de Matemáticas
 
-**Esta es una versión en desuso. La nueva versión está disponible en este [enlace](https://cursos-0-fc-ugr.github.io/Matematicas-2026/)***
+**Esta es una versión en desuso. La nueva versión está disponible en este [enlace](https://cursos-0-fc-ugr.github.io/Matematicas-2026/)**
 
 Curso cero para matemáticas en la ETSIIT y Facultad de Ciencias de la Universidad de Granada. Puedes encontrar otros cursos cero de nuestro centro en este [enlace](https://cursos-0-fc-ugr.github.io/).
 
