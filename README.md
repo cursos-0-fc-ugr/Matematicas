@@ -1,5 +1,7 @@
 # Curso cero de Matemáticas
 
+**Esta es una versión en desuso. La nueva versión está disponible en este [enlace](https://cursos-0-fc-ugr.github.io/Matematicas-2026/)***
+
 Curso cero para matemáticas en la ETSIIT y Facultad de Ciencias de la Universidad de Granada. Puedes encontrar otros cursos cero de nuestro centro en este [enlace](https://cursos-0-fc-ugr.github.io/).
 
 Se han tomado como base las transparencias de Jerónimo Alaminos Prats, José Extremera Lizana, Pilar Muñoz Rivas, Javier Lobillo Borrero y Evangelina Santos Aláez para el Curso Cero de la ETSIIT de la Universidad de Granada
