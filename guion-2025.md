@@ -16,7 +16,7 @@
 
 4. Lo que tenemos que demostrar: lemas, proposiciones, teoremas y corolarios.
 
-5. Demostraciones: distintos tipos ¿cómo elegir el tipo de demostración adecuado? Ejemplos. Una cosa es lo que dice una demostración y otra lo que pueda que entendamos que nos dice. Pautas para saber si una demostración no es correcta o está mal interpretada. Ejemplos versus contra-ejemplos.
+5. Demostraciones: distintos tipos ¿cómo elegir el tipo de demostración adecuado? Ejemplos. Una cosa es lo que dice una demostración y otra lo que pueda que entendamos qué nos dice. Pautas para saber si una demostración no es correcta o está mal interpretada. Ejemplos versus contra-ejemplos.
 
 ### Tercera sesión: números y aplicaciones
 
